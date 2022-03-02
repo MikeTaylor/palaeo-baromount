@@ -1,7 +1,8 @@
 # palaeo-baromount
 
 **Michael P. Taylor <dino@miketaylor.org.uk>**  
-(other authors to be determined)
+**Peter May <pmay@rescast.com>**  
+**Lowell Dingus <dinglowell@gmail.com>**
 
 This respository contains work on an in-progress paper that will document the AMNH's rearing _Barosaurus_ mount.
 
