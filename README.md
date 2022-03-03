@@ -6,7 +6,7 @@
 
 This respository contains work on an in-progress paper that will document the AMNH's rearing _Barosaurus_ mount.
 
-I've written other open-process papers ([the Archbishop description](https://github.com/MikeTaylor/palaeo-archbishop/), [the vertebral orientation paper](https://github.com/MikeTaylor/palaeo-vo/)) in Markdown, so that they appear formatted on GitHub ([example](https://github.com/MikeTaylor/palaeo-vo/blob/master/vo-manuscript.md)). But that raises a collaboration barrier, so we'll do this one in LibreOffice.
+Feel free to read [the manuscript](TaylorEtAl-mounted-barosaurus.docx).
 
 Anyone is welcome to [file issues](https://github.com/MikeTaylor/palaeo-baromount/issues).
 
