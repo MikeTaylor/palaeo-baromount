@@ -5,3 +5,5 @@ reply to Taylor Mar 8, 22.pages -- received from Lowell Dingus on Wednesday 9th 
 reply to Taylor Mar 8, 22.docx -- exported from MacOS Pages
 
 lynton-gardiner -- extracted from email thread with photographer
+
+Glut supplement 5 contains a good summary of specimen history
