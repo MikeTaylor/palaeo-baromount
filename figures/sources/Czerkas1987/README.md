@@ -1,0 +1,1 @@
+Gregory S. Paul's painting of a herd of sauropods: figure 16 (page 30) in Paul, Gregory S. 1987. The science and art of restoring the life appearance of dinosaurs and their relatives. In Czerkas, S.J. and Olson, E.C., editors, 1987. Dinosaurs past and present. Volume 2. Natural History Museum of Los Angeles County, University of Washington Press, Seattle, 149 pages.
