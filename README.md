@@ -2,7 +2,9 @@
 
 **Michael P. Taylor <dino@miketaylor.org.uk>**  
 **Peter May <pmay@rescast.com>**  
-**Lowell Dingus <dinglowell@gmail.com>**
+**Lowell Dingus <dinglowell@gmail.com>**  
+**Eugene S. Gaffney <genegaffney373@comcast.net>**  
+**John S. McIntosh (deceased 2015)**
 
 This respository contains work on an in-progress paper that will document the AMNH's rearing _Barosaurus_ mount.
 
