@@ -8,3 +8,11 @@ Mike, Carl Mehling found two of these and I had two already. All are AMNH copyri
 
 Carl is also trying to find the resting place of my baro notes as well as Norell's but even if found may not amount to much.  Lowell and I have already replied to your reply to our reply and will send it to you for your reply. pant pant. Im not used to doing work these days. Hope you see something interesting here.   Gene
 
+
+
+---
+
+The best image is https://images.library.amnh.org/digital/items/show/22520
+Reproduction terms are explained at https://www.amnh.org/research/research-library/reproduction-and-licensing
+From there I downloaded "Permission to Reproduce Images for Academic Use.pdf"
+I filled it in to create "Permission to Reproduce Image 315932 for Academic Use.pdf"
