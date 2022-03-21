@@ -16,3 +16,14 @@ The best image is https://images.library.amnh.org/digital/items/show/22520
 Reproduction terms are explained at https://www.amnh.org/research/research-library/reproduction-and-licensing
 From there I downloaded "Permission to Reproduce Images for Academic Use.pdf"
 I filled it in to create "Permission to Reproduce Image 315932 for Academic Use.pdf"
+
+
+
+---
+
+Permission for two images is granted in
+PC20-1817 Permission Letter revised.pdf
+They are:
+00315930.png (same as 1939-1.jpg) -- Bronto in left anterolateral view
+00315932.png (same as 1939-2.jpg) -- Bronto in right anterolateral view
+
