@@ -12,7 +12,7 @@ Feb. 7, 1972
 
 cervicals 7-15, dorsals 1-3, 5-10, sacrals 1-5, caudals
 r. scapula and distal end of left, both coracoids,
-r. humerus, r. ischium and distal ends and acetabular
+r. humerus, r. ilium and distal ends and acetabular
 part of left, pubes, ischia, r. femur, r. tibia,
 (?)r. fibula, r. astragalus, metatarsals 1, (?)2, 5
 2 proximal phalanges and (?)1 other, 2 second phalanges,
