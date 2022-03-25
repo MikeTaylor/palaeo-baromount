@@ -24,3 +24,5 @@ But the description in the rest of the paper does not consistently match this. T
 * p66: "The hindlimb of AMNH 6341 is beautifully preserved and uncrushed (Fig. 2.12)". It consists of right femur, tibia, fibula and astragalus.
 * p70: the "partial pes" consists of MT I, II and V and phalanges I-I and V-I (table 2.13); and these bones are from the right pes (caption to figure 2.13).
 
+See also: ../figures/sources/mcintosh-archives/README.md
+
