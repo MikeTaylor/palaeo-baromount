@@ -1,0 +1,243 @@
+Delivered-To: sauropoda@gmail.com
+Received: by 2002:a1c:7711:0:0:0:0:0 with SMTP id t17csp1258771wmi;
+        Mon, 4 Apr 2022 03:52:31 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwsXNVYIxVsKTXN4Vgp8DbuUTyOoHDoZMyJ6gsyIp4QaC0U9LDgbUld85dzlS/L32mX2/FM
+X-Received: by 2002:a50:fd94:0:b0:419:9ed:e870 with SMTP id o20-20020a50fd94000000b0041909ede870mr32901214edt.207.1649069551448;
+        Mon, 04 Apr 2022 03:52:31 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1649069551; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=eDVB5/V0Bm6qrubApkmAfZ/N7WqrC50Va1JmnCmz2/ldABzNIFKxVJfHkMcsWDNKV8
+         RWjMDweYZ58FQF7aGcIBOnc0uUIIu4q2/09I9TivF3ozm438u0rnSJABW+SVU/spjMOg
+         wIrInVT7KFw+ZcDT2dmG88ctC4sYvisPhLLKhBaoRk0P88FXNCoo0u/DN0yAy06N/1ge
+         VsUsq3CEjn6ugeLLdvHj9w5NPgaAqNblBzCVGp/PtlPyVHsL+mEMl4ehp3q2dT8mr9Qy
+         SsLclpfZwPIY8GhADTRH+cHSDCgNfdPlR65O1asOBvfMbQf3Yz33yRSuBNvE9+HBQ3G0
+         h8Gw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:suggested_attachment_session_id:content-language
+         :accept-language:in-reply-to:references:message-id:date:thread-index
+         :thread-topic:subject:to:from:dkim-signature;
+        bh=2LgJvysmhQ2gQLks4LWo6SDVoqW0KolqvJwjcRUXHsw=;
+        b=K/M4Cd6in4M32FHbx5j2hP3yRNbmoGwTQQX4J7xH/HRl5RsNzM5HQunmAKGJzAP7QL
+         Qfvz+8olGmbarHtnhRoCjNEpr8N0FeTWOy80oAisRpeCTfwoHzeFHAK6EtVtLtMf+Lwe
+         NwFNNXFGAAYbCPrpG6hx7kRIftz3jnrue/Qpf04qPwXdoc09FpJX/t9ICeq/Ruj+xR5P
+         72XNPE/tjGD82dAMqGSt22fwpNVaVSO2rWZDuVH7JYZBQj752pJkMQbrSqL8OQ2XUNn9
+         8rajLabauTt+8+5W61R2i5xAimHHukvZfVVwEhUr5rszHbH9BFK3ZFfdCJJ91bdEMSwk
+         J5yw==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@uchicagoedu.onmicrosoft.com header.s=selector2-uchicagoedu-onmicrosoft-com header.b=qxT7TLEP;
+       arc=pass (i=1 spf=pass spfdomain=uchicago.edu dkim=pass dkdomain=uchicago.edu dmarc=pass fromdomain=uchicago.edu);
+       spf=pass (google.com: domain of dinosaur@uchicago.edu designates 2a01:111:f400:7e8a::719 as permitted sender) smtp.mailfrom=dinosaur@uchicago.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=uchicago.edu
+Return-Path: <dinosaur@uchicago.edu>
+Received: from NAM10-BN7-obe.outbound.protection.outlook.com (mail-bn7nam10on20719.outbound.protection.outlook.com. [2a01:111:f400:7e8a::719])
+        by mx.google.com with ESMTPS id a18-20020a1709063e9200b006df76385ee9si5961994ejj.905.2022.04.04.03.52.31
+        for <sauropoda@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 04 Apr 2022 03:52:31 -0700 (PDT)
+Received-SPF: pass (google.com: domain of dinosaur@uchicago.edu designates 2a01:111:f400:7e8a::719 as permitted sender) client-ip=2a01:111:f400:7e8a::719;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@uchicagoedu.onmicrosoft.com header.s=selector2-uchicagoedu-onmicrosoft-com header.b=qxT7TLEP;
+       arc=pass (i=1 spf=pass spfdomain=uchicago.edu dkim=pass dkdomain=uchicago.edu dmarc=pass fromdomain=uchicago.edu);
+       spf=pass (google.com: domain of dinosaur@uchicago.edu designates 2a01:111:f400:7e8a::719 as permitted sender) smtp.mailfrom=dinosaur@uchicago.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=uchicago.edu
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=cJ/3aZpbboxQKWLsXOwQWa9NUugGJ5O0JMIyruRWpJrBYyWYrhpHzTHfC9voAJrTwi+CeuI7+hQchAXAPpHv53nU65EoMwasuioudIJt3PxAugSMlNTLOLbrhiCcKmWNrL5iHg6qezmfVrbJ8mTOtMWCfbzjgyFP04RvDPm+1zZVRqvWafShEL/EIAtqdqZsEs89+59C/Rv/DviFfHqf0SFDLFIbpcI8PFO4p6+Lz5uWfsaPF5TNI562wMvlxbfFCvhuf/FmqPAJqmOjkGSedmKtkXqr1fQhcLmVB0LEa/cSv0QCLLsnyJxGJdSQI20WmhsAz0261xDZeGv/6ugXKw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=2LgJvysmhQ2gQLks4LWo6SDVoqW0KolqvJwjcRUXHsw=;
+ b=XTq0ahA1P3PnxYokEUunR0kmFjtP8slNsQo5uDdS6LbK9ETtAxLkQerhzoG2yTkgGOmZLCsnqKNNyph9MwcC+4oroEFSNOcEH8cDcUv26ZY+L0c1vAE8N5B1PsxewZOGdgx9kqPzMh8bTz/vgoi/MqeSAT12+6hTDzyweGaNLePxeW5QR8ubT/Pmj9WX58K0MHR0sC7xxS+/BRUzHUfvY7CNcMjlkUZJiqaCjlNSHZ3N/4Lhn0yPBgoHrV8H48Y+4c4d/zPDoVJ8O58RlJaqg8zMnnKWKsr845EQ0Z/JsgQdV7oEy0IoX8v1pl/CqA6/LJyaxAU6r+ZfleXsRj+ZyQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=uchicago.edu; dmarc=pass action=none header.from=uchicago.edu;
+ dkim=pass header.d=uchicago.edu; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=uchicagoedu.onmicrosoft.com; s=selector2-uchicagoedu-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=2LgJvysmhQ2gQLks4LWo6SDVoqW0KolqvJwjcRUXHsw=;
+ b=qxT7TLEP1dprG4D7RGDGIR2nvp0mXcDt+1b0R8nM9KWX0lzF5l1NAc9eXjDgxBwMwfS3O5rzpC59g2ktTqATVFQgEe2WFMxJ5vWdxTNubMoudqsyuT1mZtSDnsImdZphS79uzTBkvJTDcuRxj2wsowmli+i2uHDhu9nstGV6bHg=
+Received: from CH0PR11MB5458.namprd11.prod.outlook.com (2603:10b6:610:d1::18)
+ by BY5PR11MB4022.namprd11.prod.outlook.com (2603:10b6:a03:18a::23) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5123.31; Mon, 4 Apr
+ 2022 10:52:28 +0000
+Received: from CH0PR11MB5458.namprd11.prod.outlook.com
+ ([fe80::ade8:d45b:e0ff:5ad]) by CH0PR11MB5458.namprd11.prod.outlook.com
+ ([fe80::ade8:d45b:e0ff:5ad%5]) with mapi id 15.20.5123.031; Mon, 4 Apr 2022
+ 10:52:27 +0000
+From: Paul Sereno <dinosaur@uchicago.edu>
+To: Mike Taylor <sauropoda@gmail.com>
+Subject: Re: Published criticisms of the AMNH's rearing Barosaurus mount
+Thread-Topic: Published criticisms of the AMNH's rearing Barosaurus mount
+Thread-Index: AQHYR5BipqD2Yp7Oq0+UQ35BC8WRJqzelyUAgACBTBiAAFZGAIAAI0/y
+Date: Mon, 4 Apr 2022 10:52:27 +0000
+Message-ID:
+ <CH0PR11MB5458529F7C16D14F5081D9D1A4E59@CH0PR11MB5458.namprd11.prod.outlook.com>
+References:
+ <CACnMvBY5eQR3JVwm_v2mgjWxohhkonKFbN05NZqSff3_-=02AA@mail.gmail.com>
+ <F394C9A2-CE4F-4BDE-B220-13C89CC59114@chapman.edu>
+ <CH0PR11MB5458A2B7706EC3D607E542B8A4E59@CH0PR11MB5458.namprd11.prod.outlook.com>
+ <CACnMvBbHZ=uUTbcfPR+gz9_xJTTnaMfDJxQsYah3650KdqOrgQ@mail.gmail.com>
+In-Reply-To:
+ <CACnMvBbHZ=uUTbcfPR+gz9_xJTTnaMfDJxQsYah3650KdqOrgQ@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+suggested_attachment_session_id: 554a8cdf-8388-4b0d-8758-ed250ca21de7
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=uchicago.edu;
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 424ebf46-47bd-47b1-6240-08da16293590
+x-ms-traffictypediagnostic: BY5PR11MB4022:EE_
+x-microsoft-antispam-prvs:
+ <BY5PR11MB4022C74E2D14F1B01EFA35ACA4E59@BY5PR11MB4022.namprd11.prod.outlook.com>
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ 2QqHbj02QyB91wpKc+LW4/aeXKjzSRoVftEdiTCUrakkl+cOq5vQSGq6OcIdN9GSB1ohw3f8nxiwN/cN14W9Fl39qSn9GojuXoZyn72V739VK/NMypuRsDMzDg/g7Rcdbeo5H5Sbcvg76xjhA2qEo9EU/dCW2GLxbmvHIg040KB6xqbDf+RKKbVr6tMuQET4TL/RlqfW31S4bOLe5cg22atCZkJQAYTTX1DFev+EvT86RNGhPuTdQAkPuAY/fF/YJ0HvXP53rPc+bOl60DRR9xLn8Lt5iaH3jy2APiTIUcatFjqNH4qnUUjVs9oY0z5ctn2xrIkipAdZJWi+AT8zr2No9Ys0+Z2NDh+nqJFE707xEP4RNlT9FmX3QzwhOQ1bvF2cA2Bmb1Wg5Yb3GFTaYdEkEzYoayADnotbdyHB5ZON3hHWs8oTb8nOoHUr8d/vy3Odq4avjapN9waA1zfnNoQ/Wmh4q0hpsvsVQto0gz9NpCfexvmp+KuK1KIuMH6gFifoUgYjmH4/7wyZwhq53oi8STLAN9gGV4Pi0OJT+TCKR9sz9IthNSs35L9QLiNHA72IoiXX7uAFCF1NAix+fgRSQyv41HEqTLwg60QERgsrnsCHG1h8Nuf+5/f5k9jL1Ffd0/NdHjQJ0oJEdcdpXrPrNdZvMBA8E/BjICl3uD+mGoMHmtBztkmDd7JLiNGVYVfukHHaZaHuj6hRzMl8QlXm5jUjDAXS5eSr1Q+SN//ZukMZQYD1lty/se8nTpAaR7+nlKkF8Sxaxot6wEFtegZ1vZycfvSkCc7H9XVg2H56CZ6tBnhRiYvuT9mHUBO7GxMxmcGlrrMcyQ/nAfdyfA==
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:CH0PR11MB5458.namprd11.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230001)(4636009)(366004)(66946007)(76116006)(64756008)(122000001)(66476007)(5660300002)(186003)(75432002)(166002)(83380400001)(8936002)(66556008)(66446008)(38100700002)(38070700005)(86362001)(8676002)(7696005)(508600001)(9686003)(6506007)(53546011)(52536014)(71200400001)(786003)(316002)(33656002)(2906002)(19627405001)(55016003)(966005)(6916009);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 2
+x-ms-exchange-antispam-messagedata-0:
+ =?utf-8?B?UXU5aWR6SzQ3QkJhcDY0ckM1REwyM1ZPbWRwNlZlRlNvS0dpUFMwSGpHTkh3?=
+ =?utf-8?B?dWNPalhqZTBtdm9EbmNDamJFSWJSVW10M3h0YkNTZzJSUlR2azZhQW5JV1Q2?=
+ =?utf-8?B?c1lZVk1tdVIyUEN3cHdBbjJ6Y0FNb1BHbW8yelFQMWdQMVFySURGVG4wUE02?=
+ =?utf-8?B?RUUwcGl0V1NMbkZCQitrV2l5SlVFWHRwbGtoSEVDVXlWT0lodFlydEdPdTFI?=
+ =?utf-8?B?cFRnSHdWVE9HLzdKUTlHdElKdzdybWFWWkZnYlVMMkt4ZExyNjJUZHJTcmdo?=
+ =?utf-8?B?SXE1K2F1VHdCM3VSSGFEUGExakowTmtud294Z0VRTGEya256ZjR2VERWWWZs?=
+ =?utf-8?B?Z3FIaHBXcGRyaVlnSGw1bFhnL3RnVkI4WU5mVy80akhGRDFZN3I0NXY4ZFpC?=
+ =?utf-8?B?Tyt5L21nNnBrekZnaEJHazY3cVBWL0ErQzJzSU12VWxjSy92Y2xpS3ljb09B?=
+ =?utf-8?B?VEVjL3VmSkIyQTVJYmVSWE83WDExWmFKN1JhWmtXM2d0QU1BRzNMMGpXODZT?=
+ =?utf-8?B?SnZZbHJPdGhxMS80eTN2UzNvakJTNjM2aEhwQWZ0dnFzc0Z6SjBaRjRyZUFS?=
+ =?utf-8?B?YjZOcjZLcFFPRjdFdVVzQ3huSWRjUDZoRGtNVzVMRDlkYndQTkpoRWhyVjlW?=
+ =?utf-8?B?RVI5bktuNXE4TFh4RW5Gd092U1dyMzE3SmlOUno2d1BPb2V1alBQSm5ENWNW?=
+ =?utf-8?B?UzE4RFdYT3QvaWxGODBLZkxTckZXZ0NrSE5BN3ZKSW5ZenlOTDRxWHBUMzZq?=
+ =?utf-8?B?dlV0UGM1WkM0MkhoNkEzdm9xeEVUS0src1pwWU91VVdkNDRWQ0JoZnFTUWha?=
+ =?utf-8?B?YUtGSUVlSWd2VitURWV4M2FHdUhhQ0JwbURHY01heXBlUnBxakZLVEtqbGpS?=
+ =?utf-8?B?cmtaMXdtUmVRV0hjZjV2WW9JYXJsTjFZeE1lWGNCd1NzQzN0QWRLSUxFZThx?=
+ =?utf-8?B?c0FLS2ZVMlltMGVxWjZtVk96K3NvbmNpc0dCZzlNMmRRYTVva2puWjF1Z1V0?=
+ =?utf-8?B?czYwSno0U2hxcVdQd1Q2ektCcjE1YlVzejZWT3liZm1vNzFSWWNyL0Z4dGhJ?=
+ =?utf-8?B?bSt0Y3AyQXlJZ1FId1BZYldMeWFvazRUN2N5S1g2d1dxK0d2VnZ0cENocHdU?=
+ =?utf-8?B?cTJYQXE1VkVsQUJleWNhc1BFczBndEs2TStKSkdYQ1c2OVU5OW1RYTJBbDRw?=
+ =?utf-8?B?NlpwTUZlRHNpR1pnelFsMWFqKzIwTmw1bTVCYmFYYmdtUUYzRXFPT0FuYXZT?=
+ =?utf-8?B?b3VwZUVqNU5CcmNUMnV1aytRN0FsNEVnYjZzK2NtRjBFdm9Ib25oaXRiSXQ1?=
+ =?utf-8?B?Sy82V1pqcUhidkw3VTBkOWErRDBudk94Yit6ZHFjR0xyeDRCZVJXeHovRWRl?=
+ =?utf-8?B?NTZpSmlkR1I1R3JEWVp2Vjh3Y2JWVTJpcDlMSXBXWnd0WWF5TnBPcHRUbVFo?=
+ =?utf-8?B?UGxjdnVtcG5aUCs0T2lNdjFOOGhzZ2tFc3AwSXRzVERaUmJRcytyU2IvUlVF?=
+ =?utf-8?B?L2ZBbTJKY3hDRUlnZ05RbUk4UGJ3UkpSdFVoNThzaStOU0NLY1NweXBPcGkx?=
+ =?utf-8?B?VnNlY1ZmS0xqMENQY2ppUjNlL2VYQnZxYjE3WDVxSFl2aHd0SEJVOW0vRmFR?=
+ =?utf-8?B?UWNycGFsZlhSbVpXZ2lpKzliZ1k4bmczUkg2ZE1GT043aW9kay9yamZTazh0?=
+ =?utf-8?B?U2xONUN4VFdBSU1oc3BnK0YxZGdBNWxZMmlpZ1RCZG1qRzgvdnVWRmtORlRm?=
+ =?utf-8?B?UVFndkxyKy9NYVFWZStJUjAzTXVVdCtuZkhtQVEwdDBrb0VTaXMwZ3BUdktU?=
+ =?utf-8?B?dHdLYmUrd2lzOHArUy9lL3R6RkxQZGJXbFBSSXliR2hxY044cFdiMjVoUFdT?=
+ =?utf-8?B?ZmRGOWlKT2VNTHRwTWVqNGtLWkY3RDFRTWdxL1lCU2dYRlVIb1Zzd0dOTThG?=
+ =?utf-8?B?QTYrSVFMS3BQanV6ODgxQUhzWlRocGEyMVVtN292VFU2ZlZJVS93VEEyVThJ?=
+ =?utf-8?B?Zm90aHhYNk1DR1lYVHNwNlg5bjJFdDErVWg5NGtzK1dSYVQ2TkxkdURjOWpV?=
+ =?utf-8?B?MXBXeExxTXRrODFPcUNTdEFjbUdpTTZxR2Q0QzdBT1p4U2tCcHVXbEFreHBS?=
+ =?utf-8?B?ZERqT0c2MnJhUi8rL0xuS3ZVK0lOUFpselI4ZWNjSHJOamF4T1pqRkdFOTNP?=
+ =?utf-8?B?RnVYVG10OU5USWFxTS81Z1ZtbGw3S25UQzcybzJZNjlKeHBxejVpbjBEc1NF?=
+ =?utf-8?B?cVVpWkdLTGJwaUx2Q3lmd3lDV0kyQVJvSisvd2xQeFFQVlZCZmJwOUNKQlNK?=
+ =?utf-8?B?Vmk5WEx2RlI2MzZQc20yVnVsSEtyK1AwelZXN3pSaHJEUFczSjFWWEpoOWF0?=
+ =?utf-8?Q?ZLl8H5abv0Hvz/CJO2GqSDQUiA1EjZTxVI1/QC/MUzqP/?=
+x-ms-exchange-antispam-messagedata-1: 1BYgA6FX/Kx4qg==
+MIME-Version: 1.0
+X-OriginatorOrg: uchicago.edu
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: CH0PR11MB5458.namprd11.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 424ebf46-47bd-47b1-6240-08da16293590
+X-MS-Exchange-CrossTenant-originalarrivaltime: 04 Apr 2022 10:52:27.3534
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 83b02c92-5f26-48ed-9e5b-6c2fca46a8e6
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: E5/hav+df6RDc/zbeYyUVVHua8N0l9wDgA9XKyS9S6NOYmm0k82jryv1rbqi+qJvGshy8FFuhZXb37hBB6rUsQ==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY5PR11MB4022
+X-StripMime: Non-text section removed by stripmime
+Content-Type: text/plain; charset="utf-8"
+
+Sure.
+Actually I paid more attention to the mount of the Allosaurus mount erected at the same time. Many illustartors and museum technicians wrongly believe that the palms of bipedal dinosaurs are held facing downward, like a begging dog.
+In order to accomplish this, they make some classic mistakes--- over and over again. They know that the ulna is closest to digit III and the radius to the thumb. And they know its impossible to cross the radius and ulna.
+
+All you need to do is flip the radius and ulna from one side to the other, and put the ulna (incorrectly) on the outside of the radius at the elbow.  The rest is magic!  It articulates near digit III distally with the hand in a palm down position.
+
+Paul
+
+
+Paul Sereno
+Website: http://paulsereno.uchicago.edu/
+https://tinyurl.com/SerenoPodcast1
+________________________________
+From: Mike Taylor <sauropoda@gmail.com>
+Sent: Monday, April 4, 2022 3:35 AM
+To: Paul Sereno <dinosaur@uchicago.edu>
+Subject: Re: Published criticisms of the AMNH's rearing Barosaurus mount
+
+Thanks, Paul, good to know!
+
+Would it be OK to cite this as a pers. comm.?
+
+-- Mike.
+
+
+On Mon, Apr 4, 2022 at 4:27 AM Paul Sereno <dinosaur@uchicago.edu<mailto:dinosaur@uchicago.edu>> wrote:
+Hi,
+I still think it's ridiculous.
+Paul
+
+Paul Sereno
+Website: http://paulsereno.uchicago.edu/
+https://tinyurl.com/SerenoPodcast1
+________________________________
+From: Horner, Jack <jhorner@chapman.edu<mailto:jhorner@chapman.edu>>
+Sent: Sunday, April 3, 2022 2:43 PM
+To: Mike Taylor <sauropoda@gmail.com<mailto:sauropoda@gmail.com>>
+Cc: Paul Sereno <dinosaur@uchicago.edu<mailto:dinosaur@uchicago.edu>>; Philip Currie <pjcurrie@ualberta.ca<mailto:pjcurrie@ualberta.ca>>
+Subject: Re: Published criticisms of the AMNH's rearing Barosaurus mount
+
+Hi Mike, it is shocking to think it’s been that long, but happy to hear you are doing this in concert with Lowell and Gene! Especially good to know Gene is still kickin. Please tell him hello for me!!
+
+Funny you ask about that Barosaurus as I was just talking about in my dinosaur class this past week. Telling the students how I had opposed the idea originally but have since come to the conclusion that at least the males had to have been able to rear up to at least the back of the female… I think it took me about a decade to figure that out.. lol
+
+Never published anything but often talked about it in my various lectures.
+
+I like the mount now, it may have been the way the males displayed. Would have been spectacular!
+
+All the best,
+
+Jack
+
+
+
+Sent from my iPhone
+
+On Apr 3, 2022, at 12:24 PM, Mike Taylor <sauropoda@gmail.com<mailto:sauropoda@gmail.com>> wrote:
+
+﻿
+External Message
+
+Dear Paul, Jack and Phil,
+
+I'm working with Lowell Dingus and Gene Gaffney on an account of the rearing Barosaurus mount erected at the AMNH in 1991. Astonishing to think that was more than 30 years ago!
+
+In the attached article from the 29 November 1991 issue of the popular journal New York Newsday, each of you is quoted as having reservations about the mount. Did any of you ever formally publish anything about your thoughts on this mount? (And do you still feel the same reservations today as you did back then?)
+
+Many thanks,
+
+-- Mike.
+
+
+
+Dr. Michael P. Taylor
+Department of Earth Sciences
+University of Bristol
+Bristol BS8 1RJ
+ENGLAND
+dino@miketaylor.org.uk<mailto:dino@miketaylor.org.uk>
+http://svpow.com/<https://nam11.safelinks.protection.outlook.com/?url=http%3A%2F%2Fsvpow.com%2F&data=04%7C01%7Cjhorner%40chapman.edu%7Cefc0754ce3e34a2c183c08da15a75994%7C809929af2d2545bf9837089eb9cfbd01%7C1%7C0%7C637846106782875939%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0&sdata=xrrbSxj5Hyle5s78Vgz0RvSdPxUxLkA%2FhULOc1WIENw%3D&reserved=0>
+@MikeTaylor
+http://orcid.org/0000-0002-1003-5675<https://nam11.safelinks.protection.outlook.com/?url=http%3A%2F%2Forcid.org%2F0000-0002-1003-5675&data=04%7C01%7Cjhorner%40chapman.edu%7Cefc0754ce3e34a2c183c08da15a75994%7C809929af2d2545bf9837089eb9cfbd01%7C1%7C0%7C637846106782875939%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0&sdata=Rb4kvI3ufRw2KhVsqez8mDAwOmma1Os%2FiruT2CsWPUk%3D&reserved=0>
+
+NOTE: This email originated from outside Chapman’s network. Do not click links or open attachments unless you recognize the sender and know content is safe.
+
