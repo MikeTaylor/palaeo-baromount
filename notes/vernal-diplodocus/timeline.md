@@ -9,7 +9,7 @@
 * "Some time later", likely in the mid-1950s: J. LeRoy Kay, Carnegie's curator of vertebrate paleontology, gifted the original molds to the Field House
 * 1957: The Utah Field House's concrete cast is mounted outdoors (Gangewere 1999:17)
 * 1989, June 30 onwards: Jim Madsen of DINOLAB made new molds from the concrete _Diplodocus_, using them to create a new lightweight indoor _Diplodocus_ cast for the Field House and reserving the right to make up to 20 additional casts (Madsen et al. 1989)
-* 1991, not later than June 20: DINOLAB was contracted to deliver the indoor mount (Madsen et al. 1989) — but I don't know when it actually arrived and was mounted.
+* 1991, not later than June 30: DINOLAB was contracted to deliver the indoor mount (Madsen et al. 1989) — but I don't know when it actually arrived and was mounted.
 * Some time subsequent to 1989: Peter May of RCI sources the new molds from DINOLAB and used them to cast _Diplodocus_ elements needed to make up the missing part of the AMNH Barosaurus mount.
 
 Is all that correct?
