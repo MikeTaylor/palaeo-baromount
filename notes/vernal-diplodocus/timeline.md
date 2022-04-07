@@ -10,7 +10,7 @@
 * 1948, autumn: The Utah Field House is built and opened.
 * "Some time later", likely in the mid-1950s: J. LeRoy Kay, Carnegie's curator of vertebrate paleontology, gifts the original molds to the Field House
 * 1957: The Utah Field House's concrete cast is mounted outdoors (Gangewere 1999:17)
-* 1960s: the original casts are thrown away.
+* 1960s: the original molds are thrown away.
 * 1988, January: plans are made to have a lightweight indoor replica of the concrete cast created by the Las Vegas Museum, but these plans fall through.
 * 1989, April: Jim Madsen of Dinolab is contacted to make new plans for creating a replica
 * 1989, June 30 onwards: Dinolab repaired the deteriorated concrete cast, stabilizing, restoring and sealing the bones. Jim Madsen of Dinolab made new molds from the repaired concrete _Diplodocus_, using them to create a new lightweight indoor _Diplodocus_ cast for the Field House, from WEP (water-expanded polyester), and reserving the right to make up to 20 additional casts (Madsen et al. 1989)
