@@ -11,11 +11,11 @@
 * 1912: another cast is mounted in La Plata
 * 1913: another cast is mounted in Madrid
 * 1914: The Great War breaks out, ending Carnegie's arbitration campaign that was the main reason for donating casts, and reducing the pace of creating new casts.
-* 1917 or earlier: the molds went into storage and are not used again, according to Untermann (1959:364).
-* 1932: the penultimate cast is mount in Mexico (with missing/damaged parts produced and added in 1931/2)
+* 1917 at the latest: the molds went into storage and are not used again, according to Untermann (1959:364).
+* 1932: the penultimate cast is mounted in Mexico (with missing/damaged parts produced and added in 1931/2)
 * 1934: the final cast is sent to Munich, but never mounted.
 * 1948, autumn: The Utah Field House is built and opened.
-* "Some time later", likely in the mid-1950s: J. LeRoy Kay, Carnegie's curator of vertebrate paleontology, gifts the original molds to the Field House. When they arrived they were "in pretty bad shape" (Ken Carpenter, pers. comm. 2022) and "deteriorating" (Gangewere 1999:17).
+* "Some time later", likely in the mid-1950s: J. LeRoy Kay, Carnegie's curator of vertebrate paleontology, gifts the original molds to the Field House. When they arrived they were "deteriorating" (Gangewere 1999:17), and "almost unusable" (Nieuwland 2019:251) and "in pretty bad shape" (Ken Carpenter, pers. comm. 2022).
 * 1957: The Utah Field House's concrete cast is created, and mounted outdoors (Gangewere 1999:17). This is the last time the original molds are used.
 * 1960s: the original molds are thrown away by CMNH. So the invitation that concludes Untermann (1959:369), "Does anyone wish to cast the twelfth?" seems to have gone unanswered.
 * 1988, January: plans are made to have a lightweight indoor replica of the Field House concrete cast created by the Las Vegas Museum, but these plans fall through.
