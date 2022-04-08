@@ -1,0 +1,232 @@
+Delivered-To: sauropoda@gmail.com
+Received: by 2002:a7b:cd93:0:0:0:0:0 with SMTP id y19csp27628wmj;
+        Fri, 8 Apr 2022 07:01:41 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzhlA3X/Z5/3DDhvL2Fesk+xvrenZDbXq8z5O1o5TCM+F6lVbPHbgC5cNX1cUlDY08qJWiT
+X-Received: by 2002:a25:3247:0:b0:63d:8e17:ac77 with SMTP id y68-20020a253247000000b0063d8e17ac77mr13483671yby.325.1649426501595;
+        Fri, 08 Apr 2022 07:01:41 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1649426501; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=kqgHTcCPwcjEHRUkWzVwMEa6o+qInbbSIIN0Gb7uTzbqAbNbmeZhUBBMPVABxvyM5Z
+         uflnLmtvCgiuKdID1Xpd90vE9L2h9d/G0AksZ8Mg2Hlo1/2h7evMLCd01vYKyDMfSJwT
+         J1cEJEtjWUGhkPqnJPAeIfqrRq4b0S2nLgfTM7O9s4WtxPHmY2CKCyDcdd9BR91Q+nxs
+         kM3WMajrweuSYPNp9GvVrsS9RNL/sYBnU+FLbTflVXI0Fer9RWJnN4gKyNLaRcweitXr
+         IC1EOO/821jNW07Ds84ERksdqB9ETd9AsEuo2Ao/mguAXB/iTfBIzT//TCQXe2zKpOy+
+         GBeg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:suggested_attachment_session_id:content-language
+         :accept-language:in-reply-to:references:message-id:date:thread-index
+         :thread-topic:subject:to:from:dkim-signature;
+        bh=uK0UvmNKZG00Pxo0i1Dt9DJiDvPvrKKKnTZll3u4cK8=;
+        b=vEOTlhVuHWG7Q8eqA8jixRBGeMh34W4axnXmWe+M7s5qVyKWDQLE3ua4IJZJbN0o9p
+         Dffypgx/6WUijVaXf4yzMnAVg4Jj/fxw0yVS+MDG+lPg7QLsQkfhYpeZTWKy5ErQqKsN
+         SwStm/jMES8zcC38wzsf//9+IUYKiw6S3hunQHMoIw/x75AJmGQbh5UURIsmwYhhtgnd
+         PaI7tNe5aIssbcTb5T1mvsE2B4qyNYL5shnNBldIVQQWU5lydYn2fgE5ahok7//E4Ty0
+         XSAdA1NgEb0+A05ij/pR6tNu8bg2GErZF5OhdemV44/5T3bFgVqiIQZUyjdSPB8LobUS
+         UwtQ==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@colorado.edu header.s=selector2 header.b=aYxG3QPa;
+       arc=pass (i=1 spf=pass spfdomain=colorado.edu dkim=pass dkdomain=colorado.edu dmarc=pass fromdomain=colorado.edu);
+       spf=pass (google.com: domain of kenneth.carpenter-1@colorado.edu designates 2a01:111:f400:fe5a::723 as permitted sender) smtp.mailfrom=kenneth.carpenter-1@colorado.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=colorado.edu
+Return-Path: <kenneth.carpenter-1@colorado.edu>
+Received: from NAM12-MW2-obe.outbound.protection.outlook.com (mail-mw2nam12on20723.outbound.protection.outlook.com. [2a01:111:f400:fe5a::723])
+        by mx.google.com with ESMTPS id v80-20020a252f53000000b0063e7d013d22si542740ybv.522.2022.04.08.07.01.41
+        for <sauropoda@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 08 Apr 2022 07:01:41 -0700 (PDT)
+Received-SPF: pass (google.com: domain of kenneth.carpenter-1@colorado.edu designates 2a01:111:f400:fe5a::723 as permitted sender) client-ip=2a01:111:f400:fe5a::723;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@colorado.edu header.s=selector2 header.b=aYxG3QPa;
+       arc=pass (i=1 spf=pass spfdomain=colorado.edu dkim=pass dkdomain=colorado.edu dmarc=pass fromdomain=colorado.edu);
+       spf=pass (google.com: domain of kenneth.carpenter-1@colorado.edu designates 2a01:111:f400:fe5a::723 as permitted sender) smtp.mailfrom=kenneth.carpenter-1@colorado.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=colorado.edu
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=O3EsARwk+DXDMm5cEMJfDOA64Ec6mrJVUSniyXW8+zN0cZKlZGLon74rlGtjKMbVxHUAUYNjQK/ajzEzs3UhLlGigqLLKphvvY8ZUml+157GXB+Y0I61r6MK+XvdJMfpU+iRaEH7ZDb7NdZ55E/mBKsndktTcwavT4UuJ/8650sE1kwFzw6nBSLV+AnKQVY+Dyk0sQT3z9OpQo4tjEPjTDSK/7td7zGWVgvWpYpFMOq5YTihf8dUyp073JHF8WHB/rN7UZHNAm7US+4gLQ9XdOo57ewbWMWM+/XnLBpnhjmpr8aGUBU/GDVXc9BL3eGJt4D4yl42sa99TjeImyWH1A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=uK0UvmNKZG00Pxo0i1Dt9DJiDvPvrKKKnTZll3u4cK8=;
+ b=E9FuSQBPB6ptzUaG65k9csn9eDn1MMYFL/X3FUGr/DYfRbxk1YeJNoITl95kj7WZo0b96nz/WFzcSvDscqmGST9Endf13KxOK/U4bF3tpxerTTdEY5LCcK7dKx+3EngKrPa6LKVsF80hs0UXRA35+SvN/eN2dTVPZd+rtfu8/Defaq1uuuKZg0xhaEOqcEcKe15wkOhWqSN+lOscGafM/KwYhkNlseMqiKsTGQQRSgaVpq3xhl/EjFCYL52jdZ/h6JySmBKnQyWfLrA4MmbwTR4tJAk7gQq5wbyZe4uf4IKbFkiDfbwQS7PSOvYPbX/8peNOaKvw0C1z/fL2ZKlNoQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=colorado.edu; dmarc=pass action=none header.from=colorado.edu;
+ dkim=pass header.d=colorado.edu; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=colorado.edu;
+ s=selector2;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=uK0UvmNKZG00Pxo0i1Dt9DJiDvPvrKKKnTZll3u4cK8=;
+ b=aYxG3QPaFGPP2hN6ohJA0Fno8aePV1yU/wk8SkSnKfyj/NBeRRV+PIjyGA2Liv3d3J6ttvXSzqxiz4WKE9khUjwivz2Vke0HYZCXz4D/ZSovlBgkFt0fntpb1Er8718Ve2c7b83ozting8MeBCShQ6CZHlrZ6+F5104cqpUm1hg=
+Received: from MWHPR03MB2861.namprd03.prod.outlook.com (2603:10b6:300:11a::19)
+ by SN6PR03MB4303.namprd03.prod.outlook.com (2603:10b6:805:c6::24) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5144.26; Fri, 8 Apr
+ 2022 14:01:38 +0000
+Received: from MWHPR03MB2861.namprd03.prod.outlook.com
+ ([fe80::6cf1:7263:915:f5ce]) by MWHPR03MB2861.namprd03.prod.outlook.com
+ ([fe80::6cf1:7263:915:f5ce%10]) with mapi id 15.20.5144.022; Fri, 8 Apr 2022
+ 14:01:38 +0000
+From: Kenneth Carpenter <kenneth.carpenter-1@colorado.edu>
+To: Mike Taylor <sauropoda@gmail.com>
+Subject: Re: Concrete Diplodocus
+Thread-Topic: Concrete Diplodocus
+Thread-Index: AQHYSpcio++GcdoKjEeOLEzibgDmYazkmxNugABdYACAARIRZw==
+Date: Fri, 8 Apr 2022 14:01:37 +0000
+Message-ID:
+ <MWHPR03MB2861645F997A857842F011689AE99@MWHPR03MB2861.namprd03.prod.outlook.com>
+References:
+ <CACnMvBbYtwf5yx+px6CZgRciqju4voX2WVoqG8SFc9=ON=Tzeg@mail.gmail.com>
+ <MWHPR03MB286114F21733F9825628DD089AE69@MWHPR03MB2861.namprd03.prod.outlook.com>
+ <CACnMvBYRrG=peiF7h8a7e20Fc4c411ei9Rim1bB72_8mDceoHg@mail.gmail.com>
+In-Reply-To:
+ <CACnMvBYRrG=peiF7h8a7e20Fc4c411ei9Rim1bB72_8mDceoHg@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+suggested_attachment_session_id: 029e7421-3052-41a3-4116-007b52875bac
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=colorado.edu;
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 75ab3751-8e66-4c59-1b71-08da19684cc2
+x-ms-traffictypediagnostic: SN6PR03MB4303:EE_
+x-microsoft-antispam-prvs:
+ <SN6PR03MB43035EAEF8917BF6423D1FE59AE99@SN6PR03MB4303.namprd03.prod.outlook.com>
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ RYXC2Fc44sNpmh9bYSwRXKNSFFgSkp1BQ2A4EDmjtcqoTG81GF24LM/7CANaqVLRDRaRWmuX+yYMoFRixShj+3X2qi5RXYDhkPuZhvVk2290Shwsoyc1NSfJeRJ5w74EWoAUg3Qjf55ZWbOirVzsHzgSlsnEjWG1pQsOQ/KEq+EnFl7DjxL2elexeeHnS2gZDNxLajfNhiVfuJ97AxZ4DLgvzh1BPdufAkVDJty4Og9ZkZm6OGOujGhiNvty1mfFaOSuBASoXhb9XMQzjAPJNVQQlU2EfIPB/SquvujfOYRBXwptF619aADjIHRluz5jWqa/Stc91pdpqt7xJ/OWmpEqXdsGDcnAo4dmy43s0rf20iT5mxfWPqqmNmrg6Vy9lj1/wXpGRvytuezWLWeLoLqi2Cb2iMUeyoh5KSZ/YjyqKwUfDYcZATqJkr6qNR2yDGv3C1giNtS4f33xD4+QEs/4vXOJEx9qWBNd1+ZxXQwMUYEHZQ+8SblsodBckr+RpT3myuWI8XXklbdaE144m1XhjX+EM1jkAQTY2wLBjEdajuYmEVP/8RgHDXxFcYdDKOLG5MZD+zOIHwfE1Ngw7ksMzJVVF8ttGi8ewzhwV/NKVrQ8fuFrJlffxzEnbyMbHxgjRY0wA8d61nxKlhaU7ezqmL8T4MTQEweoFc8gl5tf0iDw1VMG4/IdFs69BMdU17CXV9TQyYh/UiYe7wFeN9zy2Faf2hYQ7nZiHGSrTgLsohw5DmjuXSbH72gKAnksXR4A6Tz918BF7klRSftJ71OvP9ioMg/TZ/XHzVoUmjA=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:MWHPR03MB2861.namprd03.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230001)(4636009)(366004)(76116006)(966005)(122000001)(64756008)(66946007)(66446008)(66476007)(66556008)(91956017)(8676002)(3480700007)(166002)(316002)(786003)(86362001)(38070700005)(26005)(5660300002)(186003)(52536014)(2906002)(38100700002)(8936002)(7696005)(9686003)(6506007)(508600001)(75432002)(53546011)(6916009)(33656002)(7116003)(55016003)(19627405001)(71200400001)(83380400001);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?Windows-1252?Q?KkZ9AehGU84R//fHiVgxgZZzoxXaq+UwgIB4qsToDe2xMVDoOIfmz83C?=
+ =?Windows-1252?Q?Br/HINmEnyPGSnTyDfghzSA8ZNnvHFOeXy85e1PhN8taIuwsxLKJTRHc?=
+ =?Windows-1252?Q?TNvDpz1yDrYrFOAdPX6f2XCy7cNjgauN2H3ziHLL1pPSLGZJd1cEH4dY?=
+ =?Windows-1252?Q?vCmluKIRnk4rA1rvqRaUFz5qQxaoB//3wlA9mCV9JnocDMgElpJWZtg7?=
+ =?Windows-1252?Q?06l1E/W2WXGWsjjSRBguvhVhAvoUEJ3bYHBMvnm72kpgxoNpoKntgCjE?=
+ =?Windows-1252?Q?A5XuzUsa6ZU0uR9fC3YLkFVdyX4V99u4DK6bv5GMCNdM4VItjZobU475?=
+ =?Windows-1252?Q?9jg78UubgnDDYYixDk0wAuLr7Xt7fKcjK82T5nfc86Zj2ZN4yLp9nlSv?=
+ =?Windows-1252?Q?II5T99mhdcfKDev0BcoKE9G487rFqRtFS7saNx5aA8QDxi9uTmbSMGXr?=
+ =?Windows-1252?Q?oJ7JNQYa1Y9w+l9IeYq7k688iF5RpsbUKt0byxO5wMZC2+8rtxrO0xaW?=
+ =?Windows-1252?Q?ksr2sS0tffXZSm7AmAtLyHTiQ6e4Z1VANx+zbZydqUpJ13PGIs7BcfCX?=
+ =?Windows-1252?Q?oU8bbqJVOg7UjIymdERVMC+637+ri6S2mP/A9L1UjXd80yeB7mqxmoD8?=
+ =?Windows-1252?Q?tEGn4iWnLSMxKeRdeLg/b2gyTHcCUPS/exHnq+IptsVUS2vRHxh+G1uM?=
+ =?Windows-1252?Q?yk6Kj4A1UNN/opgFPyqFfVb9JM1HsUtOMqnoPAyglLAwNL3ZuQX8Layf?=
+ =?Windows-1252?Q?Xi+pV7M5RpP4abkWUh109ImeJve5Qc95r2M5xQtagwNeZ7BlMLYf8CVs?=
+ =?Windows-1252?Q?3Z3uSUoVv6sepacEXXmGSE0G4g33Q0OBOX83PA80yYpl4K3hYREy8KRa?=
+ =?Windows-1252?Q?gk4GE8fqNcEQyuK7V6vpHcBec6spu1GVk2D8PoIwSYna5OzLUIjg0Vfi?=
+ =?Windows-1252?Q?R/7RsL33t9x0uM8R/S9fPuTwPsrx3sJnVT6u3OxVsT6bFV8j1w7qEkr7?=
+ =?Windows-1252?Q?1BTnjjKNTA3aGrO6X+Nfky9EboyAdBnHqWsAEK5J2h6UNFIdKg8NK8+0?=
+ =?Windows-1252?Q?HH3Uiu9F1NaqBmvGaNb31zyTDhVe9CqfKdpb9o/MGygKRPBmNR23xhBN?=
+ =?Windows-1252?Q?wVETcYRCG8X5MCKXKcmhgeHYOIenpPLyZDrLuj0i4TLQ7HDfc8xcgP4d?=
+ =?Windows-1252?Q?McQV/85cuhM+V806SguC4Iq0YPHAu1fbIoKJVkPrIBlEe+PGJE5h2CUV?=
+ =?Windows-1252?Q?vXRUBv1mEB2PYJZZHAcasxbG/vjpoJrZNpQb/7Au5zhadateQjPoGlBl?=
+ =?Windows-1252?Q?115V7PeR38qCTsIfaFumKg4X0IZ4phhZ7oljnpUjDW7oeIDF5yYe+ngV?=
+ =?Windows-1252?Q?PNjq82f8MN4lcVrGo7JifhKmOeuqaHcat4jmH8UYcwMQNXi/oYGz/KCt?=
+ =?Windows-1252?Q?43nTV2ctS65mfuRvrDthO4WdDiJNz1G+1o+j34V+csYk+1lTmdlvDHvo?=
+ =?Windows-1252?Q?I7dpIx57IFdFCfuqXgnFrmzFuDf7pKHRYIYU9YBW3R7ZoFy1/dNB6p/8?=
+ =?Windows-1252?Q?hPLhHL6rUDqY1C+nPm7f23RJwM42PqhXN/xQZdl0jdqXWEE13zaUkfjs?=
+ =?Windows-1252?Q?hIi1aD8Ke9xvlCjQNszeyun69xH2BCLaJBwiTg7tKrNfT0bozTn9T8Rm?=
+ =?Windows-1252?Q?xgS+g86Q3I7PZaDfpErGa/7/LiDFtfGOH24cABLaxKLxY3RTNyxjLXND?=
+ =?Windows-1252?Q?VDtaIldtu7sblDR/YDBtAL1yj04YSVhfa8tHInf12ANkPiW67A8Du/qt?=
+ =?Windows-1252?Q?XRZQhzuAYKiCH6iRAQHJ+t/jAWFhuBlulRMGQB6a8IJ99IvA+saEW9CY?=
+ =?Windows-1252?Q?+tck3HwNN9GQ0g=3D=3D?=
+MIME-Version: 1.0
+X-OriginatorOrg: colorado.edu
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: MWHPR03MB2861.namprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 75ab3751-8e66-4c59-1b71-08da19684cc2
+X-MS-Exchange-CrossTenant-originalarrivaltime: 08 Apr 2022 14:01:37.8616
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 3ded8b1b-070d-4629-82e4-c0b019f46057
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: EaqA06punwzeKMO+8pDD/J487HuoKn+arH+GRWorJBvhlTDjgUnUwbjxdgcSzyPi4C02KVbFRPh5WIxHKsOtAA==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR03MB4303
+X-StripMime: Non-text section removed by stripmime
+Content-Type: text/plain; charset="Windows-1252"
+
+Hi Mike, thanks for the corrections on the concrete dino history. Yes, I meant Field House. You jarred my memory on the cast Madsen did. As I recall, it was mounted above the admission counter at the front of the lobby. The concrete bones are in the basement storage on the USU eastern campus, where the big bones are (but in a different room). They were repaired and ready to be mounted. The grant was obtained by Carrie Herbel (now at U of Nebraska prep lab), and who did most of the work. Yes, you may quote or paraphrase these emails, but I have to agree that this is all tangential to the Barosaurus. Best wishes on your project.
+
+Ken
+Kenneth Carpenter, Ph.D.
+Adjoint Curator
+University of Colorado Museum
+Boulder, CO 80309
+(publications: https://www.researchgate.net/profile/Kenneth_Carpenter3)
+________________________________
+From: Mike Taylor <sauropoda@gmail.com>
+Sent: Thursday, April 7, 2022 3:31 PM
+To: Kenneth Carpenter <kenneth.carpenter-1@colorado.edu>
+Subject: Re: Concrete Diplodocus
+
+On Thu, Apr 7, 2022 at 6:29 PM Kenneth Carpenter
+<kenneth.carpenter-1@colorado.edu> wrote:
+> Hi Mike,
+> First thing, sorry I was an ass a few years back.
+
+Hi, Ken, thanks for getting back with such a comprehensive response. I
+am pleased to say I have no idea what you're talking about when you
+speak of being an ass a few years back. Whatever it was, it either
+slipped past me at the time, or has left no imprint on me.
+
+> Second, yes, I am retired. I retired at age 70 during the pandemic in 2020.
+
+Oh, I had you pegged as at least ten years younger than that! It's a
+shame, we're losing too many people who know so much about things that
+have never really been properly documented. Obviously Jack McIntosh's
+death was the biggest blow, but retirements can hurt, too, especially
+when someone so well connected retires. (I'm working with Lowell
+Dingus and Gene Gaffney on the Baro-mount paper.)
+
+> Third, about the concrete dinosaur: Shortly after the original Vernal Field Museum was opened, "Pop" Kay, who was a curator at the Carnegie Museum and who got his start working for Earl Douglass at DNM, offered the Field Museum the plaster of Paris molds of D. carnegii so they would have a dinosaur skeleton for exhibit (Kay often visited Vernal since he still had family there).
+
+Now some of this is covered in Untermann 1959, which BTW I have in a
+better PDF which I am attaching. The nickname "Pop" is new to me,
+though, I knew of him only as J. LeRoy Kay. BTW., do you know what the
+J. stood for?
+
+> When the molds arrived, they were in pretty bad shape having been used to make all those plaster skeletons of Dippy. It is not clear who made the suggestion for a concrete Dippy. An article on the casting and mounting was published (attached). The Field Museum posted a notice in the SVP news bulletin offered the plaster molds to who ever wanted, but I have no idea who took them.
+
+Assume you mean the Field House (Utah), not the Field Museum (Chicago)?
+
+> Regardless, at this point they disappeared.
+
+It seems, based on communication from Ilja Niewland, that the original
+molds made their way back to the Carnegie Museum. He writes "The
+original moulds were thrown away somewhere during the 1960s (nobody at
+the CMNH could be more specific than that)."
+
+> Fast forward to the 1990s: Jim Madsen convinced Steve Stroka to allow him to dismantle the Diplodocus to mold and cast.
+
+I don't think that part can be quite right. Steve wrote to me
+recently,: "The mount we have was up at the old building when I
+arrived in Feb 2000, but I was told it was put up in the early 1990s
+(1992) or possibly later, but I cannot confirm dates." I have a copy
+of the 1989 contract between Dinolab and the State of Utah, and it's
+signed for the state by Jerry A. Miller, Alden H. Hamblin and Richard
+L. Barker.
+
+> Jim would then have a new skeleton to sell. In return, the Field Museum would get a plastic cast for display, which is the cast in the lobby of the new museum. When the dismantled concrete specimen was returned, it was in bad shape and went into storage.
+
+That is surprising and disappointing, as part of the 1989 contract was
+for Dinolab to "Stabilize, restore and seal the concrete casts of the
+individual bones". I'll attach the contract, in case you're
+interested.
+
+> Meanwhile, the museum moved to a newer building, but the original cast was left behind. When the city decided to tear down the old museum, Steve contacted me if we would take it since it was state property "so had to go to a state repository. It sat in my garage for several years, during which time we got a state museum grant to restore it. I still have no idea how some of the damage occurred on some of the larger, robust casts. The plan was to remount it for display outside a new museum in Price, which was in the planning and fund-raising stage. However, everything got torpedoed by the main USU campus: I was forbidden to "fund raise on my own in state and the land that had been donated for a museum was returned to the donor without my knowledge; I found out a year after the fact. At this point, the chancellor and I kicked around the idea of mounting the skeleton on campus as a way of fund raising. However, after giving the matter much thought, I decided against it since mounting and later dismantling to move to a new museum would damage the cast. So it currently sits in storage waiting for a new museum building where it can be displayed outdoors.
+
+All of this is new to me, and really interesting, thank you! I'm not
+sure if my co-authors on the Baro-mount paper will consider it too
+tangential, but would it be OK to cite suitable extracts of this as
+pers. comm.?
+
+You say "during which time we got a state museum grant to restore it."
+Did you in fact do so?
+
+And "it currently sits in storage" — but where? Hopefully not still in
+your garage!
+
+-- Mike.
+
+
