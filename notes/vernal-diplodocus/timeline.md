@@ -33,5 +33,5 @@
 
 * Gangewere, R. Jay. 1999. This is huge, really huge. _Carnegie Magazine_ July/August 1999:12-18.
 * Madsen, James H., James LeRoy Kay, Jerry A. Miller, Alden H. Hamblin and Richard L. Barker. 1989. Agreement between Dinolab, inc., and the Utah Field House of Natural History State Park. Private agreement.
-* Untermann, G. E. 1959. A replica of Diplodocus. _Curator_ **2(4)**:364-369. doi:10.1111/j.2151-6952.1959.tb00520.x
+* Untermann, G. Ernest. 1959. A replica of Diplodocus. _Curator_ **2(4)**:364-369. doi:10.1111/j.2151-6952.1959.tb00520.x
 
