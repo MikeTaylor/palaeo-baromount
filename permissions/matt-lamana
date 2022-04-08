@@ -1,0 +1,275 @@
+Delivered-To: sauropoda@gmail.com
+Received: by 2002:a7b:c1d5:0:0:0:0:0 with SMTP id a21csp2334721wmj;
+        Wed, 30 Mar 2022 16:22:01 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJz9AoCR5HSxdfZL+UjUGTURtH0kpcmSHhlUcrhwQqg8ksL2SuW3JGEq/a0Z3FrzG5kVubfc
+X-Received: by 2002:a05:6402:5210:b0:419:d802:626e with SMTP id s16-20020a056402521000b00419d802626emr13984261edd.11.1648682521740;
+        Wed, 30 Mar 2022 16:22:01 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1648682521; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=rcVwKMTpf2R1U7TNtxEuqAsI2cwW1tpyA6EdPPrU2A040LENY6K7BAs7pgYkp8YNpB
+         2hsh7Jty/S0OMMxpQTsOaPREG8Kjx7tmL9wA+txPy7v3vNHkzBhV/z1TzyXGl+BOHqyq
+         XHD5o54p+P+S5bYRPpx/mEXh0LebhBDhz2DSl9CQKU7fWFCFWRmxMbE6/78arTmDjEsA
+         aP67L4xpYJOxuMIDINqxvby/qeQE58RdDrfmXRh8l6jzjM0I5fvoJQBqQ18FcHHNkoS8
+         k60W79lV/oUxGZR7p9NLrJp088SaFQ8zAAVNFZJjbGxmwOwp2SIZlCDevwLp+EW7X6az
+         7J3g==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:in-reply-to
+         :references:message-id:date:thread-index:thread-topic:subject:to
+         :from:dkim-signature;
+        bh=Cq8FeLgV5NeS2/BCzHMkt3DuU+VakY2GEfubRfSUE3E=;
+        b=MAzeQBk/ZC4fEtWpG2EvQ+8PSUz7lxUQZsLoXimRHZFNZVdLIzgTzRMsxcoxnzowbn
+         hMylxtFLk807fup8sLT9IglBKXpy21KvPQrZD1+wTqH+6vV8zHNtuduNnZ64nxKWS0Kh
+         Q2B6IRjYUSOHwj8OpUUINEOrjzZjI10+y0oxn3nDHv+hL9dIm2zK+UBgp3trF2GBozwn
+         BRc0b9Ws5WQtpaECPGI2a8540FLj8G6QMFjf+G8+ThTf0ax2HBpzTz6u4twQFJ14pilv
+         VMHfYr2SXsqh4KQd98ZBWSMQvZ4brQttMIxGDeZDNYJZl1odXjYtI9r/g3Xrttt33WH9
+         OKMA==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@carnegiemnh.org header.s=selector1 header.b=Sm2+AvyS;
+       arc=pass (i=1 spf=pass spfdomain=carnegiemnh.org dkim=pass dkdomain=carnegiemnh.org dmarc=pass fromdomain=carnegiemnh.org);
+       spf=pass (google.com: domain of lamannam@carnegiemnh.org designates 2a01:111:f400:7eab::731 as permitted sender) smtp.mailfrom=LamannaM@carnegiemnh.org
+Return-Path: <LamannaM@carnegiemnh.org>
+Received: from NAM11-CO1-obe.outbound.protection.outlook.com (mail-co1nam11on20731.outbound.protection.outlook.com. [2a01:111:f400:7eab::731])
+        by mx.google.com with ESMTPS id v29-20020a50a45d000000b00418c2b5be17si20161790edb.249.2022.03.30.16.22.01
+        for <sauropoda@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 30 Mar 2022 16:22:01 -0700 (PDT)
+Received-SPF: pass (google.com: domain of lamannam@carnegiemnh.org designates 2a01:111:f400:7eab::731 as permitted sender) client-ip=2a01:111:f400:7eab::731;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@carnegiemnh.org header.s=selector1 header.b=Sm2+AvyS;
+       arc=pass (i=1 spf=pass spfdomain=carnegiemnh.org dkim=pass dkdomain=carnegiemnh.org dmarc=pass fromdomain=carnegiemnh.org);
+       spf=pass (google.com: domain of lamannam@carnegiemnh.org designates 2a01:111:f400:7eab::731 as permitted sender) smtp.mailfrom=LamannaM@carnegiemnh.org
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=XTXN9OgBvaXw08Zda+gJx1k+ybwLghN/1tmP3Y+v4G3scacTEBNANsxVR2iqDXXckgcRyeeDyCTc+LnIueeDuwPQzuffEGdxzP1Xe/ttYXXw4ENDcWoaIQzQf56mCu3TWAgRUIcNj6zxHRquI353Fk9TAdWEZQcE+5RXZ6MVK2wCVTFbU6aR2SRzfwQTvOTBaf/cVJF2bZeV4J7f075OoSJlfk98Cgqd0atFqLX+zqQ6WOprrlr6Y27APMVxgrtXe0DEAQMVni/Qcwrt0OXTQPAGV1PiDBSDyaRknkZFdaSu/kvduigLK4b2eFREY8+XnAkuMqBnSudpsI3h+8/fqg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=Cq8FeLgV5NeS2/BCzHMkt3DuU+VakY2GEfubRfSUE3E=;
+ b=WYtsl8Q8U57sMFDMgpYgqsz7OgoU2s0TAn+fLHQmzGWLAdDLKd6b4XamqlS1aBGWzG8gYb+6e+pcQHgOt3/J0aQVNuDNozN54P/r+/Jtsn06LNlJnTxJ6l1cs6CI5zh8wXaoIq7Y/+cczPxxN1yPkTq432u6z10GPh3mARxlh9hxbAcQPNYTJG0+Gg+FGg4uG99si9VeL9dYCYQpWYnw99b5SJFhPT00a+BROXq6izp8ncI6IJvc9EFPHiKCQfv3lvBgtgdUCg0g2ndSEYo4r4v1eUpKmufUjwUbvYxWGoooY11I4o4978qeeREnwe0D6p49aEGPiGIzWahVPQIzYQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=carnegiemnh.org; dmarc=pass action=none
+ header.from=carnegiemnh.org; dkim=pass header.d=carnegiemnh.org; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=carnegiemnh.org;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=Cq8FeLgV5NeS2/BCzHMkt3DuU+VakY2GEfubRfSUE3E=;
+ b=Sm2+AvySPcqN3E2UqRZvzxsntTxPZQGIZ24U3rf5TjeRPgxCgshVq1qpGXneyqyPJs54990eTpmW/p/CPZqLoVUk1v0Ekqv9idH1AOpA/LljNA7hsKVz2lwqEUg4h9j+xQWWMaSdXil89rfqfYoUv/9HmouXlOEM0nPlis8xE0c=
+Received: from CH2PR02MB6475.namprd02.prod.outlook.com (2603:10b6:610:35::11)
+ by DM6PR02MB6059.namprd02.prod.outlook.com (2603:10b6:5:1f7::13) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5123.16; Wed, 30 Mar
+ 2022 23:21:57 +0000
+Received: from CH2PR02MB6475.namprd02.prod.outlook.com
+ ([fe80::1c8:efd6:b248:7d63]) by CH2PR02MB6475.namprd02.prod.outlook.com
+ ([fe80::1c8:efd6:b248:7d63%7]) with mapi id 15.20.5102.022; Wed, 30 Mar 2022
+ 23:21:57 +0000
+From: "Lamanna, Matthew" <LamannaM@CarnegieMNH.Org>
+To: Mike Taylor <sauropoda@gmail.com>
+Subject: RE: Composition of the Diplodocus mount
+Thread-Topic: Composition of the Diplodocus mount
+Thread-Index: AQHYRFJBFSfmdFmr2UmIxcttrmPTs6zYhbd6gAABKkA=
+Date: Wed, 30 Mar 2022 23:21:57 +0000
+Message-ID:
+ <CH2PR02MB647540075DC5CCDEF2605666D81F9@CH2PR02MB6475.namprd02.prod.outlook.com>
+References:
+ <CACnMvBbLYyX6=0Shf18ZhFgo+Mu4fgyVg_2-NJEt2Sja+2z0Eg@mail.gmail.com>
+ <CAPthEx9rrgdNaECo8QPxFTDgJiQ4yAFs3_qBggc5Kc=0Mb4UuQ@mail.gmail.com>
+ <CH2PR02MB647510F5A6671C8AFA57E84ED81F9@CH2PR02MB6475.namprd02.prod.outlook.com>
+ <CACnMvBbuT-0d__-Uix-qm4gOnkciu+iWtEFR+VZgfQrtqOkaDA@mail.gmail.com>
+In-Reply-To:
+ <CACnMvBbuT-0d__-Uix-qm4gOnkciu+iWtEFR+VZgfQrtqOkaDA@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=CarnegieMNH.Org;
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: e596b134-6d42-4efc-9d9e-08da12a415be
+x-ms-traffictypediagnostic: DM6PR02MB6059:EE_
+x-microsoft-antispam-prvs:
+ <DM6PR02MB605952F4C10CEDE53EB2222AD81F9@DM6PR02MB6059.namprd02.prod.outlook.com>
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ Cs/vcOr6O0RAlC7d5AE7E3RfqUvI6BVeLeCJjapaYIrCrQKp+LtsLgbFZkZIndua2fyjr1ihViQKZVohiCCzJQisHY1OZS5wHvTjBc4kRKME6GhVrs9D/nFd4dH9A/A0ChNNxN6LR4mZ+0t9H+6OPDPt6gOiLYyx+grNMyGqsYyaZSFeUanxB9rUZq9vxRxmcoLATpg/65oGwmQmECLl2hq6vfxUCJ9sdjK9JZJRNxmUk4wJEs9vTR5tyIUnMsbScqR5Tw0rIt79ejcXGtgsR3AG8Gu4K0CIGsyI6i0ZnjXP7tV56aiDMWMVjf4XNnMW5oBGBwdRuAfqJ+a9UrKf+HPZK0oTvDVQ7gdL11OTLgKM7zjUT+GbOyxQpVzAPt82ghbUyjoJsHUtrkNGAu41wKE0gRNmYFEFUbArBm6niq+Q16PgxqT3BGtwewDzYHK8mIV0ReTFOf7lbf6V13SF1F0C42pqyieanELzTqEwtVEcY5oD99uHldJ3qGhvI5ZB5G6Blz6dzWFXOoMT4QGIQiMToAnrM8dg9BXkwKLj8jRCB4eVnXrUmoi3MlombciuGWaW5qlIk9qwOFWCYlJMwmSFGSiYxDl0Z2r9LWONt0/CcUd+Yb/3mK1uh2iNKMrvXxHkuzHtol9Jt+9CwRxMgVx2ciwkFYI3Qcre9LiDzLVZ4RRZN0PK/1MbkrrdBAjYN5sBtVVfbHnZRNAEb9uIW8d/apt0msdNP4F7RBjTP1+QiOMNRBkpfl9ntIiPRjGkt4sQdQsDnBJIWvQ7RqYPltiFdVsFxKdjN6lJ0K6RNrY=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:CH2PR02MB6475.namprd02.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230001)(366004)(166002)(71200400001)(186003)(8676002)(76116006)(64756008)(26005)(33656002)(38100700002)(55016003)(66946007)(122000001)(52536014)(66556008)(66476007)(66446008)(86362001)(316002)(8936002)(508600001)(6916009)(966005)(5660300002)(6506007)(38070700005)(83380400001)(2906002)(9686003)(7696005)(53546011)(786003)(40140700001);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?utf-8?B?Nm03R1YyNVdMOHlMZXFzM1N6dDlGYWJuY2lhbEM5b3JXNWZYSUFHbU1QeXZj?=
+ =?utf-8?B?YTNrL3NkSm14d2c2eHhyd0dVV0gwc2Rud3NHelVEM0ZFTWpTbHF6UnM0N1o3?=
+ =?utf-8?B?VSsyTkNrZHVTcUtqeFdoYzRsZlMxTnNqTGFqVW5jOTdFV3k5dW10RkZNQUpu?=
+ =?utf-8?B?dlhqSE1pRldOTDNEQytma1BHNU4rQW5yOFFTdCtrZUU3WTlTTGJpdlpHdS8y?=
+ =?utf-8?B?eWxIRndpellyYWFQR1FuaU1yeDNjamdxbHJnVklXVlZ0RElFQ3ZwemZyTnpT?=
+ =?utf-8?B?Uk9IbDBncmFGckNNNEhDSUh0NEorY2JWb1FYZTdlTzFjWERYODdKa1NkQmxa?=
+ =?utf-8?B?RExWcDRla250MytOWEcwdGorUDExM3JtUHplTk9xOW8wRE9oZHQyQStUQUtu?=
+ =?utf-8?B?UmNkOHFpQlhEUkRuaDRBTFhOUzMvZ2JpcVRqcmxEaXBZeHgyMGlXZU5xTXBm?=
+ =?utf-8?B?dkM1eVIwYkNXV3BCMkk5YjRQVFFwQXRJUFM5alF1YkMyQm4wRWI4VE40YWEy?=
+ =?utf-8?B?aGFDeU1NQkRDNk9OT3dDNUhmS2xrUGJ3WHR5ZEpjOFNTQkx0U2pyMWtvQmFr?=
+ =?utf-8?B?Y3JjZm5xV1FkemVHSGUzT01YYnFLZ2pDWGpyT2VtMlkwZWxHc3ZvZ3U1U01I?=
+ =?utf-8?B?dDh1V2wwZjZUbnc3WFJELzNEaU5wQkNmeTdnK1pRZHZBc21jWmZVNVJPRDJ4?=
+ =?utf-8?B?cjBHTk9EV25HR3BPRWNSV3RtWUxDWFVCV2NXNnVSSzhSanlyUndKTkxzcHNS?=
+ =?utf-8?B?amRUUW1ML2t6YUE5bWttZXkzMFJDLzNTYXRlRFFBVnI3TWt2R3o0SnBJNUc2?=
+ =?utf-8?B?a3QyOTJvenBYWlJ4WUhMb25hZU8vbDU2RjNtMFlXTzNKcXp3Um81SnBhd2FK?=
+ =?utf-8?B?VmhydjBSNXRvMWhvSHExRnZoRFM3dWQvTXo5Z3psQ3VieFQxR3NCczF2SXNM?=
+ =?utf-8?B?dDJXKzZRdkR1S2lZTWpIV3VLQWtncVBIcElnUE5seXorYUMwb0Vkdm9UcjFn?=
+ =?utf-8?B?N1JuR2NyOCtjS3FHS1lCTnhtRWVvaVQ5di9ZaUJiK0hMdytmSW5MZWdpa2dH?=
+ =?utf-8?B?Mkc1TUYveDdwZVFNbnhPbFRTN2twRFIyMTdleloyZDdPd2duN2VuY3FoTisz?=
+ =?utf-8?B?UEhuY21JdWFJT01MK1R2QXRtOHUvQ3c5Tk1xaDQ5M01BRnN4S1N1UWZTaS9M?=
+ =?utf-8?B?L1pkRm5mZmw5WFhicTRXZXFFaUhqb2F4TmhCb1dLUXZ0MUVvMm5IaytJcjQx?=
+ =?utf-8?B?ZlY3L1RTRkNMNExHSXFzODVNdnVEWlRWMjVvcVZQYUIvb2VGZXlHNldpcFRJ?=
+ =?utf-8?B?Qk1pWjFNbmQ5NmZQSll6TWg1cjFxeGE5eW9BMUVmaUttMXBHbFUva2pLL1o5?=
+ =?utf-8?B?UUVIb1hPS0ZDbGxmWlBYRnE3UU04Sm1VWHZXZlkvRXZ2NVFVT0l2bXp4eEw3?=
+ =?utf-8?B?NXU1QlVDQWZvbnBrMkh5NUw5TklMYmZmb3hSb3ZlRUZiL1BmMDZJRVoxWWhP?=
+ =?utf-8?B?T3NZS2xSVlNMYlZDT0ZkWWxwZGRId1QrQmF4YlkxM2NmQndmQ04ybEJTZGV1?=
+ =?utf-8?B?eWRQVzI2Wmhxc1lRNTcxNERXaGRQR1ZVWDRUMTNTdDdHYThKZjJOazcwN05B?=
+ =?utf-8?B?WHVGVTRPRHZQQ0F5b0YySmlwWi93ajh4OHRpa0lOeHBQWlpIYmZ6NVlUd29C?=
+ =?utf-8?B?YldrY2ZGVjJ0M2pubHNUNmlCY2FlbUR4ckpCVDM2Q2UwKzJtRlhSQmRTb1pX?=
+ =?utf-8?B?N2M1cmwzUDV5MmpmRGlmMEtLek1ROEhiNXdQazVtYkdjMkEyU3JHRzNXNGNV?=
+ =?utf-8?B?cnRNZGJUNDNQRTZIeDcrdkZaL1MvYWR4N1VDVEt5ZCtDdWxvYyt5S2JBMGVY?=
+ =?utf-8?B?U3ZwUFdNUUlBUWQ1Uk9jeFk0dTBZejF4dFZsVEI3cEFqQVFSUE96ZTJIVTkx?=
+ =?utf-8?B?aE1CR0lOajBFUzF5S083blhINjlwNzRVT3FpeERYQ0VzazJJV0JNSjNscElT?=
+ =?utf-8?B?T0JRSFZRWUJ3VGNwNm0yNXVzWXBjVExWZU1hQkFSaFplMVlQeU5DaUNRWXJZ?=
+ =?utf-8?B?dUJ2c1IwNE4rUjdsb0g4ZjVVS3ZaTjluWC96Qm1HMm8zWStlWWpvd3BvODgz?=
+ =?utf-8?B?ZmtpTURJcFE5WW9UblRMVXd6ZWd4SUNSYjA1NUltTDN6NFNGMmc5SFMrK2FO?=
+ =?utf-8?B?OXlJV1IrQ3YzZDdNa0lXQkxXdDRLSkVqK3pTcmdvbTRuc1RLb0wrQVpPbVRo?=
+ =?utf-8?B?OVRYMlNrT3NDdmY3VGZ2NDRkVkJKSUpkN1VUZWFTL29Jb2o0UkQxM0k5K0hk?=
+ =?utf-8?B?VitDZjVHNXdUcXc3MlRmQ3FNcVVKRCt2TGxqdm5NWmIvL0taU3lzSXpjMnJY?=
+ =?utf-8?Q?U6rVKKYCYHAypKYM=3D?=
+MIME-Version: 1.0
+X-OriginatorOrg: carnegiemnh.org
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: CH2PR02MB6475.namprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: e596b134-6d42-4efc-9d9e-08da12a415be
+X-MS-Exchange-CrossTenant-originalarrivaltime: 30 Mar 2022 23:21:57.4315
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 9b45694f-7f01-41cc-9f79-15bf5b9b2a16
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: PmrqedeplFS+mMdc3uKXFNUiDyclIMuSPV8KuwcbMuHJVYmyrf9j2jy2yf5u5BBSzGhFKlIGBz39RURcZvGqiL5WY6ZEiTD9HcmRZjggc1c=
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR02MB6059
+X-StripMime: Non-text section removed by stripmime
+Content-Type: text/plain; charset="utf-8"
+
+Sure thing Mike. Also, if you want, I can try to find additional documentation that might indicate when (1) the original replica skull was swapped out for a cast of CM 11161 and (2) the original manus were swapped for casts of CM 662. Please just let me know.
+
+I take it that, as I suspected, our later, mid-2000s modifications aren‚Äôt of interest for your current (rearing Barosaurus) project, but if you want more definitive info on those too (rather than my just trying to do all this from my [hazy-ass üòâ] memory) I can try to hunt that down as well. Again, just let me know.
+
+Cheers!
+Matt
+--
+Matthew C. Lamanna, Ph.D.
+Mary R. Dawson Associate Curator
+Section of Vertebrate Paleontology
+Carnegie Museum of Natural History
+4400 Forbes Avenue
+Pittsburgh, PA 15213
+Office: (412) 578-2696
+Mobile: (412) 592-3361
+Email: lamannam@carnegiemnh.org<mailto:lamannam@carnegiemnh.org>
+
+Museum webpage: https://carnegiemnh.org/research/matthew-lamanna/
+ResearchGate: https://www.researchgate.net/profile/Matthew_Lamanna
+Instagram: @mattlamanna
+Antarctic research: http://antarcticdinos.org<http://antarcticdinos.org/>
+Twitter: @antarcticdinos
+Pronouns: he, him, his
+
+From: Mike Taylor <sauropoda@gmail.com>
+Sent: Wednesday, March 30, 2022 6:40 PM
+To: Lamanna, Matthew <LamannaM@carnegiemnh.org>
+Subject: Re: Composition of the Diplodocus mount
+
+Thanks, Matt, this is all really helpful! I was familiar with the McIntosh account, but as you note it's not the whole story by a long way. Your additional notes are just what I was looking for. May I please quote parts of this as pers. comm.s?
+
+Much appreciated,
+
+-- Mike.
+
+
+On Wed, Mar 30, 2022 at 11:29 PM Lamanna, Matthew <LamannaM@carnegiemnh.org<mailto:LamannaM@carnegiemnh.org>> wrote:
+Hey Mike,
+
+Nice to hear from you again. I hope all‚Äôs well.
+
+Does the account in Jack McIntosh‚Äôs (1981) catalog of the Carnegie Museum dinosaur collection (attached) answer your questions? It‚Äôs under CM 84 on p. 20. Note, however, that Jack‚Äôs account pertains to the mount as it was originally constructed back in 1907; some additional modifications were made (not by me) later in the 20th century (e.g., the skull was replaced with a cast of CM 11161, the manus were replaced with casts of those of the former CM 662 [now the holotype of Galeamopus hayi at the Houston Museum of Natural Science], etc.). Still more changes were made during our remount in the mid-2000s (e.g., the CM 662 manus casts were replaced with scaled-up replicas of a cast of the putative Diplodocus carnegii manus described by Bedell and Trexler [2005], ten-ish sculpted posteriormost (‚Äòwhiplash‚Äô) caudals were added to bring the total number of caudal vertebrae to ~83, and [if memory serves], the humeri, radii, and ulnae were replaced with replicas of cf. Diplodocus specimens at Brigham Young University [specifically, I think they‚Äôre scaled-up sculptures based on the smaller forelimb bones BYU 4742, BYU 4708, and BYU 4726]). (That said, all the mid-2000s changes substantially postdate the construction of the rearing mounted cast of Barosaurus lentus at the AMNH, and as such probably aren‚Äôt relevant for your current project.)
+
+Hopefully that helps, but if you have questions about specific bones in our D. carnegii mount then please let me know and I‚Äôll do my best to answer them. Good luck with your work!
+
+Cheers,
+Matt
+
+ps‚Ä¶ I assume ‚ÄúCM 82‚Äù in your email below is a typo, and you meant the D. carnegii paratype CM 94 instead.
+
+--
+Matthew C. Lamanna, Ph.D.
+Mary R. Dawson Associate Curator
+Section of Vertebrate Paleontology
+Carnegie Museum of Natural History
+4400 Forbes Avenue
+Pittsburgh, PA 15213
+Office: (412) 578-2696
+Mobile: (412) 592-3361
+Email: lamannam@carnegiemnh.org<mailto:lamannam@carnegiemnh.org>
+
+Museum webpage: https://carnegiemnh.org/research/matthew-lamanna/<https://linkprotect.cudasvc.com/url?a=https%3a%2f%2fcarnegiemnh.org%2fresearch%2fmatthew-lamanna%2f&c=E,1,60tFTG2sHdOJattcDFlBUbDp486z60lG2tVin5c5y_tjmxzXBQhljrKlLzNmQKny3LigRJ-q6QJsbS5L8RXW_WzChWcvlC-Xs0_7wqLILZ52WA,,&typo=1>
+ResearchGate: https://www.researchgate.net/profile/Matthew_Lamanna
+Instagram: @mattlamanna
+Antarctic research: http://antarcticdinos.org<https://linkprotect.cudasvc.com/url?a=http%3a%2f%2fantarcticdinos.org%2f&c=E,1,5BjtIQ6sgT6jjDudcSSWwDX7ngl-Ws0uCkC2P8IvJu8FNEbgDsPyOU1a1EBj734NX9nxMlpO3U2D6WichMoo34oejzHgv8APcXF8aFqVfgeRG_bahzHFgmX1_IA,&typo=1>
+Twitter: @antarcticdinos
+Pronouns: he, him, his
+
+From: Matthew Lamanna <matthew.lamanna@gmail.com<mailto:matthew.lamanna@gmail.com>WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+>
+Sent: Wednesday, March 30, 2022 12:22 PM
+To: Lamanna, Matthew <lamannam@carnegiemnh.org<mailto:lamannam@carnegiemnh.org>>
+Subject: Fwd: Composition of the Diplodocus mount
+
+
+---------- Forwarded message ---------
+From: Mike Taylor <sauropoda@gmail.com<mailto:sauropoda@gmail.com>>
+Date: Fri, Mar 25, 2022 at 8:45 PM
+Subject: Composition of the Diplodocus mount
+To: Matt Lamanna <matthew.lamanna@gmail.com<mailto:matthew.lamanna@gmail.com>>
+
+Dear Matt Lamanna,
+
+Do you know if there is a published account anywhere of the material used to fill in the gaps left by CM 84 and CM 82 in constructing the mounted Diplodocus? Failing that, are there notes anywhere at the museum on what was done?
+
+(My reason for asking: I'm working on a paper about the AMNH's rearing Barosaurus mount, and much of the material not present in AMNH 6341 was cast or modelled from the Carnegie Dipldocus.)
+
+Many thanks,
+
+Dr. Michael P. Taylor
+Department of Earth Sciences
+University of Bristol
+Bristol BS8 1RJ
+ENGLAND
+dino@miketaylor.org.uk<mailto:dino@miketaylor.org.uk>
+http://svpow.com/<https://linkprotect.cudasvc.com/url?a=http%3a%2f%2fsvpow.com%2f&c=E,1,1m4uQTOrOhKlUZ9JAKYcoyeI-tKY0kME7j22K8_O0IHZxiFq8llt1I4NFNf_PkRU5o_uz9FgUwW-sT39pDxvORcEvKaoVLrOCT8cWFGq6ZXjNFA,&typo=1>
+@MikeTaylor
+http://orcid.org/0000-0002-1003-5675<https://linkprotect.cudasvc.com/url?a=http%3a%2f%2forcid.org%2f0000-0002-1003-5675&c=E,1,PeyrAVRKed4wZMQqxEUxBjwiPxITajNC4RWckK6rnRlS5u90T0uOns5XBFuBvafhhkBvMhFWoxKrsKEHrgu1_zvk02rgYkKyDr9JAmLlrDdUnfIyEK0,&typo=1>
+
+
+
+The information contained in this message and/or attachments is intended only for the person or entity to which it is addressed and may contain confidential and/or privileged material. Any review, retransmission, dissemination or other use of, or taking of any action in reliance upon, this information by persons or entities other than the intended recipient is prohibited. If you received this in error, please contact the sender and delete the material from any system and destroy any copies. Any views expressed in this message are those of the individual sender.
+
+
+
+The information contained in this message and/or attachments is intended only for the person or entity to which it is addressed and may contain confidential and/or privileged material. Any review, retransmission, dissemination or other use of, or taking of any action in reliance upon, this information by persons or entities other than the intended recipient is prohibited. If you received this in error, please contact the sender and delete the material from any system and destroy any copies. Any views expressed in this message are those of the individual sender.
+
