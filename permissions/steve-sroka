@@ -1,0 +1,139 @@
+Delivered-To: sauropoda@gmail.com
+Received: by 2002:a7b:cd93:0:0:0:0:0 with SMTP id y19csp322405wmj;
+        Fri, 8 Apr 2022 13:29:27 -0700 (PDT)
+X-Received: by 2002:a05:6902:114b:b0:634:6f24:afc2 with SMTP id p11-20020a056902114b00b006346f24afc2mr15054958ybu.229.1649449767306;
+        Fri, 08 Apr 2022 13:29:27 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1649449767; cv=none;
+        d=google.com; s=arc-20160816;
+        b=IxX2JZ6qR+yDg3DTZgNSRkp5hxZgwxI3WuJ+mWXoyH8WUdT4sS+Afrn+VYbQJHYqeh
+         t1h3xEvbRNpc0C0ONJShPYhWQ++u2RIdK42BR+6yi3wpesIkrhDscl9LIwVEcOaldWKB
+         u7r9Nbljkv/CoCcfxVUIVXeAdVh5TR8mdzKJTmbnM0iteppAF47EATA7cm3sL2IfJH1l
+         mZuGGqLhjXSX+x3qugi0JaGHPK76IDvXOYoDL0G1XuPhkDo7sqBKwEgtw3hwn4rbP7BC
+         OtwSlOZRwI8/EzKwR8TasYRTw0g4VdlYEJwdiUnpePFKxY0PpIu1deYdTWFoQwSNnxf8
+         oOmA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=NplvR947nihjmRu6+AoAeVhgLrVbTTidkSvw5n7GrTc=;
+        b=Qis8y65w3MXzqiBF5yXp9MskZn2sZxOm7QL2PG9fPE27OhHqJM6cuSb63E0MWMNded
+         istcAmX5E5bmOHY2kirrJVi5bmsy9nmKm9FBdOUnLVWHOG6IykHxaSTvD9jALiCNR6KV
+         ccr5UyEDc1B0GeEhLl3FAwDEdcPKWa0kksi/NFlZArMvMdXh9mRi/6e/jCjFshGZg3rr
+         NdIfutJ7F+I/QvpERowHg4payIu9wqeYlDB/0j6eN4mTTVRP06bp0pnZTPEpNuIo6pf7
+         4i4ay2d2Jmdy/WLCtu/9ajBXetR8IefryDVX1bb6bNcdTiPbljO74OfqGOO9ncuTQril
+         1sTA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@utah.gov header.s=google header.b="QXYis/1R";
+       spf=pass (google.com: domain of stevesroka@utah.gov designates 209.85.220.41 as permitted sender) smtp.mailfrom=stevesroka@utah.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=utah.gov
+Return-Path: <stevesroka@utah.gov>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id y17-20020a259291000000b0063dbc226223sor936342ybl.166.2022.04.08.13.29.27
+        for <sauropoda@gmail.com>
+        (Google Transport Security);
+        Fri, 08 Apr 2022 13:29:27 -0700 (PDT)
+Received-SPF: pass (google.com: domain of stevesroka@utah.gov designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@utah.gov header.s=google header.b="QXYis/1R";
+       spf=pass (google.com: domain of stevesroka@utah.gov designates 209.85.220.41 as permitted sender) smtp.mailfrom=stevesroka@utah.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=utah.gov
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=utah.gov; s=google;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=NplvR947nihjmRu6+AoAeVhgLrVbTTidkSvw5n7GrTc=;
+        b=QXYis/1RkcDqoky4HWAl2xgMf/FwPX7wCtQ3FKdz5EI0/KNa2JK3RjQs0Me6gWmcvc
+         3B29s58U0RD932oLYE08DDlDUTxDm0iurIIdFwmDZH98BNjLH0KmjS9gIUal6npLLbBb
+         AH0fw882rt4oY055aqsH73R5WmDImwnHRs7pLi1or4Ucrx85q1GHyLaQvQ5SllgLnX13
+         JM8Gp/zaxG8RuISm4TQsUv7E8t0zmzyVzqNslZUbV60VghTfSR0bvfzh6qLZbQXx8HrX
+         i8+lwUDq+YOEhFrX7g1HqSHZhfYsDdYtjsdGz6HT51MINn0vC/vI4fLvZscvswx7NB/+
+         H6cA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=NplvR947nihjmRu6+AoAeVhgLrVbTTidkSvw5n7GrTc=;
+        b=ytE1fstpD2utqwRPQXno+2B1DIZn4nFSNS1XoDrpcKMoitHaBbaRXQDpq8wJxhu6Ju
+         mJ4eEfQkTbLec2+iKS0YkCxCJctStMNg8O+xeKzn1P3QhAeISEmhL44eVQBV7+DwbYVb
+         tKaRnnXKXB6L7NJeiAbMtC2/IwiAJnZjkDVyoXqkzlCLtWq7YSm09yPy7Gl6/t4/UZE7
+         r9FjBz6dXYOQDde3wA9z+3KvqJmtCQ6bUHyrcHGazw9k5RTvle0NOFD8fDt48PkzXY9D
+         5b9p4+1+5tCXSi+M2TmstVLcKD+fHkSiQrRDjlGVU2Q/VCZWFXTmoNxnAfjfmIRZrXs3
+         x9bg==
+X-Gm-Message-State: AOAM530lIfKbru0pcU0UgNNRjxt8qXQGX70JnNZsTBqDKxIjtd9c2qBb
+	eZ2m4elzLywCXc8dmXr98NWiJqsXC+3gUTuQ7PnXLmEVuFY=
+X-Google-Smtp-Source: ABdhPJw2RKi4rRLP4FverfwmXbaUftQIoulp9xT+z8zzRQSU7+YS37m5/IXBM7vYhIQBuzssfdve5wOOijMRLd4ey9w=
+X-Received: by 2002:a25:dfd5:0:b0:63d:942d:d460 with SMTP id
+ w204-20020a25dfd5000000b0063d942dd460mr15285155ybg.589.1649449766533; Fri, 08
+ Apr 2022 13:29:26 -0700 (PDT)
+MIME-Version: 1.0
+References: <CACnMvBYvy-2tM4v2UvTuz-r0fZAtzOTYBYZEYVm9BvMa9oCu_Q@mail.gmail.com>
+ <CA+ukeOt8ZV75ShCRQuTUJmXwfSa5h2z8PotUGdCofAHus3L94g@mail.gmail.com>
+ <CACnMvBbKLetnDAF9my7FRJWYi3VQO-QDrJbVV0R=yxq7y8D2JA@mail.gmail.com> <CACnMvBZ+CV=+XtZNnn00a7PCeDCm5ifEsd3CniVP1ntAw=ytPQ@mail.gmail.com>
+In-Reply-To: <CACnMvBZ+CV=+XtZNnn00a7PCeDCm5ifEsd3CniVP1ntAw=ytPQ@mail.gmail.com>
+From: Steve Sroka <stevesroka@utah.gov>
+Date: Fri, 8 Apr 2022 14:29:15 -0600
+Message-ID: <CA+ukeOtCto6JwtOjaH58D_CZqcEX53mBYmAQv9BHMkc+fsW==g@mail.gmail.com>
+Subject: Re: New building
+To: Mike Taylor <sauropoda@gmail.com>
+X-StripMime: Non-text section removed by stripmime
+Content-Type: text/plain; charset="UTF-8"
+
+Mike,
+
+You have my permission
+
+Steve
+
+On Fri, Apr 8, 2022 at 1:47 PM Mike Taylor <sauropoda@gmail.com> wrote:
+
+> Oh, one last (I think!) thing I need to ask: may I please have
+> permission to cite personal communications from you? (Lots of journals
+> now like to see this explicitly stated.)
+>
+> -- Mike.
+>
+> On Fri, Apr 8, 2022 at 8:42 PM Mike Taylor <sauropoda@gmail.com> wrote:
+> >
+> > On Fri, Apr 8, 2022 at 8:13 PM Steve Sroka <stevesroka@utah.gov> wrote:
+> > > We opened the new building May 22, 2004; Collections into the
+> repository Nov 2012.
+> >
+> > ThHanks. I assume moving collections across from the old building was
+> > the impetus for getting rid of the concrete cast be sending it on loan
+> > to USU?
+> >
+> > >  The old Dippy was never remounted by us after it was taken down.
+> >
+> > It's interesting, as I work on this, how sad the endings of various
+> > things are. The original Carnegie molds that were thrown out in the
+> > 1960s; the concrete Diplodocus that was supposed to be repaired by
+> > Dinolab but was never remounted; the molds that were made from the
+> > concrete casts sitting unloved in the Dinolab building until it was
+> > torn down, and now lurking the RCI's storage. i suppose most endings
+> > are sad, but the project definitely has a melancholy feel.
+> >
+> > > Our archives have some photos of the old Dippy in slide format, and I
+> will have to have some scanned. Until then search photos at
+> https://uintahhistory.org/photos/  (use term Dippy or Diplodocus) for
+> some interesting photos).
+> >
+> > Oh, marvellous! Thank you! No need to do scanning slides, at least for
+> > now: what's in the online archive should be more than sufficient. And
+> > you have already gone far beyond the call of duty!
+> >
+> > -- Mike.
+>
+
+
+-- 
+Steven D. Sroka, PhD
+Park Manager/Paleontologist
+Utah Field House of Natural History State Park Museum
+496 E. Main Street, Vernal, UT 84078
+Ph: 435-789-3799, Fax: 435-789-4883
+stevesroka@utah.gov
+
+Discover Utah State Parks!
+For a complete list of events visit www.stateparks.utah.gov
+Don't forget to purchase an annual pass
+Like us on Facebook at www.facebook.com/utahfieldhouse1948
+
+
