@@ -1,0 +1,193 @@
+Delivered-To: sauropoda@gmail.com
+Received: by 2002:a7b:cd93:0:0:0:0:0 with SMTP id y19csp681505wmj;
+        Sat, 9 Apr 2022 03:04:38 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxBSOHQT6wj+qDDE6dOCMz9eyJ1DhfYmfGH0dUYUSKPBoPkkXnHmi5X2yIQbMW2JG34cdKi
+X-Received: by 2002:a17:902:f68f:b0:158:4a47:5607 with SMTP id l15-20020a170902f68f00b001584a475607mr58371plg.89.1649498678231;
+        Sat, 09 Apr 2022 03:04:38 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1649498678; cv=none;
+        d=google.com; s=arc-20160816;
+        b=vI3wWXyl7RbcN8VqkwAkPBPmfkuvwcnJDBVk4z/8CQC2ISd6v4VUvulLM9vIFdTeYD
+         CmsDcDrh8UEN+Ytpo5tr7oOW8sEBjLO7FA22h0j/rAvxopsFywU6gIigeXibXdKU8vVF
+         VD71WEyqYkf/8oB+27sH8nWJx83bIROmJ2NwMA5BtSldlsKIDbjnm1jXKO9HBjqutFCr
+         vnM8yFeSsZKmyQv7TN8xqi/kyvjEvJn1iYfWl764inTOtA9C5UmPkcNedKIVmxBIt8GB
+         qAg0weWbK/EQjrI5/AOm3zBCNaG1NbVNO6xP0+AFS8s42pN8mNgHsczhXlJcYiGiVNsI
+         NjFg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:references:in-reply-to:message-id:to:from:date
+         :dkim-signature;
+        bh=SR/K87yEQoYo0m7SYg7OXIvQ7oZdnEs+Qln5tdM1Dco=;
+        b=Ww9qwXaM6SDuAwN0egf2iXoNRyfbByTP/+EZ6238XOTLalmt0UFL5Fh8hUROARN7t2
+         LaQxs+Mxj+MpQ2MlkX2QZmQ8YkD2rBS0ggmBzX9567Sa6z/7noPZpDE1kKanftUbChG3
+         qNaXkoUsm3RVrcTOfpLjdXy6wq+8pOz0s1OO7Ko2go47MPjLirJvcY+OcOQuiB7Hc+KS
+         u2P/TwAdodk6XIiYPT3KSdb042TF+J4Yv+UsZnI+7HZhicEGy+lqfDorBDfdPxlK0pI3
+         47z7swrBh9fis9D18CmePaGOCCi/2OkbdhW+PoT6b6rNKtnQf3U5RmjOGvz93WZ/Cs7V
+         H6Ww==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mac.com header.s=1a1hai header.b=ApySdTu5;
+       spf=pass (google.com: domain of ilja@mac.com designates 17.57.156.11 as permitted sender) smtp.mailfrom=ilja@mac.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=mac.com
+Return-Path: <ilja@mac.com>
+Received: from ci74p00im-qukt09082102.me.com (ci74p00im-qukt09082102.me.com. [17.57.156.11])
+        by mx.google.com with ESMTPS id p3-20020a170902f08300b001583bf64501si778819pla.227.2022.04.09.03.04.37
+        for <sauropoda@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sat, 09 Apr 2022 03:04:38 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ilja@mac.com designates 17.57.156.11 as permitted sender) client-ip=17.57.156.11;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mac.com header.s=1a1hai header.b=ApySdTu5;
+       spf=pass (google.com: domain of ilja@mac.com designates 17.57.156.11 as permitted sender) smtp.mailfrom=ilja@mac.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=mac.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mac.com; s=1a1hai;
+	t=1649498677; bh=SR/K87yEQoYo0m7SYg7OXIvQ7oZdnEs+Qln5tdM1Dco=;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type;
+	b=ApySdTu5FZT5jnOdkj4ut7loQvXkbPIZTiJNPHP1GZnWxaVUl6fRuW/oNkcALjYHZ
+	 CRBPJ6S4Fem8Z/rAce4cIiek7E2QKyJg0jWgbNpL4TdtqSkHozRtHBU+bYKt2nbH1i
+	 EED05ZdFQOKQ4a6GV3+Ej0PGSmyTMZ7EMEcz44J9Vc63lTMcsMDO4KY1fAp3ei2oOz
+	 QiIYz7T7q9o25abfq7kWEiz4aW7KKerWFLhNZr+ER8PJiD8z0dpt5AUUXk96DkH+XB
+	 DzYVBAK1mxMFZQSEBd2B/2nVC4x6ZqLL/+yOWMsum2XlNN99mo7RU5UcMaQkts9Wir
+	 VP0W2adkOW5og==
+Received: from [192.168.127.127] (ci77p00im-dlb-asmtp-mailmevip.me.com [17.57.156.26])
+	by ci74p00im-qukt09082102.me.com (Postfix) with ESMTPSA id ED54919C0836
+	for <sauropoda@gmail.com>; Sat,  9 Apr 2022 10:04:35 +0000 (UTC)
+Date: Sat, 9 Apr 2022 11:04:12 +0100
+From: Ilja Nieuwland <ilja@mac.com>
+To: Mike Taylor <sauropoda@gmail.com>
+Message-ID: <75f4bf59-f293-4b7f-827e-6ee1dab5060d@Spark>
+In-Reply-To: <CACnMvBacT3DxR_FhVL3nUGJXj3EFFjpcXkn_+06PrQpXH8RqpA@mail.gmail.com>
+References: <CACnMvBZ7bvuXJqWCXgRJ3fbypLLKnN_QbcztPONQJYYHzA6=nw@mail.gmail.com>
+ <DECC934E-7994-4221-91F1-FFCD68144E00@mac.com>
+ <CACnMvBaX+vseQZTcxswBUEFRiWkL9K_pS4cRAwYTQ2m_MW35hg@mail.gmail.com>
+ <CACnMvBa7DhcBgz=k0WQd2H5o1mJZPJWLiE4LGbAkhMJzH7sZAg@mail.gmail.com>
+ <0D088AB4-7BC5-4F24-92C0-14EFE2E0B245@mac.com>
+ <CACnMvBYLgdJKgiiTrW92-ndvS0jFWCw9cEKa7A+osFJUNY-ibA@mail.gmail.com>
+ <CACnMvBYfmYnFLYGHAATCkO+x2O3BBiaE-b=0MTaa6XZ5bfAjRw@mail.gmail.com>
+ <1B032C4C-9C89-4387-A622-A18F72A0DBAE@mac.com>
+ <CACnMvBacT3DxR_FhVL3nUGJXj3EFFjpcXkn_+06PrQpXH8RqpA@mail.gmail.com>
+Subject: Re: Carnegie Diplodocus moulds
+X-Readdle-Message-ID: 75f4bf59-f293-4b7f-827e-6ee1dab5060d@Spark
+MIME-Version: 1.0
+X-Proofpoint-Virus-Version: =?UTF-8?Q?vendor=3Dfsecure_engine=3D1.1.170-22c6f66c430a71ce266a39bfe25bc?=
+ =?UTF-8?Q?2903e8d5c8f:6.0.138,18.0.572,17.0.605.474.0000000_definitions?=
+ =?UTF-8?Q?=3D2020-02-14=5F11:2020-02-14=5F02,2020-02-14=5F11,2020-01-23?=
+ =?UTF-8?Q?=5F02_signatures=3D0?=
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 phishscore=0 malwarescore=0 mlxscore=0
+ adultscore=0 spamscore=0 mlxlogscore=999 clxscore=1015 bulkscore=0
+ suspectscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.12.0-2009150000 definitions=main-2204090066
+X-StripMime: Non-text section removed by stripmime
+Content-Type: text/plain; charset="utf-8"
+
+Hi Mike,
+
+You have my permission to cite all our discussions as a personal comment.
+
+Best,
+
+Ilja
+On 8 Apr 2022, 20:12 +0100, Mike Taylor <sauropoda@gmail.com>, wrote:
+> Thank you once more.
+>
+> I hate to bother you, but I still need explicit permission to cite
+> personal communications for the parts of
+> this discussion not in your published works. Would that be OK?
+>
+> -- Mike
+>
+> On Fri, Apr 8, 2022 at 9:35 AM Ilja Nieuwland <ilja@mac.com> wrote:
+> >
+> > Hi,
+> >
+> > I was referring to the Carnegie, who of course made the moulds and, so far as I was informed, lent them to Vernal for making the concrete cast and received them back afterwards. I didn't find any documentation confirming this, though, so they might just as well have stayed in Vernal. It seems like they were pretty much beyond use or repair at this point.
+> >
+> > Best wishes,
+> > Ilja
+> >
+> > On 7 Apr 2022, at 22:36, Mike Taylor <sauropoda@gmail.com> wrote:
+> >
+> > Oh, one more thing: "The original moulds were thrown away somewhere
+> > during the 1960s (nobody at the CMNH could be more specific than
+> > that)." Do you mean the Carnegie Museum, or the Cleveland Museum of
+> > Natural History? Presumably whichever of those institutions you were
+> > speaking to was the one that threw it away: do you know how the molds
+> > made their way to that institution?
+> >
+> > I ask because Ken Carpenter told me: "The Field Museum posted a notice
+> > in the SVP news bulletin offered the plaster molds to who ever wanted,
+> > but I have no idea who took them." (Field Museum here presumably means
+> > the Utah Field House, not the museum in Chicago.)
+> >
+> > Thanks once more.
+> >
+> > -- Mike.
+> >
+> >
+> > On Thu, Apr 7, 2022 at 9:43 AM Mike Taylor <sauropoda@gmail.com> wrote:
+> >
+> >
+> > That is fascinating, thank you so much!
+> >
+> > BTW, would it be OK to cite personal communications for the parts of
+> > this discussion not in your published works? (Some publishers are
+> > sticklers for having written permission for all pers. comms.)
+> >
+> > -- Mike.
+> >
+> > On Thu, Apr 7, 2022 at 9:39 AM Ilja Nieuwland <ilja@mac.com> wrote:
+> >
+> >
+> > Hi,
+> >
+> > Here we see the danger of me doing things off the top of my head - I got it somewhat wrong regarding the 1931/2 casts. I’m including a link to the PDF of my book (don’t tell the publisher), which should give a clearer image. The bit about post-Carnegie casts is on page 250 and on. Here’s the link: https://www.dropbox.com/s/s0j236w5bzveznn/Nieuwland%2C%20I.%20%282019%29.%20American%20Dinosaur%20Abroad.%20A%20Cultural%20History%20of%20Carnegie%27s.pdf?dl=0
+> >
+> > In short:
+> > First five casts, made in early 1904: Placed in London (1905), Berlin (1908), Paris (1908), Vienna (1909), Bologna (1909), original in Pittsburgh in 1907
+> > Another five made in late 1909/early 1910: Placed in St. Petersburgh (1910), La Plata (1912), Madrid (1913), Mexico (1932, with missing/damaged parts produced and added in 1931/2) and Munich (1934, same as Mexico, never mounted).
+> >
+> > So Undermann may well have been right.
+> >
+> > Best,
+> > Ilja
+> >
+> > On 7 Apr 2022, at 00:09, Mike Taylor <sauropoda@gmail.com> wrote:
+> >
+> > On Wed, Apr 6, 2022 at 11:16 PM Mike Taylor <sauropoda@gmail.com> wrote:
+> >
+> > 3. The moulds themselves had become pretty worn out after the Mexico/Munich casts had been made in 1931/2.
+> >
+> >
+> > Oh, that's interesting. Untermann (1959:364) says "After these initial
+> > activities, the molds were stored in the basement of the Carnegie
+> > Museum where, for more than forty years, they lay forgotten". Since
+> > the Vernal concrete Diplodocus was made in 1957, that implies they
+> > were unused from 1917, which is obviously wrong.
+> >
+> > If you have to hand a table of when the various casts were made, that
+> > would be helpful. Please don't go to any trouble, though, if you don't
+> > have them easily available.
+> >
+> >
+> > Hmm, OK, I have found Nieuwland 2010, whose first three pages provide
+> > this list. But it finishes "However, in 1932 Carnegie's widow Louise
+> > was persuaded to donate another copy of Diplodocus to the Mexico City
+> > natural history museum, and two years later a final plaster cast was
+> > shipped off to the Palaöntologische Staatssammlung in Munich"
+> > (Nieuwland 2010:63-64), which would place the date of the Munch cast
+> > in 1934 — two years later than you suggested upthread. Have you
+> > discovered new information since the 2010 article?
+> >
+> > BTW, would it be OK to cite personal communications for the parts of
+> > this discussion not in your 2010 paper?
+> >
+> > -- Mike.
+> >
+> >
+> >
+
+
+--- StripMime Report -- processed MIME parts ---
+multipart/alternative
+  text/plain (text body -- kept)
+  text/html
+---
+
+
