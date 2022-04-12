@@ -16,7 +16,7 @@ This describes the mount as it was originally constructed in 1907, and the molds
 This account omits the atlas (C1). Assuming that the "median caudals" from CM 94 begin at Ca19 and that those of CM 307 pick up where it left off, the axial skeleton is otherwise completely accounted for. The source of the left ilium, femur and tibia in the mount and casts is not given, nor is that of the fibula in the casts.
 
 Modifications were made subsequently:
-* At an unknown date, probably after 1981 since McIntosh's catalogue does not mention it, the skull was replaced with a cast of CM 11161.
+* At an unknown date, but before the fall of 1979 when Amy Henrici began working at the museum, the skull was replaced with a cast of CM 11161.
 * In the second quarter of 1999, the manus were replaced with casts of those of the former CM 662
 * In late 2007, when the cast was remounted, the CM 662 manus casts were replaced with scaled-up replicas of a cast of the putative _Diplodocus carnegii_ manus described by Bedell and Trexler (2005)
 * At this time, About ten sculpted posteriormost ("whiplash") caudals were added to bring the total number of caudal vertebrae to ~83
