@@ -1,0 +1,179 @@
+Delivered-To: sauropoda@gmail.com
+Received: by 2002:abe:7c4:0:b0:2fc:ac97:e3f with SMTP id 187csp2117872vlh;
+        Wed, 20 Jul 2022 16:05:20 -0700 (PDT)
+X-Google-Smtp-Source: AGRyM1tQONeYumf63QOpGVf75r3NLdqJkBgwktA3jqr6lKvn/6wREfrOCJbg8h6qWW5KDIddo71i
+X-Received: by 2002:a17:907:2dab:b0:72f:f7:bdd6 with SMTP id gt43-20020a1709072dab00b0072f00f7bdd6mr27045559ejc.330.1658358320494;
+        Wed, 20 Jul 2022 16:05:20 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1658358320; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=FRGwxm6aT65hDxn4Mlgt2m4IxFJVgaEIBkk7KzabTkPzZzAXim9Mx4s1ffbAnDJTR2
+         WntXTgVfMKvmMWQ4/mH5y4wdFmceTZR7Do/roVryjmmAeu5c1EnHaJVRVSmsYeHpuZao
+         t0kXXq0Z3Mu13zCtQ1HlRmde/C1CUn8e+z+xj6Ff/Fg8t3OEk8vOAM3vYxU5XXL9hgb6
+         fwlWpUd1NV1An5fKSFuH/KkKzsiKOpQEoGqnso4Q1JLz8ZVpFaTfS7RYAw/ULz4Y0BQS
+         FfFdGOLTQgFfeN4Nrq/6sgYnnKzJS4tnqRnLMAJjTOD2bXp4Uvmcpf3yNXpCG58OsjL1
+         j4zg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:in-reply-to
+         :references:message-id:date:thread-index:thread-topic:subject:to
+         :from:dkim-signature;
+        bh=C3RrnCkLYlOQ5SA4gvyJddWwnkeHVLtbaokgtWL1TfQ=;
+        b=zUfgaGkvk1FqIkAeYOlIn+Fy3YeyXYcetsGxx7GWEbzVHejwngwXl/+0nv0CCY+ULL
+         x+l9oC9uyzuOd20uCoiEyFYjsO5BjFU6UYaLeCCgHbC0klvKugZbAs/rXrAFgUl+3uL8
+         AcQ/d8Bi7blhkAgjekQCd8yx6Y8cHSsJB/WyVKx3ZMDmyxEZt+n6X6nExQjvOhwKYApj
+         5ZXCymTuRfH8/Hq/B0t9xQTIUwRNS1fa6WNq/CJBFmKWDWTwFUhwlv8pzMUmIKECek65
+         DMgLyTlYOKgof1wgsacHsNaUUdovZKxnbE36YqkH5eDR4BzW5ZxZ1UnLZN753eka3uMe
+         Friw==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@amnh.org header.s=selector1 header.b=mHQsjo6T;
+       arc=pass (i=1 spf=pass spfdomain=amnh.org dkim=pass dkdomain=amnh.org dmarc=pass fromdomain=amnh.org);
+       spf=pass (google.com: domain of mick@amnh.org designates 40.107.94.133 as permitted sender) smtp.mailfrom=mick@amnh.org;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=amnh.org
+Return-Path: <mick@amnh.org>
+Received: from NAM10-MW2-obe.outbound.protection.outlook.com (mail-mw2nam10on2133.outbound.protection.outlook.com. [40.107.94.133])
+        by mx.google.com with ESMTPS id ht22-20020a170907609600b00722f74fff57si672315ejc.313.2022.07.20.16.05.19
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 20 Jul 2022 16:05:20 -0700 (PDT)
+Received-SPF: pass (google.com: domain of mick@amnh.org designates 40.107.94.133 as permitted sender) client-ip=40.107.94.133;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@amnh.org header.s=selector1 header.b=mHQsjo6T;
+       arc=pass (i=1 spf=pass spfdomain=amnh.org dkim=pass dkdomain=amnh.org dmarc=pass fromdomain=amnh.org);
+       spf=pass (google.com: domain of mick@amnh.org designates 40.107.94.133 as permitted sender) smtp.mailfrom=mick@amnh.org;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=amnh.org
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=YqUqf4Iw6uQPobeklxk/GuQ4ydTqbFF8PI3kDHxj/jo/U8PPahCMm9b2qOBty0JZUgUVcZq40GliiPAlZdbRfgxSDAVFhGEQl6aOiS4KfQBwnMjitZ7vuQ0rsUobjphLhc9wNXKNO/IbEwGj1w9KhZMEkZQ1C63My1kMq0vz9yFrgjFOw7vVwTzWjgOUk4iFwUGwF+qgFe0dpGeAVRk82uKWyd3R5ei7sHMvoG5tJjYQm5lI6x0qrl9lA3hvcNQJzZFjd9DgVrNTQ/Aj9mURnoP9r0tNqOdx6m67VUGjdYEWmNR4D5ckmk7Z5XasaTTiW1EkHqZFBL1QC0RRvYNAzg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=C3RrnCkLYlOQ5SA4gvyJddWwnkeHVLtbaokgtWL1TfQ=;
+ b=ephgAxCbABck4No1fDlBOXrfzWKW6IRq299T0LNW+hYPfNfcY5OVtq1vPeVFY+U+EeFNP2B63+HWZeRM3TzesFDzJkK4rwerAwmzqmNGGjsEd2w6swnA8N0jObYbEgyym6N/6Fh1G7j9V/lDmzGlL/PKMQrT0CwFnpAmV5wRM+UYTwkFkZzUAmtL5a+jkdZm3SmYs5+iUqS/anOBRdoqttfpKm7gbQE7qiXjq3na5oRr+J1DbZhQArgu01aOu4+/1sONhuj/YpFL8H22o1eBaZ0P32llEhLKdBOrLolU3WnuGgf/5mlfYtDrAqd0Q1N3m7oSVxs7qEg6RZLZW7jsFQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=amnh.org; dmarc=pass action=none header.from=amnh.org;
+ dkim=pass header.d=amnh.org; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=amnh.org; s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=C3RrnCkLYlOQ5SA4gvyJddWwnkeHVLtbaokgtWL1TfQ=;
+ b=mHQsjo6TfpL3Q18ILji/YueWE9Vbq7+3aDOpE/cZ0QJGB3tmJEEy3yLznA/bIqf4I41hmDIxhFMIZBXquX6srC2QziIGRMfa7eCH6wwkPfRwOwBlRrW6bqhWwa+24rHR+8hLKjtEDkoA5hZutik4xkeYbbkuUJZXAQ80OfkzV9Mfvr1X3g8gCdBbBZuV2NPYtJe7m5x5kF6e7f+6WunjZEzNJbNFPp8gDgsTXmT6/BfsdOkqCnezgp71ysSvHvrQUX7ZZTSrcUJuY09YmjuS13vuS7QzYd6RXNPG+7XPP03kDlvMux3wGjRI1xWElCNSvDfMotmcn5aPsDwYWFyzqg==
+Received: from BL0PR14MB3731.namprd14.prod.outlook.com (2603:10b6:208:1c7::14)
+ by BL3PR14MB5555.namprd14.prod.outlook.com (2603:10b6:208:3b6::14) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5417.16; Wed, 20 Jul
+ 2022 23:05:16 +0000
+Received: from BL0PR14MB3731.namprd14.prod.outlook.com
+ ([fe80::755f:3faf:637b:28f4]) by BL0PR14MB3731.namprd14.prod.outlook.com
+ ([fe80::755f:3faf:637b:28f4%7]) with mapi id 15.20.5458.018; Wed, 20 Jul 2022
+ 23:05:16 +0000
+From: Mick Ellison <mick@amnh.org>
+To: Mike Taylor <sauropoda@gmail.com>, Lowell Dingus <dinglowell@gmail.com>
+Subject: Re: Model photos
+Thread-Topic: Model photos
+Thread-Index: AQHYnIIejGMaLvxxXEOX4BM967KeKK2H3Ltv
+Date: Wed, 20 Jul 2022 23:05:16 +0000
+Message-ID:
+ <BL0PR14MB3731DEFA53B95F284C00947DA88E9@BL0PR14MB3731.namprd14.prod.outlook.com>
+References:
+ <CANLjxQcKvQah=x2HFRNAqX737wSAUodiM85-j0vfCaZSLiazCQ@mail.gmail.com>
+ <CACnMvBaCo6ASz+c2-u5U=bBL4UkqjbL6=vQTSjJ0Hr6KB8pZkA@mail.gmail.com>
+In-Reply-To:
+ <CACnMvBaCo6ASz+c2-u5U=bBL4UkqjbL6=vQTSjJ0Hr6KB8pZkA@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=amnh.org;
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 4f06bc6c-af16-44b2-31d1-08da6aa44f36
+x-ms-traffictypediagnostic: BL3PR14MB5555:EE_
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ 9eolRkU6gK28zo7dV8uxXr1PfO0cXlb47MkdVTFYD3/f5VmJfzSMOfp+7edDwSI1305FUqYnagAEGzEBPYqivIrPC950l0LMJdl08SyLTAwlku3YXZHBc+LZftUGmkbKiC3joPb92/lMljMRtpovnqjmsxh8v1e4wGv6Yk1r5DOCYRqNGIj7YgEZdAGJY66G7s64dj4HRQCfrZkF8xts77EDLwHNdGA4+4B+fekoKcCE+036I/Njg9u90MnBLAOebk8nVfaUZvDCeopvirXXVZWOWYd3HKu3r7niDINWucU4gJy2c/zZleezwHFSF5FZz4UDAubWN2ybuuYBDHz8103J0HKUezxxIATkqJrnzx+CCxGM4/QWVEw4WP2B0RWqfJic3NusN8/MQzW1NWoDc6Ikz0ino0b9/dwIjxTcKWWT0exU0hZdNbkfi5KhxSSIWFvnh24JYWx/z673o7e2azImrIOEgHqUyvRbPzqFcyZlGwlYA7p4E3rQJHWAWrDNrewXrfQIschRPnrY7HwsKMd5HRsQZG+0IDyFxhrZAzfjjzD/YQ5aPGHFDOJoKMCUKuSoat2N0D03OtNqc69q6At+Ig/1UfelKRnelCTyD10kqoRdJfQQbRb0KYgLREgQC1R2GNcJKdrmkcx58bRlmKYqNaBk3qAmVURDAdbAhquZu80D8zwyrKFEXuKxwRzl/eyUYd0yn6bm/m/IEpI6n9lqfUvboeVRfLrKuQNEv+nf4VxKWrSRicat8Ifa9MY1QhkOnLTciWAQD8V7MMS7U6gWppDpdtgFnM6DBEQT+hVN9RRNZWqg2vnnZQax5b4WQgkMiPXvWhnBfqXoOj/tqQ==
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:BL0PR14MB3731.namprd14.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230016)(4636009)(376002)(39850400004)(136003)(346002)(366004)(396003)(83380400001)(786003)(166002)(3480700007)(7696005)(186003)(41320700001)(2906002)(8936002)(66946007)(53546011)(38070700005)(9686003)(122000001)(38100700002)(52536014)(86362001)(5660300002)(66476007)(76116006)(6506007)(478600001)(316002)(66556008)(55016003)(45080400002)(66446008)(26005)(8676002)(450100002)(7116003)(41300700001)(110136005)(33656002)(71200400001)(64756008);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?us-ascii?Q?6FM+Dc9R2o+KLAaZ+R8ABxVUe0o0BXSl68EMUJUM+iKHj4gzq+nPIgummiFu?=
+ =?us-ascii?Q?LFu/kZ/T7Rq8PaQnFv3Y1LEN0yCkqMI2d7BhRS2Yupc+TJ5B1Zg/vfsvdIKy?=
+ =?us-ascii?Q?9EHhnmLlgUYyGTWT+GM5fCHq1QoAFJuM9bMppJmfNCoqfJEmcthoMF6SYngN?=
+ =?us-ascii?Q?9pKmZeF689vjgkRUi4/Yy9rXvKDea+0Q3rbY/MpDdxPxlGE8TNu7sgg8WGI4?=
+ =?us-ascii?Q?ip85Xi61llEKEWc4sF1KTuBaeSxSzbeUfDE9jlwUpZdeD6fM86vl6omOLPhJ?=
+ =?us-ascii?Q?ENJ1+zXlJ7OFgWVUaaoirkQ1AylGCqBAHuzp9saCOtsAPzK0fIEou9HEIiyg?=
+ =?us-ascii?Q?AiHkC+9974/Qx2FTYZbirjD0QYyztQLTcO5NVq8AxamLFCKhIfOQXdbON340?=
+ =?us-ascii?Q?RjKztSnpz96qsbYn12FXj+O7ZHm5W6yD6JbtbffFxpA4eLQ27YUfbIjGoEA5?=
+ =?us-ascii?Q?2tL3S3kEwvSTxr2yKalBkRJy+l/1KFr/Vi5Bxwbw2Ay2r6UfS403pjBEAYKO?=
+ =?us-ascii?Q?TLdfRRk/xpwRMffWyO7W16URzCP/xBInJ1yR7TwdLj/42yVGhbk/kCNf3reu?=
+ =?us-ascii?Q?TKkmqBcSVD6NUy8GHS2UULnfBwu+3VIVK0YPZmUmTDH7Yhf7jggLcR2dKuLo?=
+ =?us-ascii?Q?ZxHHskY/FnZ6/mKP7+rjMYYDhQMW6EEjbrBo8BJED+DVpBerGgdyEucOlVyB?=
+ =?us-ascii?Q?oe7ilvVMgAwq4tfI6LKJi/i0WeF9YFAjpLp1GzTGnZ9+ic9M9raGNyFx9inl?=
+ =?us-ascii?Q?mpPbUUOce08Lmp6Jt3vb/DaZoRzgnQxjd2MEp4ijUYGbIg4qcX4946w8k7ZH?=
+ =?us-ascii?Q?ZmQpCd5MEtsnqRkA+8K/AFtgUTWDWGvgcsOebiLXIL9isKkUoccrEBCgUZNj?=
+ =?us-ascii?Q?Bl/54d4gUKNhopzVqxtXmUDtrlbDjyn7dy0DUQjQEdTKsU7sXruBda13+tKn?=
+ =?us-ascii?Q?EP8U6GSeZYQWUr9IZSmKBMh8FXqCSiNCuXh16jwFCsxfEtf2NhYFJJEkWFLn?=
+ =?us-ascii?Q?IYn2JFoP6ori8LZlYxcy8rN0jo8KU3BD8uTKXFd7x9XodvfcHl665zlHZ4pY?=
+ =?us-ascii?Q?4TtGodPEssLtOfDzZPwEopkTUD+DRslCgZpyg95U/rmtzZf1tYBLYqSK3utC?=
+ =?us-ascii?Q?6f+gXbXlqhnJQwONMOCkAEjbeu04CuQlh5+ePYIY6YJZhUmxm/8I0oXDuM83?=
+ =?us-ascii?Q?FrN01l9xIeOZ5T8ANKHF5XXVlJpk2bUKdY4jOBGgkiHT47nWOCEy4Fq0EN18?=
+ =?us-ascii?Q?DXMUvGC4qBCFL5/fmX7DnYEZlP8GPUgGUMjYbDZ0D7vExMGRFzlSqvOci4P1?=
+ =?us-ascii?Q?RLzOmeBC3T4J/VsEVPgv3rJOEAUkTVaOjTt69ugtyuGNcx4qESXfAInAOFvH?=
+ =?us-ascii?Q?j+/b4vd+IuC0iShSdCD2Dy1C/0l9RCQiRuKUSOS6Ohy6W2yGXq94SrrDKcSy?=
+ =?us-ascii?Q?JWIoXwWa7QZp1XiWYtq2qZnqYD+/na0XP37Hr2WwWJiqsYEnWGQW+duafNG0?=
+ =?us-ascii?Q?f1NqLNYxk+QTi4dRui76zwnpMS4lmlgcqL6mfrsjhcdXaq/jW9Gnl1CuJiR2?=
+ =?us-ascii?Q?nuJcHlSJaSqITbcIk09HddkBlcg2kgQ8oA3+pklu?=
+MIME-Version: 1.0
+X-OriginatorOrg: amnh.org
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: BL0PR14MB3731.namprd14.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4f06bc6c-af16-44b2-31d1-08da6aa44f36
+X-MS-Exchange-CrossTenant-originalarrivaltime: 20 Jul 2022 23:05:16.2322
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: be0003e8-c6b9-4968-83ae-b34586974b76
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: 75XOafJkxDODFS1716ySTWq9V1tUBqAH+cXkZy30J+ayGTZtrLc/gRiz+aNxh3mf
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BL3PR14MB5555
+X-StripMime: Non-text section removed by stripmime
+Content-Type: text/plain; charset="us-ascii"
+
+Thank you, guys! I really appreciate that.
+
+It's such a cool model, and it was extremely challenging to light and photograph it, so I'm happy to hear that you both like the image. I spent a good deal of time considering every view and angle, and decided this vantage point was the "sweet spot" for a single shot.
+
+I was commissioned by Lowell to create these images of the model solely for your paper, Mike, so I'm glad you want to include the image in the paper!
+
+Right now I have the model safely stored in the department, and it's still accessable if need be.
+
+Thanks again!
+Mick
+Get Outlook for iOS<https://aka.ms/o0ukef>
+________________________________
+From: Mike Taylor <sauropoda@gmail.com>
+Sent: Wednesday, July 20, 2022 5:46 PM
+To: Lowell Dingus <dinglowell@gmail.com>
+Cc: Mick Ellison <mick@amnh.org>
+Subject: Re: Model photos
+
+EXTERNAL SENDER
+
+Wow, you are not exaggerating. That three-skeletons photo is solid gold. Mick, thank you so much for pulling this together! I assume you are happy for us to include this in the paper?
+Mike
+BTW., what will happen to the models now they have been restored? I would love it if they were able to go on exhibit alongside the actual mount, as the Brontosaurus model is exhibited alongside the Brontosaurus mount in the Saurischian hall.
+
+-- Mike.
+
+
+On Wed, Jul 20, 2022 at 10:10 PM Lowell Dingus <dinglowell@gmail.com<mailto:dinglowell@gmail.com>> wrote:
+Hi Mike,
+
+Mick has uploaded his shots of the model in our Dropbox files. I think the one of all three skeletons is fabulous.
+
+Lowell
+
+
+--- StripMime Report -- processed MIME parts ---
+multipart/alternative
+  text/plain (text body -- kept)
+  text/html
+---
+
+
