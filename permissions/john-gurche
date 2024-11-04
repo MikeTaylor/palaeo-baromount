@@ -1,0 +1,134 @@
+Delivered-To: sauropoda@gmail.com
+Received: by 2002:a7b:c1d5:0:0:0:0:0 with SMTP id a21csp5126460wmj;
+        Thu, 24 Mar 2022 16:32:12 -0700 (PDT)
+X-Received: by 2002:a17:907:1687:b0:6df:877e:c81d with SMTP id hc7-20020a170907168700b006df877ec81dmr8214981ejc.306.1648164731952;
+        Thu, 24 Mar 2022 16:32:11 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1648164731; cv=none;
+        d=google.com; s=arc-20160816;
+        b=pgOWrIINlsV6RN2zko7UziuYUDY44TssgMl+UXz4kVJgHjxxh0NfnO7s88/kuEjRrW
+         1zqr/LVojbz6rF/hNXSOBolGGPzH7Y1igO8j+UWgTxMjOVTimkbeNKr03uBqK5w+tKZ8
+         jnk7yFwl7hKMHMI5VxVkdbvIoC1G4X/0AaBbcv7v2dal84xG3zfR62WKjqMELaEWidz0
+         1UnqSdSnZGeT8jXRPuYeRMvfP8OGqQjgytAkkJQPygzFkH7ekVCpMfiMg+/ZvlnrTBaR
+         ACwllD0jhW1gLJTWhMCU7kPRrFI9Y2+05sXP8pXUdICvgpXOW0mycg3uqps5m0VgFulv
+         6zOA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=UCZtgkEFEZuTxz7cU23eX71Xzf9eniMYmo4RHQKZ6KU=;
+        b=ZQncJ6XEtmvA3T9y1ewzDfnR4xxCp6hBKA1ouHzFQ0Jch0bpJJpMJez6Ju9UC18zJQ
+         m16yhhfV53xnYwHQ3kctKb/bNwgcPc3NsRNdN2GctochploAqd0syLI41IYAohwiVLbm
+         0qXopxe8qr/ax5t+ZLm7RvEGlbhHzPf1YcgoDw0ppyhUXhqInZ0TCZjKpr9IwcWkg1OM
+         Q3AP+sI5n9J10qwDDAROVB99MO09UXKMZQxCvQl7hkx7LT8/rPUwpmROxIpR1c9JJ1Vl
+         67kXjyTAEylhNnWIqz9FI+1jVLi+ZXQy7PHJedK5KNXyz7YYGq3Nyv6BSDAwLCDTrnGV
+         ZnTw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=HHRybj4j;
+       spf=pass (google.com: domain of dinglowell@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=dinglowell@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <dinglowell@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id c10-20020a170906694a00b006d2a8ce64e6sor337865ejs.112.2022.03.24.16.32.11
+        for <sauropoda@gmail.com>
+        (Google Transport Security);
+        Thu, 24 Mar 2022 16:32:11 -0700 (PDT)
+Received-SPF: pass (google.com: domain of dinglowell@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20210112 header.b=HHRybj4j;
+       spf=pass (google.com: domain of dinglowell@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=dinglowell@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=UCZtgkEFEZuTxz7cU23eX71Xzf9eniMYmo4RHQKZ6KU=;
+        b=HHRybj4jsqP+L2+tpHP0kLWOPgbgYzuQZiKg4JTVWJ0Z2Oz3dYNRHihIX/r2OIl4ca
+         AcvGq7UVo9QzHpevqBf19aFjORgKmtCNwKzzqJ3wmHvkNvlp+h9qShEgJMN6ibpgmgQC
+         th5QjTNCA3byuDYGjsxEYMeNsgq+DaRg6pXGe+5QFyid6w9i1sZHcBdHzI9H+0r/bDi4
+         7rTiTZyiGYsorNtEpR+DnstIqotRCmIdvokYLPVbGamlN8JibTRnbERjglqmZalwWi3Z
+         A4R4V2QmxIqS8c877wha3ic6wvFmI3ChfZisosSv6pwS4NYRflmSYxvPIIoFCSEja8RN
+         UW8A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=UCZtgkEFEZuTxz7cU23eX71Xzf9eniMYmo4RHQKZ6KU=;
+        b=tf35R4TlWztIgAUua6xXWEJ94vP//beuoJDqE1HBHvPeY3mOeaAASsR/X15lCjDFqX
+         jEYQx60FB3SLs0TyjDxUipVBYqTH1s7MF8sVmjPfYF2W2un3Jd/TX86VXOYBGEO0fSVr
+         vd2MXl1N/BjJXz+7C4dDXt1zWTeieFrUpLy3TnHwUhUf5/4YCbZK2/GDjkcfrjj7YyP3
+         bsxSvs6kl6g/tjGtoxveqHo8dTxk5tv5fYMmafRPcmysw6gSZ6MPh5O44jnQz9N43E7e
+         ONa4Y9nGvhng7jh5vjWY/+ogm9DvOtY5ddO8XLVAfTONbFBtwCUQH5KJsZk+BjZYYyZJ
+         KEcQ==
+X-Gm-Message-State: AOAM530Kbs6PTz7K4thBuwkmbpAuo8DBJmqeeP3nUHxnVi14SoDPJbh3
+	Ew3dG5LcslVjdMU6gaHjW1aRDTAInL7X1pwk0inNhw4s
+X-Google-Smtp-Source: ABdhPJx+zkLLP2eUrMuhA35+pIz/dRtFzsssakoyYkhJByiubpZ7d0+nUSoj2NmYCvs7N4Dxg2Gi19zw/0aHilGdwco=
+X-Received: by 2002:a17:906:c111:b0:6db:cf0e:3146 with SMTP id
+ do17-20020a170906c11100b006dbcf0e3146mr8537035ejc.280.1648164731268; Thu, 24
+ Mar 2022 16:32:11 -0700 (PDT)
+MIME-Version: 1.0
+References: <CANLjxQfSJ8UPPwV0PQc=XAf1QsAsyuhSqfdOrLaEZqLycv16=A@mail.gmail.com>
+ <CACnMvBa_b-dYp-X_=fVvjqWHEAmPwnPYm=RCeaJ3tBXj4RrMTw@mail.gmail.com>
+In-Reply-To: <CACnMvBa_b-dYp-X_=fVvjqWHEAmPwnPYm=RCeaJ3tBXj4RrMTw@mail.gmail.com>
+From: Lowell Dingus <dinglowell@gmail.com>
+Date: Thu, 24 Mar 2022 19:31:59 -0400
+Message-ID: <CANLjxQcG4k5Bqv8t8e+Y4dusCUsKo07=eJo-rp1O7Kdo3uLg=Q@mail.gmail.com>
+Subject: Re: Gurche image and slides
+To: Mike Taylor <sauropoda@gmail.com>
+X-StripMime: Non-text section removed by stripmime
+Content-Type: text/plain; charset="UTF-8"
+
+Hey Mike,
+
+Just to confirm, John Gurche and Mick Ellison are both now on board.
+
+Lowell
+
+On Thu, Mar 24, 2022 at 10:55 AM Mike Taylor <sauropoda@gmail.com> wrote:
+
+> All of that sounds perfect -- many thanks!
+>
+> I have never scanned slide before, so if we can get someone who knows what
+> they're doing to handle that, it will be much better than shipping the
+> physical media to me.
+>
+> -- Mike.
+>
+>
+>
+> On Thu, Mar 24, 2022 at 1:35 PM Lowell Dingus <dinglowell@gmail.com>
+> wrote:
+>
+>> OK Mike,
+>>
+>> I've written to John Gurche to request permission to use his painting of
+>> the scene depicting the mount. I'll let you know when I hear back.
+>>
+>> I've also pulled out the slides I have. They include:
+>>
+>> two of the vertebrae being prepped for molding and casting at Peter's;
+>>
+>> six of the initial attempt to erect the mounts up at Peter's, including
+>> one of Gene looking worried on a step ladder;
+>>
+>> twelve depicting the installation process at AMNH, plus one of me looking
+>> worried;
+>>
+>> and three of the finished mount, including one with the crick in its neck.
+>>
+>> I'm thinking I might ask Mick Ellison, Mark's illustrator, to scan them
+>> so they don't have to be shipped to you, and I can also ask him if he'd be
+>> willing to take a couple shots of the scale model we had Henry Galliano
+>> make that I mentioned early on (assuming we can still find it).
+>>
+>> What do you think?
+>>
+>> Lowell
+>>
+>
+
+
+--- StripMime Report -- processed MIME parts ---
+multipart/alternative
+  text/plain (text body -- kept)
+  text/html
+---
+
+
