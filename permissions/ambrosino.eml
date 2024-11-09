@@ -1,0 +1,92 @@
+Delivered-To: sauropoda@gmail.com
+Received: by 2002:a05:7022:2226:b0:8e:f607:213b with SMTP id bu38csp5601959dlb;
+        Sat, 9 Nov 2024 08:17:41 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFFTyhweKdIDhw0q+zFo8Ri8w3VjIOMsHLYJVwvNRKshvdG3UYOq/1nY03cf8owK8aYMogz
+X-Received: by 2002:a05:600c:4f83:b0:431:60ac:9b0c with SMTP id 5b1f17b1804b1-432b7517213mr51708365e9.20.1731169061666;
+        Sat, 09 Nov 2024 08:17:41 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1731169061; cv=none;
+        d=google.com; s=arc-20240605;
+        b=ZCWMfPrusvdWsNhEab2lK10HksHtkEtjxsX4WVOB1acXWWVPNw1Ote0ggY5y7Yftuc
+         H3fO9EajQ1grf7DD1J3kwajY2z5pmWXPOfw/oMN2vRyCw6oAlZcV7LShvPZuW3BwooFU
+         0lwcjTmQqFHLexeg4KOIpwZyqakWKUa6VLIqkdAkZwJqr9FtYEsfKv/+HXV2qt8LuwiB
+         VoL+oMrebGkKDv5rf1L2VVhnBDIfsAjVDxHhvbtzmYE0oPEdp0bHCYzp9Md9UbBYn8Ad
+         aZNBd7OHDd6B/vOI7DCnkbkOYFxYPTLLzoTUTBzyKC2p52xs8Yfm+VpTgqHqyjj8SjQS
+         m+NA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:feedback-id:references:in-reply-to:message-id:subject
+         :from:to:date:dkim-signature;
+        bh=sfdo60fxVAvYiywOog9a+vHt9P0mktzTPRNhHwGSbaY=;
+        fh=cuZ7jSwD13YE+Qq+nea85qW3JSKlsjfKmkJdZM5m4cU=;
+        b=X4sqVxbMbz1RXOSz1zrE26F362hBk1QJbssIqpoKzeuYrg/9IB5O/DJpCgr7pPHbye
+         zmvnihuXr0OQNXckmpiVK057k2/oJk0rQDnnltZGgg9A5Cv6o2aJiih/FUnFH6veUkix
+         E4cncATAqE+t2WA9CmFLibGX45WGEXwGdX3pGhKPwZ2IcWW0mKQMigmh+UzrJAqjj/Ca
+         be5ssAJ23hevrRDc8kVDRA4ERp+liHHkS8sVUrA3WyVVbMSnQ8xGT/1Wt7i6Jm/EnTaa
+         iND8MZvv6gpUXOKxK54O0fqczYhbprhG7yx3Rr6+4+Du1IvxxxH+VfIww+sy5+tWGymA
+         iCJA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@pm.me header.s=protonmail3 header.b=lhJjsiZo;
+       spf=pass (google.com: domain of ambrosinomoc@pm.me designates 185.70.40.133 as permitted sender) smtp.mailfrom=AmbrosinoMOC@pm.me;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=pm.me
+Return-Path: <AmbrosinoMOC@pm.me>
+Received: from mail-40133.protonmail.ch (mail-40133.protonmail.ch. [185.70.40.133])
+        by mx.google.com with ESMTPS id 5b1f17b1804b1-432acc9a5besi52861535e9.106.2024.11.09.08.17.41
+        for <sauropoda@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sat, 09 Nov 2024 08:17:41 -0800 (PST)
+Received-SPF: pass (google.com: domain of ambrosinomoc@pm.me designates 185.70.40.133 as permitted sender) client-ip=185.70.40.133;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@pm.me header.s=protonmail3 header.b=lhJjsiZo;
+       spf=pass (google.com: domain of ambrosinomoc@pm.me designates 185.70.40.133 as permitted sender) smtp.mailfrom=AmbrosinoMOC@pm.me;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=pm.me
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=pm.me;
+	s=protonmail3; t=1731169060; x=1731428260;
+	bh=sfdo60fxVAvYiywOog9a+vHt9P0mktzTPRNhHwGSbaY=;
+	h=Date:To:From:Subject:Message-ID:In-Reply-To:References:
+	 Feedback-ID:From:To:Cc:Date:Subject:Reply-To:Feedback-ID:
+	 Message-ID:BIMI-Selector:List-Unsubscribe:List-Unsubscribe-Post;
+	b=lhJjsiZoSo1WCI2lbAeiwfKw76W4NR8JNDuVR8EcLlkMQM7I56E/I4CeBiEjs88Hu
+	 wP+JrdGzrgU1JHAu0hYSGMbVOPRIuiqXCKgkjOqQn6eZjBvAQhLhxbqo3MUrz9h4+/
+	 he+e9Aqw0Z3vi6wyKrPdJ7xm5kbsoS08AcSv1yDLcJLiK/ed+GDmnDU9xIuGTMZq18
+	 8G6WJ15LTMNUqJOE07Vwji1+bh69Qk5wv6SGvqo5CdbjXP5q0UL/SfLNuR7GZgz+Ru
+	 A/YdgF7JNqwGHGy982d1pLCOFZX6gniZFXIoGuHM1oOGaimvb4Ed/05vi0w1NkQFU6
+	 dr2u/qSAC0Pbw==
+Date: Sat, 09 Nov 2024 16:17:38 +0000
+To: Mike Taylor <sauropoda@gmail.com>
+From: Ambrosino <AmbrosinoMOC@pm.me>
+Subject: Re: Barosaurus mount paper with MOC
+Message-ID: <IhLXXzsh_ySNzCJCFIvIDbEeTO4D9XDA_gIL3fT4i-jqhkZaiS4Koy8TKFx0LmvkuYr3KQEcg-RnWGn7YXRbq1cpl69vcSZFrxoVNpgM8Mo=@pm.me>
+In-Reply-To: <CACnMvBaDFhQtXvgrD03+mNKBevt6=mivwFFOHNho3=3QCebKzA@mail.gmail.com>
+References: <99gdFe_02P_V_6jeT_jqNp_G67f5-95mZ7Vs1rF3K6nuOGhhBBYVPoTqrqbWRsPdOhPPRPTmCuAfrI2FW5mhMym89QAFbBBWp6n2HycA9i8=@pm.me> <CACnMvBaDFhQtXvgrD03+mNKBevt6=mivwFFOHNho3=3QCebKzA@mail.gmail.com>
+Feedback-ID: 124861183:user:proton
+X-Pm-Message-ID: 8976eac8a00195e435abc5ad388419add5cde76a
+MIME-Version: 1.0
+X-StripMime: Non-text section removed by stripmime
+Content-Type: text/plain; charset=utf-8
+
+Hi Mike,
+there are watermarks and other measures in use to prevent selling uncredited kits by Chinese companies, which plagues many designers. This creation is already stolen.
+https://drive.proton.me/urls/Q1R8CH1N2G#EUWFRnjQ1GJx
+Let me know if you download it, I will delete the photos.The new Barosaurus MOC is planned for LEGO Ideas (https://ideas.lego.com), so it may become a LEGO set if it succeed.
+Best regards,
+[REDACTED]
+
+sobota, 9 listopada 2024 16:48, Mike Taylor <sauropoda@gmail.com> napisał(a):
+
+> Hi, [REDACTED], it's nice to meet you by your real name!
+>
+> But I am perfectly happy to stick to your public handle in the paper.
+>
+> As you guessed, I would like, if I am able to, to include a photo of your model as well as mentioning it. So, yes, please, if you could send a selection of decent photographs, not watermarked, I'll pick the one that works best for our purposes. It's not a gimme that I'll get that past my co-authors, the editor or the reviewers, so don't hold your breath. But I'd like to give it a try!
+>
+> It will be interesting to see the rework (as well as the life restoration), but for me, a bit part of the appeal of the original model, like LegoFossil's Giraffatitan, (https://rebrickable.com/mocs/MOC-60925/LegoFossil/moc-giraffatitan-brachiosaurus-brancai-skeleton-little-oskar-alternative-build-for-21320-dinosaur-fossils/#details) is precisely that I know I can build it out of my existing kit. So please don't get so excited about the new Baro that you abandon rebuilds!
+>
+> -- Mike.
+>
+> On Sat, 9 Nov 2024 at 15:38, Ambrosino <AmbrosinoMOC@pm.me> wrote:
+>
+>> Hi Mike!
+>> It's great you are finishing the paper. It's also great you want to mention a thing not usually mentioned in papers (at least I don't know any publication with LEGO dinos). I'm guessing you are writing a paragraph on cultural impact of the mount. Do you need photos?
+>> If you must mention me by real name, I'm [REDACTED]. But I think it is enough if you mention just my "business" name, Ambrosino, because I want to remain anonymous if I can.I'm working on a life reconstruction of Barosaurus with the same size. A rework of the skeleton is planned too, with use of any LEGO parts, not just found in the set I used previously, so will me much closer to the real anatomy.
+>> Best regards,
+>> [REDACTED]
