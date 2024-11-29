@@ -18,7 +18,7 @@ RCI took molds from the metacarpals of one manus (but can't remember whether it 
 
 > "Some missing bones, including the left scapula and tibia, were sculpted based on their right-sided counterparts." Which others, and which just used from the Carnegie _Diplodocus_? Can we know?
 
-Peter was the only sculptor at RCI at this time, and does not sculpting anything except the metacarpals mentioned above. So we thnk the quote from the current manuscript is incorrect, and all the missing bones were filled in with corresponding bones from the Carnegie _Diplodocus_ (supplied by Dinolab, inc., created from the molds they had taken from the Concrete _Diplodocus_ of Vernal).
+Peter was the only sculptor at RCI at this time, and does not sculpting anything except the metacarpals mentioned above. So we think the quote from the current manuscript is incorrect, and all the missing bones were filled in with corresponding bones from the Carnegie _Diplodocus_ (supplied by Dinolab, inc., created from the molds they had taken from the Concrete _Diplodocus_ of Vernal).
 
 Jack McIntosh had inventoried the AMNH 6341 _Barosaurus_ material and ordered missing bones as casts from Dinolab, but we have not been able to find anything about this order in McIntosh's notes.
 
@@ -50,7 +50,7 @@ Peter does have a couple of documents, including a can of a very high level sche
 
 > How can we get the video into digital form?
 
-I had misunderatood an earlier message as meaning that Peter had found an old VHS tape showing the trial mount. Nothing has yet been found, but the old recording probably still exists on a [Digital8](https://en.wikipedia.org/wiki/Digital8) or similar small video cassette.
+I had misunderstood an earlier message as meaning that Peter had found an old VHS tape showing the trial mount. Nothing has yet been found, but the old recording probably still exists on a [Digital8](https://en.wikipedia.org/wiki/Digital8) or similar small video cassette.
 
 Among the many video recordings RCI made back in the day, some have been transferred to DVD, but Peter has not been able to find these either.
 
