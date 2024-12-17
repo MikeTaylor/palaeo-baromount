@@ -13,7 +13,7 @@
 
 ## Lynton Gardiner
 
-* [`lynton-gardiner`](lynton-gardiner) -- notes extracted from email thread with the photographer Dorling Kindersley contracted to photograph the in-progress mount in 1991.
+* [`../lynton-gardiner`](lynton-gardiner) -- notes extracted from email thread with the photographer Dorling Kindersley contracted to photograph the in-progress mount in 1991.
 
 
 ## Miscellaneous observations
