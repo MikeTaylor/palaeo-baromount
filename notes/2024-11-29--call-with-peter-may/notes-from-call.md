@@ -35,11 +35,11 @@ At some point in the process, Peter went down to Dinosaur National Monument and 
 
 > Is the old paperwork likely to turn up, or should we give up on that?
 
-Peter has looked through bins of old records, but has not been able to access to ins going back further than 1998.
+Peter has looked through bins of old records, but has not been able to access the bins going back further than 1998.
 
 Among the documents yet to be located is the engineering report, which should contain lots of good information. Peter last remembers seeing it about 20 years ago, and thinks it very unlikely that the AMNH has a copy.
 
-Peter does have a couple of documents, including a can of a very high level schematic of the exhibit produced by Applebaum (the design company) and another diagram showing the locations of the mounts' feet. (All of this was done before CAD was widespread, so there are no electronic records, only paper.)
+Peter does have a couple of documents, including a scan of a very high level schematic of the exhibit produced by Applebaum (the design company) and another diagram showing the locations of the mounts' feet. (All of this was done before CAD was widespread, so there are no electronic records, only paper.)
 
 **TODO**: Peter will send Mike scans of the two documents he has.
 
