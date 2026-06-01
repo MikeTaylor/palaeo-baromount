@@ -19,7 +19,7 @@ RCI took molds from the metacarpals of one manus (but can't remember whether it 
 
 > "Some missing bones, including the left scapula and tibia, were sculpted based on their right-sided counterparts." Which others, and which just used from the Carnegie _Diplodocus_? Can we know?
 
-Peter was the only sculptor at RCI at this time, and does not sculpting anything except the metacarpals mentioned above. So we think the quote from the current manuscript is incorrect, and all the missing bones were filled in with corresponding bones from the Carnegie _Diplodocus_ (supplied by Dinolab, inc., created from the molds they had taken from the Concrete _Diplodocus_ of Vernal).
+Peter was the only sculptor at RCI at this time, and does not recall sculpting anything except the metacarpals mentioned above. So we think the quote from the current manuscript is incorrect, and all the missing bones were filled in with corresponding bones from the Carnegie _Diplodocus_ (supplied by Dinolab, inc., created from the molds they had taken from the Concrete _Diplodocus_ of Vernal).
 
 **Update**: "Pretty sure that all of the infill in the skeleton was from the Carnegie Diplodocus, the distal end of the tail most of the chevrons, i think we also used the right scapula and tibia from Diplodocus, I've tried comparing the scaps and right scap of the Barosaurus doesn't look that far off the diplodocus scapula."
 
