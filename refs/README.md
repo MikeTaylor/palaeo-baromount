@@ -1,4 +1,4 @@
-Douglass, Earl, 1922. Report of Work Done by the Carnegie Museum at the Dinosaur Nationel Monument in Uinta County, Utoh, under the Supervision of Earl Dougless, in the year 1922. 2 pages.
+Douglass, Earl, 1922. Report of Work Done by the Carnegie Museum at the Dinosaur National Monument in Uinta County, Utah, under the Supervision of Earl Dougless, in the year 1922. 2 pages.
 	Douglass1922_Field_Report.pdf
 
 Gilmore, Charles W. 1923. Letter to William de Chastignier Ravenel, “I herewith submit my report on the expedition to the Dinosaur National Monument”. 30 August 1923. 3 pages.
