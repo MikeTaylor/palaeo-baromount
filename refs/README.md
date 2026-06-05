@@ -1,17 +1,45 @@
 References
 ----------
 
-Douglass, Earl, 1922. Report of Work Done by the Carnegie Museum at the Dinosaur National Monument in Uinta County, Utah, under the Supervision of Earl Dougless, in the year 1922. 2 pages.
+Douglass, Earl. 1922a. Telegram to George P. Merrill estimating cost and time to extract two Diplodocus skeletons from the Dinosaur National Monument quarry. 10 November 1922 or shortly before.
+	p. 8 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
+
+Douglass, Earl. 1922b. Letter to George P. Merrill expanding on cost and time to extract two Diplodocus skeletons from the Dinosaur National Monument quarry. 22 November 1922.
+	pp. 9-12 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
+
+Douglass, Earl, 1922c. Report of Work Done by the Carnegie Museum at the Dinosaur National Monument in Uinta County, Utah, under the Supervision of Earl Dougless, in the year 1922. 24 March 1923.
 	pp. 13-14 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
 	Original (I think): Douglass1922_Field_Report.pdf
 
-Gilmore, Charles W. 1923. Letter to William de Chastignier Ravenel, “I herewith submit my report on the expedition to the Dinosaur National Monument”. 30 August 1923. 3 pages.
+Gilmore, Charles w. 1923a. Handwritten letter to William de C. Ravenel briefly summarising the outcome of the field season at the Dinosaur National Monument quarry. 8 August 1923.
+	 p. 16 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
+
+Gilmore, Charles W. 1923b. Letter to William de C. Ravenel reporting the outcome of the field season at the Dinosaur National Monument quarry. 30 August 1923.
 	pp. 18-20 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
 
 Gilmore, Charles W., et al. 1920s. Various correspondence relating to the USNM's acquisition of the Carnegie's DNM quarry.
 	DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
 
+Gilmore, Charles W. 1928. Memo to George P. Merrill on sourcing cast Diplodocus elements from the Carnegie Museum. 11 February 1928.
+	p. 21 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
 
+Merrill, George P. 1923. Accession memorandum for "portions of two skeletons of the fossil dinosaur Diplodocus", presumamably #340 and #355. 20 September 1923.
+	p. 2 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
+
+Merrill, George P. 1922. Letter to William de C. Ravenel on the Carnegie Museum's readiness to release the Dinosaur National Monument quarry. 6 November 1922.
+	pp. 3-4 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
+
+Osborne, Henry F. 1923. Letter to Charles D. Walcott with vague but ominous contents. 14 April 1923.
+	p. 15 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
+
+Ravanel, William de C. 1923. Telegram to George P. Merrill summarising Gilmore's report on work at the Dinosaur National Monument quarry. 17 August 1923.
+	p. 17 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
+
+Stewart, Douglas. 1922. Letter to George P. Merrill offering to turn over the Dinosaur National Monument quarry to USNM. 7 November 1922.
+	pp. 5-7 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
+
+Wetmore, F. Alexander. 1928. Letter to John C. Merriam on sourcing cast Diplodocus elements from the Carnegie Museum. 17 February 1928.
+	pp. 22-23 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
 
 
 --
