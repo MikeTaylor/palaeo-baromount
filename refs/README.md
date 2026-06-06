@@ -100,7 +100,7 @@ We have been successful far beyond expectations
 and the museum has the material for an essentially
 complete mount of Diplodocus, 80 or more feet
 in length and about 14 feet high at the hips.
-	Will have (estimated) a total connage in last
+	Will have (estimated) a total tonnage in last
 shipment of 25000#. THe cost of hauling same as
 before 1.50 per crate. Total cost of operations, including
 hauling to R.R. will be slightly less than 3000.00.
