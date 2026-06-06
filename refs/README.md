@@ -1,6 +1,9 @@
 References
 ----------
 
+Douglass, Earl. 1879-1953. Earl Douglass papers, 1879-1953. Collected by University of Utah Libraries, Special Collections; Excepted by Archives West. https://archiveswest.orbiscascade.org/ark:80444/xv14910
+	Earl Douglass papers - Archives West.pdf
+
 Douglass, Earl. 1922a. Telegram to George P. Merrill estimating cost and time to extract two Diplodocus skeletons from the Dinosaur National Monument quarry. 10 November 1922 or shortly before.
 	p. 8 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
 
