@@ -1,6 +1,9 @@
 References
 ----------
 
+Brown, Barnum. 1929. Report on Barosaurus. Confidential memorandum from the archives of the AMNH. 31 December 1929.
+	Brown1929-reproduced-in-Dingus1996.pdf
+
 Douglass, Earl. 1879-1953. Earl Douglass papers, 1879-1953. Collected by University of Utah Libraries, Special Collections; Excepted by Archives West. https://archiveswest.orbiscascade.org/ark:80444/xv14910	
 Earl Douglass papers - Archives West.pdf
 
