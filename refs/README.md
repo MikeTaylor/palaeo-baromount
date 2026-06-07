@@ -41,7 +41,10 @@ Osborne, Henry F. 1923. Letter to Charles D. Walcott with vague but ominous cont
 Ravanel, William de C. 1923. Telegram to George P. Merrill summarising Gilmore's report on work at the Dinosaur National Monument quarry. 17 August 1923.
 	p. 17 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
 
-Stewart, Douglas. 1922. Letter to George P. Merrill offering to turn over the Dinosaur National Monument quarry to USNM. 7 November 1922.
+Stewart, Douglas. 1922a. Letter to Arthur S. Coggeshall offering to turn over the two Diplodocus skeletons at Dinosaur National Monument quarry to USNM. 6 September 1922.
+	Stewart1922-letter-to-coggeshall.pdf
+
+Stewart, Douglas. 1922b. Letter to George P. Merrill offering to turn over the Dinosaur National Monument quarry to USNM. 7 November 1922.
 	pp. 5-7 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
 
 Wetmore, F. Alexander. 1928. Letter to John C. Merriam on sourcing cast Diplodocus elements from the Carnegie Museum. 17 February 1928.
