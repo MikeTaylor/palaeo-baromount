@@ -121,3 +121,18 @@ hauling to R.R. will be slightly less than 3000.00.
 		Very sincerely yours,
 			C. W. Gilmore
 
+
+Attempted transcription of note on Wetmore to Gilmore
+-----------------------------------------------------
+
+Mr. Bryant. Send
+Int bill of lading
+with instructions
+for use &
+classification
+of material
+R"
+
+("R" would be William de C. Ravenel)
+
+
