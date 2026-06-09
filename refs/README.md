@@ -26,6 +26,9 @@ Gilmore, Charles W. 1923b. Letter to William de C. Ravenel reporting the outcome
 Gilmore, Charles W., et al. 1920s. Various correspondence relating to the USNM's acquisition of the Carnegie's DNM quarry.
 	DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
 
+Coggeshall, Arthur S. 1924. Letter to Charles W. Gilmore reporting that neck section is ready to be shipped from Caregie Museum to USNM. About 21 October 1924.
+	1924-10-21--Coggeshall-to-Gilmore--Carnegie-neck.pdf
+
 Gilmore, Charles W. 1928. Memo to George P. Merrill on sourcing cast Diplodocus elements from the Carnegie Museum. 11 February 1928.
 	p. 21 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
 
@@ -49,6 +52,9 @@ Stewart, Douglas. 1922b. Letter to George P. Merrill offering to turn over the D
 
 Wetmore, F. Alexander. 1928. Letter to John C. Merriam on sourcing cast Diplodocus elements from the Carnegie Museum. 17 February 1928.
 	pp. 22-23 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
+
+Wetmore ,F. Alexander. 1933. Letter to George H. Sherwood stating that Barosaurus material has been sent to the AMNH.
+	1933-02-10--Wetmore-to-Sherwood--Barosaurus-sent.pdf
 
 
 --
@@ -86,6 +92,7 @@ Charles Doolittle Walcott, Secretary, Smithsonian Institution
 Charles Whitney Gilmore, principal excavator of DMN, United States National Museum
 F. Alexander Wetmore, Secretary, United States National Museum
 John Campbell Merriam, Head of the Carnegie Institution
+George H. Sherwood, Director of the American Museum of Natural History
 
 
 Attempted transcription of Gilmore to Ravenel
