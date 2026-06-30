@@ -22,6 +22,7 @@ Gilmore, Charles w. 1923a. Handwritten letter to William de C. Ravenel briefly s
 
 Gilmore, Charles W. 1923b. Letter to William de C. Ravenel reporting the outcome of the field season at the Dinosaur National Monument quarry. 30 August 1923.
 	pp. 18-20 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
+	Also extracted as Gilmore1923b-report-on-work-at-DNM.pdf
 
 Gilmore, Charles W., et al. 1920s. Various correspondence relating to the USNM's acquisition of the Carnegie's DNM quarry.
 	DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
