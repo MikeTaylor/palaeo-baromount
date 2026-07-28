@@ -11,8 +11,6 @@ Research Casting International, 15 Dufferin Ave, Trenton, Ontaria K8V 5C8, Canad
 Division of Paleontology, American Museum of Natural History, New York, New York, USA.  
 **Eugene S. Gaffney**
 Division of Paleontology, American Museum of Natural History, New York, New York, USA.  
-**John S. McIntosh**
-(deceased 2015)
 
 Feel free to read [the in-progress manuscript](TaylorEtAl-mounted-barosaurus.docx).
 
