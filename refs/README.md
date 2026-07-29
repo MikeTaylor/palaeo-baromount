@@ -14,7 +14,7 @@ Douglass, Earl. 1922a. Telegram to George P. Merrill estimating cost and time to
 Douglass, Earl. 1922b. Letter to George P. Merrill expanding on cost and time to extract two Diplodocus skeletons from the Dinosaur National Monument quarry. 22 November 1922.
 	pp. 9-12 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
 
-Douglass, Earl, 1922c. Report of Work Done by the Carnegie Museum at the Dinosaur National Monument in Uinta County, Utah, under the Supervision of Earl Dougless, in the year 1922. 24 March 1923.
+Douglass, Earl, 1922c. Report of Work Done by the Carnegie Museum at the Dinosaur National Monument in Uinta County, Utah, under the Supervision of Earl Douglass, in the year 1922. 24 March 1923.
 	pp. 13-14 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
 	Original (I think): Douglass1922_Field_Report.pdf
 
