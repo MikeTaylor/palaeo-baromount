@@ -9,6 +9,7 @@ Earl Douglass papers - Archives West.pdf
 
 Douglass, Earl. 1922a. Telegram to George P. Merrill estimating cost and time to extract two Diplodocus skeletons from the Dinosaur National Monument quarry. 10 November 1922 or shortly before.
 	p. 8 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
+	Also extracted as Douglass1922a-telegram-to-Merrill.pdf
 
 Douglass, Earl. 1922b. Letter to George P. Merrill expanding on cost and time to extract two Diplodocus skeletons from the Dinosaur National Monument quarry. 22 November 1922.
 	pp. 9-12 in: DINO GILMORE ACC# 70568 - Dino Skeletons.pdf
