@@ -33,15 +33,15 @@ DONE		Integrate changes from proofreading
 DONE		Italicise "B" and "D" genus abbreviations in Figure 17
 DONE		Spell-check
 DONE		Add running header
+DONE		Integrate Matt Wedel's suggestions
+DONE		Check all SV-POW! blog-post references have DOIs
 NO		Maybe summarize Carnegie Diplodocus casts composition
 NO		Discuss arterial peristalsis
 NO		Remake Figure R with better photos from Tschopp and Mehling
 NO		Integrate Applebaum documents recently received from Peter
 NO		List material sent to the University of Utah
-FAILED		Ask Peter for better scans of documents in notes/2024-11-29--call-with-peter-may/follow-up/
-	XXX	Integrate Matt Wedel's suggestions
-	XXX	Check all SV-POW! blog-post references have DOIs
-	XXX	Check C17=14 using Mallison's model, acknowledge
-	XXX	Find out how the USNM obtained casts of Carnegie Diplodocus material
+	BLOCKED	Ask Peter for better scans of documents in notes/2024-11-29--call-with-peter-may/follow-up/
+	BLOCKED	Check C17=14 using Mallison's model, acknowledge
+	BLOCKED	Find out how the USNM obtained casts of Carnegie Diplodocus material
 	XXX	Format for AMNH Novitates (or PE?)
 	XXX	Submit to AMNH Novitates (or PE?)
