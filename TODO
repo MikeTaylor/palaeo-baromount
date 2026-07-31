@@ -35,6 +35,7 @@ DONE		Spell-check
 DONE		Add running header
 DONE		Integrate Matt Wedel's suggestions
 DONE		Check all SV-POW! blog-post references have DOIs
+DONE		Send completed manuscript to co-authors
 NO		Maybe summarize Carnegie Diplodocus casts composition
 NO		Discuss arterial peristalsis
 NO		Remake Figure R with better photos from Tschopp and Mehling
@@ -43,5 +44,6 @@ NO		List material sent to the University of Utah
 	BLOCKED	Ask Peter for better scans of documents in notes/2024-11-29--call-with-peter-may/follow-up/
 	BLOCKED	Check C17=14 using Mallison's model, acknowledge
 	BLOCKED	Find out how the USNM obtained casts of Carnegie Diplodocus material
+	XXX	"the right side on both the original mounted Diplodocus and the casts": s/on/of
 	XXX	Format for AMNH Novitates (or PE?)
 	XXX	Submit to AMNH Novitates (or PE?)
