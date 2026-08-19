@@ -7,10 +7,14 @@ Department of Earth Sciences, University of Bristol, Bristol BS8 1RJ, UK.
 <dino@miketaylor.org.uk> (corresponding author)  
 **Peter May**
 Research Casting International, 15 Dufferin Ave, Trenton, Ontaria K8V 5C8, Canada.  
-**Lowell Dingus**
+**Lowell W. Dingus**
 Division of Paleontology, American Museum of Natural History, New York, New York, USA.  
 **Eugene S. Gaffney**
 Division of Paleontology, American Museum of Natural History, New York, New York, USA.  
+**John S. McIntosh**
+(deceased 2015)  
+**Mark A. Norell**
+(deceased 2025)  
 
 Feel free to read [the in-progress manuscript](TaylorEtAl-mounted-barosaurus.docx).
 
