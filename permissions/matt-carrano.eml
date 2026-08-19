@@ -1,0 +1,243 @@
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+WARNING: bad base64 char -1 (ˇ)
+Delivered-To: sauropoda@gmail.com
+Received: by 2002:ad4:57cb:0:b0:907:b262:d72e with SMTP id y11csp4539058qvx;
+        Mon, 3 Aug 2026 19:55:15 -0700 (PDT)
+X-Received: by 2002:a05:690c:6d8f:b0:7db:ccda:a40d with SMTP id 00721157ae682-81fd49c94bfmr153458647b3.5.1785812114927;
+        Mon, 03 Aug 2026 19:55:14 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1785812114; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=azZiU3ZqrFgtzpz8jXm1vtiN0xlKzBKnViS+TL7yF97gCcvWriLybX2EqgCiSjzwxj
+         L1KZKHNNKjGQUM6D6zv8oZ/ywYrdqNOAqkUij2SdWYRC/JWBat6uGAXnm/+rm6bhgAEp
+         njl0jR4SzIMr1puF/YiHRUrpTvZN1xfzuDobQ0jYm0hvRLHIQDbReQFGiDKqeYUdvmUK
+         EVf1dkVIVdMc4vf66G4xW+U8gxjFwg2Dbfzy0MuAvohQG2Hfz3LwjNkaMXGz3YiS1TCS
+         cqqJYzwGHBWaRluQrnATEFUagy1MO5xDHpLjWKTiRlXNyRiq3yicHIH6r8y2f7+P2aPK
+         pi1A==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=mime-version:content-language:accept-language:in-reply-to
+         :references:message-id:date:thread-index:thread-topic:subject:to
+         :from:dkim-signature;
+        bh=xrbMcSZJp+aBz46u+Ozfp5onmITYf2EuMLAevzbCHKk=;
+        fh=cuZ7jSwD13YE+Qq+nea85qW3JSKlsjfKmkJdZM5m4cU=;
+        b=ma9QyuTXyy2qEp1oYAdBNyqjxN0A/tGW8PnRT8gNE2ITguBzN/tAxjNTUiBDULmRvy
+         4nw3/cG/afm2BfS47aWWZQey/A1ZH8pJKGAy/r4sdzqieXy7bmClEka37IN2lwtLUD3K
+         PYKQfbbfZ/zXGGxofkrl9N/9FwieYxfXljs2qOin1sgUzNZM4xle9lkQi+fD4mamVJUO
+         C7/uUh91/Nvs9ePL4r0zs2afofAGVgvhSYmkGtvqTvGgbfekowE3aHj6iYCKFGYJNtaP
+         OnLeEZPZTUR1o3o+e+enrAZ7QJga3Sl4zYiKZ7xx1Wg0ffKVWHIy1sEqr67vlAXZ7/AP
+         fHmQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@si.edu header.s=selector1 header.b=AZ6LsKlc;
+       arc=pass (i=1 spf=pass spfdomain=si.edu dkim=pass dkdomain=si.edu dmarc=pass fromdomain=si.edu);
+       spf=pass (google.com: domain of carranom@si.edu designates 2a01:111:f403:c105::1 as permitted sender) smtp.mailfrom=CARRANOM@si.edu;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=si.edu
+Return-Path: <CARRANOM@si.edu>
+Received: from CH1PR05CU001.outbound.protection.outlook.com (mail-northcentralusazlp170100001.outbound.protection.outlook.com. [2a01:111:f403:c105::1])
+        by mx.google.com with ESMTPS id 00721157ae682-81fcd155793si159196977b3.135.2026.08.03.19.55.14
+        for <sauropoda@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 03 Aug 2026 19:55:14 -0700 (PDT)
+Received-SPF: pass (google.com: domain of carranom@si.edu designates 2a01:111:f403:c105::1 as permitted sender) client-ip=2a01:111:f403:c105::1;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@si.edu header.s=selector1 header.b=AZ6LsKlc;
+       arc=pass (i=1 spf=pass spfdomain=si.edu dkim=pass dkdomain=si.edu dmarc=pass fromdomain=si.edu);
+       spf=pass (google.com: domain of carranom@si.edu designates 2a01:111:f403:c105::1 as permitted sender) smtp.mailfrom=CARRANOM@si.edu;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=si.edu
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=mAOBC/5FhznzA+iMxZmzRFFBcwq5h9LXgDAaCXBO1K9/GxZnJ7SrFQ8HBxsVT15aZaAfhuNvahvkPaEThthLN/jUKQLpgYpUcks32jnsM/qtgUYTfccmFOfvqZnfx0VmV9nsvU/YtAbKo4Yt9zYSNugubyuKI5jQctvxSZWEQyCFyq3fXyyeMoTa31rmZnxE6xqvBIlA5TwnZTE0usxNmVV6Jrg62B1YKDQyu/qWGF69bG87tcW7xsZp9CncCsO8jB1rsE4abzcYrksDrQC1+EEoRhgzvNGCXwp4nK6FpsOAp5tTRkQbdQxR1ji5f5utvpchIuOH6bVAkQQX/lOSbw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=xrbMcSZJp+aBz46u+Ozfp5onmITYf2EuMLAevzbCHKk=;
+ b=TCnrQaH2p6De7QtJMrrN5lpp+jjPuX0nUpiFmgIeUg/yYYBLUFONynG6VoYbTvgbob61NeT4ptpIkPJdFFMNlkmwEnbueSWSz/mUznacttKafnfBssuOdOivMedTD4p1snoCRpQQYdh8JL8LR8mjf1seh2l06XcktX+DHn/20aiDde7hWL/QrRZvdGU2sJmeG+J5uWGPqxMrzym20jNtv0Ht1zUOA7K0k4jXXCkKayn4lu5GiRjT1bcw5d91rNZ0yym8z7u93Iwl2M9k6Avo7nEZy+RIwulU8Pu8UR3vgCO2ucZShr10wnZnqCiomUZsczyIvcbqsu5l/bwYiknABA==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=si.edu; dmarc=pass action=none header.from=si.edu; dkim=pass
+ header.d=si.edu; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=si.edu; s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=xrbMcSZJp+aBz46u+Ozfp5onmITYf2EuMLAevzbCHKk=;
+ b=AZ6LsKlcQ5qi6X7gW8skycAdk6HcJFYJhtV9iFFEFOiOgaEe9TzxfQVbR/wiIFuzrp5JGT1K6Mf4z7NmvBJUplagvQ/hTe9ij95sPd35a6PXyNvlMmErRKEgPSscCoSdSiUcXMLY58m6De9RDeK2vTng9v75oIFEa+Q9h9/8sNA=
+Received: from MN2PR12MB4439.namprd12.prod.outlook.com (2603:10b6:208:262::17)
+ by IA0PR12MB8279.namprd12.prod.outlook.com (2603:10b6:208:40c::16) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.21.270.18; Tue, 4 Aug
+ 2026 02:55:12 +0000
+Received: from MN2PR12MB4439.namprd12.prod.outlook.com
+ ([fe80::faf0:a2b7:75fc:ccbe]) by MN2PR12MB4439.namprd12.prod.outlook.com
+ ([fe80::faf0:a2b7:75fc:ccbe%7]) with mapi id 15.21.0292.013; Tue, 4 Aug 2026
+ 02:55:12 +0000
+From: "Carrano, Matthew" <CARRANOM@si.edu>
+To: Mike Taylor <sauropoda@gmail.com>
+Subject: Re: Barosaurus radius and sternal plate
+Thread-Topic: Barosaurus radius and sternal plate
+Thread-Index: AQHc9s0hWNrSjyu3lEap2yghtwg9l7aD2ZOAgAEHHuqAAAfygIAHc50AgAEvcgA=
+Date: Tue, 4 Aug 2026 02:55:12 +0000
+Message-ID: <B1DB590C-673E-4065-9C46-31E7F25634AC@si.edu>
+References:
+ <CACnMvBbcUWgax7Pz3SKHZKoUB9DT8v6CxtTF9JDcsDmKGsBA3Q@mail.gmail.com>
+ <CACnMvBaqt5BxxepuSDdobA2xB7oSBOL1nCpE1W2imDVypSauoA@mail.gmail.com>
+ <MW3PR12MB44440B5529F686538B9A5666B5CA2@MW3PR12MB4444.namprd12.prod.outlook.com>
+ <CACnMvBaRYi0SCgz1XNZ0mCcO15WkD91FF+5KOknJEZDXRHe9Ow@mail.gmail.com>
+ <CACnMvBaBWDbZ+3VR4q2Rq7re_vD_CuQ6Us5idONR4Sn6e9i0WQ@mail.gmail.com>
+In-Reply-To:
+ <CACnMvBaBWDbZ+3VR4q2Rq7re_vD_CuQ6Us5idONR4Sn6e9i0WQ@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-mailer: Apple Mail (2.3864.600.51.1.1)
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=si.edu;
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: MN2PR12MB4439:EE_|IA0PR12MB8279:EE_
+x-ms-office365-filtering-correlation-id: 4d632aef-b1ff-4e65-131c-08def1d3cdda
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam:
+ BCL:0;ARA:13230040|10070799003|19092799006|23010399003|376014|1800799024|366016|38070700021|56012099006|4143699003|5023799004|11063799006|10067099003|8096899003|18002099003|22082099003;
+x-microsoft-antispam-message-info:
+ bZZi+rNOxIuK0RAmtbRxSYwmDaZvWtsxStt9uKMUtUth7dWNViN0OrJuUUmbWaAwrsl4LtkI9TOgk+StJEWWON1ek21T+aojMgfQChmv44+jp1n/tkrSyGu985OVnSTXnHLTx5VH88z4c1LBJtOBd1KpRicoRWgVN7x+SkjOzvnHZjqkVbjtpHv6h6KtlhECuEHvy457TEOBVDy8qVWowei5OPINQV9wu9rTrCJ+ltxTNdgLAge4NWOyURmB6MUugrCyuy4GMd9pQyXlvPIREA3K7AGEullw6pxW7xZ7glkR9cCQC2i0G8/B5Yk0sxL/kqlYPoQz05MCO2rEwDVbvHylKnUpD+M/hJrWT0p5maxSHs8piYutynY4MuzP7fV7NSb8nrXrqHsMPgp9ESZCktnlB3k5ujRSzUeu4OpU9vx0aEm9apfM2X9mEMCk8pOvt21riF3XL7MHo7GlPpPKv+5/mLZ/uw9smlk1x819YIXEzHUci8f5HNlqs9uxTNrlGawljIH11AawfXF2e9KW5o33NOAONHCbdtaZsSs9lJ/cihtZwKUSM7HAvJ19+9xhnbcTd24XuwjvhuoNWVRg1sHh8YEnJY26OXrBpHk7fillR1ldZVZZUnUFcTQBCdp4zAaLqPPs/+eAhtCYRB31dQH4KMJRqnN4CU0WalqmxLE+md9aAdf+uRrtE/2FCjhs0EGAj7ICwprz74gxZDjiHJOZ6IuN3nHM+bDTZpv1Wtk=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:MN2PR12MB4439.namprd12.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230040)(10070799003)(19092799006)(23010399003)(376014)(1800799024)(366016)(38070700021)(56012099006)(4143699003)(5023799004)(11063799006)(10067099003)(8096899003)(18002099003)(22082099003);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 2
+x-ms-exchange-antispam-messagedata-0:
+ =?utf-8?B?YktmY1dnL3phMk9GL0tyczRXcjRwWWhZR2EwVXZrQUxCNTg4OGo0LzN2akxs?=
+ =?utf-8?B?M05ESHZZUmZmZGxBUVF1VXNHK0tLT2hJVlg5U1hiZFF5SmhETGdqUDNLMnBE?=
+ =?utf-8?B?VmNxc2g5N3Z1WDhuODAwSVRKbjdqMU9iQ1NuVlRpdGNVeUFFYXEzNis5WEJB?=
+ =?utf-8?B?MHJsT1F5TUxub2lBbG5sL0VxRzFNU2VRbjVTUXFBQnBLZGFsT1ZNNVhZekZk?=
+ =?utf-8?B?bG14V0NsYjl0QkVrOERCb1VVbzdrVFd0VG5SNERDWFRjSzBhay8yR0JLVFQ4?=
+ =?utf-8?B?Z3J4ZkhMWjV6dFZMS0Z3OStmMk1YVUdaVU1lV0ZXL2R1NlExVFA5TXdZajhi?=
+ =?utf-8?B?UkNQL2VmaHljVGRiTTRwMzB0YUtaajI1WUdEM0VSNk1mRGJEZzlIMmtYMSs1?=
+ =?utf-8?B?cytmaVEvZkpHRG9IRVV3TThId0thN3l2NGFZVUZ2amVjNmpjYTFNR2crd0x6?=
+ =?utf-8?B?YThMY2tqZG9UendoTFRqdjhPRzIyRjZEK211eVhURGtsejZQei9GL3Z6U2NX?=
+ =?utf-8?B?Si93UWNzbDZGL0dvUVVEWmJMbnhtZW1hRzFrL09kUHFHclczQmxGQUJBTHc3?=
+ =?utf-8?B?MzhHdWFEZEt1UWdieFJpYnBhaytEUng4djFDZzlZN1NYbmJCakZBOE5ZcGdw?=
+ =?utf-8?B?Vmt4WUFoQjZXR0lTbExpZEFmdjZmNzRSOFA1aTRHbER0ZVRTMVNTRmpNUm5R?=
+ =?utf-8?B?dXpBZHVrUGlCbzlFTHBzOXVmN3VyQlNiNDdtaU14eElJWnJwalFqUnY5VG5I?=
+ =?utf-8?B?VlVCSG9ma20rRGJacVVHOS81YnB4WU90NThjVjB6NFVQZUEwUk8zQ3RWeE5z?=
+ =?utf-8?B?bXR2aUFVQXY5QUJSaUZXV1NoNEJtdlhTVnZqK3JzV3NweTIvUm45aUZjUXMy?=
+ =?utf-8?B?NGtXYmd1bzc5UWlnUnB4VmFZdHdKeUlybHh5MVhxSHhJWXRieENsUUFQb0Rn?=
+ =?utf-8?B?ZGJVdkpXekJzQkJ4T0VBTUhEWXkvNCtEZDNHMjRGSHhCd2VlalFseTR0TERC?=
+ =?utf-8?B?a3NFM0F3dGRHdnV1MFdza1FMUFNrYnBmNFVVdnp0aUZZM0dlbkZXdlhmdmxv?=
+ =?utf-8?B?cHZrem1sNHJoelRneDM2OWs5ZHU1M1JYd1pqTk9PUGFpYkdSZXNhY3MzM3BT?=
+ =?utf-8?B?VmJmcGJlZDRKUy9FcHJMbWV5OFRYS0lMYlF3VG9maElHM0EzeVhVVDA3MDJF?=
+ =?utf-8?B?UkI1Z2oyZWFBK3h2dXR3OEx2NElDZ3NTKzk4K0hiRWZ4NDVpY1d3aVlQaW8y?=
+ =?utf-8?B?NHBHWjBVVWZmWVY2dS9xbThiWVJQVkc5cjVmZmRwWGFOTG04SnhtNTdtSUhv?=
+ =?utf-8?B?ZkcwdjdVajlzSWdBVHExK0lOeExJVHJjT01uYnRzWnl0SkM4bHJDMURHSU12?=
+ =?utf-8?B?TjN5N1pnRSs4QVd1cnBwdnp4UzIzRmxVYkpuMzI2S3hMSzI1QkpGcEw5Vkp6?=
+ =?utf-8?B?aHdsS2o3Y2RWc0pCZWJjYUptbE0wMG1zQitVaGUrQnBzQW00cTlnbUpkbFZo?=
+ =?utf-8?B?OUprN0hqZUltM3pHRzVBdUVZV1JmbGNmLzcwRUM3cURjUUc2NHRmQm5sNjVi?=
+ =?utf-8?B?c0hoU0hrd1NjMytjRmZFTTVmUkhzQlpWVC9VZDdvT0Z2OFRHcll2c24wU3ZY?=
+ =?utf-8?B?dWtUckZESExReGRDZ0krZkJ1Wk8yeTNtT2lDVUFkYXFLUlhGa3cxTVJWaFVm?=
+ =?utf-8?B?a0ttQjF2Y054aWlrS283eXdrUWJwME8xdjVjWUJLOGF4OWhBc1A4Q0pRV0JD?=
+ =?utf-8?B?QUJRN2lFL2VHb3NwRFlTN21JRnJhenFiRURLaWlTNWFvTVhjTGZjK2F1TmFV?=
+ =?utf-8?B?S05SU0l1NFA1b0d0QWR0aDNJWVFnTDZxWUs4ajRPV3FnM1owZzhtWUpzbjRQ?=
+ =?utf-8?B?SHlsMktrYzQybmJyMi9sVSt6bURqZUtudTZCQ1JKZ3Noc0JVVkJTMVZqeUlL?=
+ =?utf-8?B?dDVsM01PTHFJbksyMElXTXROakhNNmF1MUFIcXBVNUVGSkQ3WTNBVnF6c25N?=
+ =?utf-8?B?ZlpPTTc5bzZHYStYM3VxMHhVRThrSW9ZLzJQMG9halhPMldQdm9PZDFlNGZH?=
+ =?utf-8?B?R01JZkpVN2ZWQlF0K3JaemhzT0FBai9nUldUd203TWhDOG03cCtTRGRQVWNV?=
+ =?utf-8?B?NGc5T2ZYeEdiY0VHbVpaMG9pQlI4L0pROUFYa2E1dEpiZVNXdFNRbStXVXhy?=
+ =?utf-8?B?Rk9aY2Q1eU80Uk96Wm9KSGZWMWt5Y3I5cHNJQ0VMbThmc1plSmRYODJvckxh?=
+ =?utf-8?B?anNtckVkb20rZ0xMWFJnNElVNS8xc0V3enAzeG1hUElhekhPMEdJcjZRNU5F?=
+ =?utf-8?B?bVkvdjRXeFMyaUNHT3pldUFrVHd2cmZXK2tWZ1IrTVJhVzVaUVEvQURJcW9h?=
+ =?utf-8?Q?VkEz0UMtY6j0kL2IqBQJSxzMX4PRzxmdgFVdxkiE3RBtN?=
+x-ms-exchange-antispam-messagedata-1: qQQ6YK8xfGRWTw==
+MIME-Version: 1.0
+X-OriginatorOrg: si.edu
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: MN2PR12MB4439.namprd12.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4d632aef-b1ff-4e65-131c-08def1d3cdda
+X-MS-Exchange-CrossTenant-originalarrivaltime: 04 Aug 2026 02:55:12.6681
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 989b5e2a-14e4-4efe-93b7-8cdd5fc5d11c
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: qCJ7AN96ValpAAGKSMpESifne3Tp4euim7Bglc9ERYan96safSrnW6e1wk3bESUS
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: IA0PR12MB8279
+X-StripMime: Non-text section removed by stripmime
+Content-Type: text/plain; charset="utf-8"
+
+Yes, certainly.
+
+Matt
+
+Matthew T. Carrano
+Curator of Dinosauria
+
+P.O. Box 37012, MRC 121
+Department of Paleobiology
+National Museum of Natural History, Smithsonian Institution
+Washington, DC 20013-7012
+
+On Aug 3, 2026, at 4:49‚ÄØAM, Mike Taylor <sauropoda@gmail.com> wrote:
+
+External Email - Exercise Caution
+Oh, one more thing ‚Äî would it be OK, please, to cite a pers. comm from you to the effect that if the radius and sternal plate exist then they're in the remote storage facility and could only be located by a lengthy search through the oversized collection?
+
+Much appreciated,
+
+-- Mike.
+
+
+On Wed, 29 Jul 2026 at 16:01, Mike Taylor <sauropoda@gmail.com<mailto:sauropoda@gmail.com>> wrote:
+Oh, I'm sorry to hear that. I'm sure Abby's happy to have retired, but I'll miss her: she was super helpful in our short correspondence. I completely understand that nothing can be done about this in the short term, and of course it's not a problem at all. I hope it will just sit indigestibly in the back your mind, so that the next time you're at the facility you have your visual scan brainroutines suitably calibrated!
+
+Thanks,
+
+-- Mike.
+
+
+On Wed, 29 Jul 2026 at 15:34, Carrano, Matthew <CARRANOM@si.edu<mailto:CARRANOM@si.edu>> wrote:
+Hi Mike,
+
+Unfortunately, Abby Telfer recently retired from the Smithsonian after a long tenure as our FossiLab manager. I‚Äôm not really able to follow up on this in a timely manner, as it would require traveling to our remote storage facility and going through the oversized collection in some detail.
+
+best,
+
+Matt
+
+From: Mike Taylor <sauropoda@gmail.com<mailto:sauropoda@gmail.com>>
+Date: Tuesday, July 28, 2026 at 6:51‚ÄØPM
+To: Carrano, Matthew <CARRANOM@si.edu<mailto:CARRANOM@si.edu>>; Telfer, Abby <telfera@si.edu<mailto:telfera@si.edu>>
+Subject: Re: Barosaurus radius and sternal plate
+
+External Email - Exercise Caution
+Just a gentle nudge on this inquiry. Thanks!
+
+-- Mike.
+
+
+On Sun, 7 Jun 2026 at 23:28, Mike Taylor <sauropoda@gmail.com<mailto:sauropoda@gmail.com>> wrote:
+Hi, Matt and Abby. As I push on with the AMNH Barosaurus paper, I have noticed an interesting anomaly. I'll quote from the in-progress manuscript:
+
+Brown‚Äôs (1929) memorandum on the trading he did for fossils has a rather different list of Barosaurus material at the USNM than that which Gilmore (1923b:3) specified when sending the fossils there. Where Gilmore had listed 13 cervicals, three dorsals, right scapula, humerus and radius and a sternal plate, Brown listed 10 cervicals, three anterior dorsals, left scapula and humerus. These discrepancies are significant. The difference in the number of cervicals can be explained as a consequence of supposed pairs turning out to be single long vertebrae, but the left/right differences for the appendicular material are harder to account for. The radius and sternal plate mentioned by Gilmore seem to have gone missing: they are not included in the material list below. It is possible that they still lurk unrecognised in the USNM collections.
+
+The references are below, and I have attached PDFs of both.
+
+What do you think? IS is possible? Is there a way to find out?
+
+Many thanks,
+
+-- Mike.
+
+
+References
+
+Brown, 1929. Report on Barosaurus (letter to the American Museum of Natural History, 31 December 1929. Reproduced on page 21 in: Dingus, Lowell. 1996. Next of Kin: Great Fossils at the American Museum of Natural History. Rizzoli, New York.
+
+Gilmore, Charles W. 1923b. Letter to William de Chastignier Ravenel, ‚ÄúI herewith submit my report on the expedition to the Dinosaur National Monument‚Äù. 30 August 1923. 3 pages.
+
+
