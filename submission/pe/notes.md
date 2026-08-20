@@ -15,6 +15,12 @@ We must suggest the best figure to use for the thumbnail for the paper: 230 x 91
 
 Authors submitting new manuscripts should submit a single PDF file that contains all elements of the manuscript, including text, tables, figures, and captions, except for author listing, author affiliations and acknowledgements.
 
+Double space the entire manuscript, including abstract, text, references, as well as captions of figures and tables.
+
+Number all pages.
+
+Include line numbering.
+
 Submitted filenames must be 8+3 monocase!
 
 
@@ -34,6 +40,8 @@ Headings:
 * First Order are all capitals, bold, centered;
 * Second Order are flush left, bold type, regular case
 * Third Order are bold, regular case, followed by a period and space, with text on the same line
+
+Indent the first line of each paragraph that does not start with a second or third order heading.
 
 Dates are in the stupid format "January 1, 1995". But "Either American or British English is acceptable, although manuscripts should be consistent throughout" so maybe ignore that.
 
