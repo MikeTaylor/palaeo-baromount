@@ -20,6 +20,17 @@ Feel free to read [the in-progress manuscript](TaylorEtAl-mounted-barosaurus.doc
 
 Anyone is welcome to [file issues](https://github.com/MikeTaylor/palaeo-baromount/issues).
 
+## Status
+
+As of 21 August 2026:
+* This paper has been submitted to
+[the ongoing Diplodocoids collection](https://palaeo-electronica.org/content/diplodocoidea-dinosauria-sauropoda)
+at
+[_Palaeontologia Electronica_](https://palaeo-electronica.org/).
+* [A preprint matching what was submitted](https://zenodo.org/records/22043394)
+has been posted on
+[Zenodo](https://zenodo.org/).
+
 ## Note
 
 See also [`palaeo-baromount-archives`](../palaeo-baromount-archives).
