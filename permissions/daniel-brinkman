@@ -1,0 +1,196 @@
+Delivered-To: sauropoda@gmail.com
+Received: by 2002:a0c:c252:0:b0:90c:8114:69f0 with SMTP id w18csp796680qvh;
+        Fri, 21 Aug 2026 11:14:56 -0700 (PDT)
+X-Received: by 2002:a05:690e:4513:20b0:66c:f1fd:db9b with SMTP id 956f58d0204a3-66cf1fddff6mr56588d50.51.1787336096550;
+        Fri, 21 Aug 2026 11:14:56 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1787336096; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=YSIie86ajxFD3jAcSHdbmIZrp6Bg6h5vEL7YgJNXFv8NtkdGhTj9MRx6mP0Ft1FBy+
+         e4NvAlqIoxM+VZUOUU9OwpgFGtwHD2pmW1V9PlRU75PbSo7HRgojtwptImQxw1JvAVvL
+         /otsSAbh1zkRsMg5q9YTdAjWSUE8mHE59xAx22iDDlnCNpblq/WTZWg1kdR5yRR9PZ5C
+         cOjDeYkAZAFKOCtBXzUDkr7uY/oQnztKVN6t+37Ee7vVPs4LXI5KDZWszS8CWA/amKiY
+         tzuV+mAGK9QfzLRdgNWY0GiwqETJ9MD+Y0by+4oG5DIznDehQMKzU16ZoGgKi88KiI9q
+         poyQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=mime-version:content-language:accept-language:in-reply-to
+         :references:message-id:date:thread-index:thread-topic:subject:to
+         :from:dkim-signature;
+        bh=WHWp5j7XW8eJNCkx4DM1lQDnj8RzOHaz/qFG/mLNrLQ=;
+        fh=cuZ7jSwD13YE+Qq+nea85qW3JSKlsjfKmkJdZM5m4cU=;
+        b=IHops0zfjbl+FPRwKeqhgokOiXAmzZLO6tYZ6YgCZ7fzOMjycfYXR9jvogOMe3z9+o
+         8GizkDoCI0OX40SBqo8eTZxC3kFdAD6W5z6smNtLAw38PPe7AreeCRwgzIuTi1mf5Jzl
+         VSObtoEHF0lIKZIdKWnn4UJp9kOjeha60Jk4jEMaRd+DEwzP33Wp+udgdCGncsnCKJcd
+         4myW/bqsPGMtY2BY/08rZ0LkaWrrJGbxCVfXDEozIRjX7dp1RycWABjdk9vGo65xVweM
+         OYHebI3fpVhKHDs1OoYZXe6vr9y0AxOEB7JYc34nU8zkR4w9Ju2pO8P5cObWWaARBxei
+         EhDQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@yale.edu header.s=selector2 header.b=sXSTUOia;
+       arc=pass (i=1 spf=pass spfdomain=yale.edu dkim=pass dkdomain=yale.edu dmarc=pass fromdomain=yale.edu);
+       spf=pass (google.com: domain of daniel.brinkman@yale.edu designates 2a01:111:f403:c10d::1 as permitted sender) smtp.mailfrom=daniel.brinkman@yale.edu;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=yale.edu
+Return-Path: <daniel.brinkman@yale.edu>
+Received: from SN4PR2101CU001.outbound.protection.outlook.com (mail-southcentralusazlp170120001.outbound.protection.outlook.com. [2a01:111:f403:c10d::1])
+        by mx.google.com with ESMTPS id 956f58d0204a3-66ccb1b99besi4564959d50.182.2026.08.21.11.14.55
+        for <sauropoda@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 21 Aug 2026 11:14:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of daniel.brinkman@yale.edu designates 2a01:111:f403:c10d::1 as permitted sender) client-ip=2a01:111:f403:c10d::1;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yale.edu header.s=selector2 header.b=sXSTUOia;
+       arc=pass (i=1 spf=pass spfdomain=yale.edu dkim=pass dkdomain=yale.edu dmarc=pass fromdomain=yale.edu);
+       spf=pass (google.com: domain of daniel.brinkman@yale.edu designates 2a01:111:f403:c10d::1 as permitted sender) smtp.mailfrom=daniel.brinkman@yale.edu;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=yale.edu
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=WreAvYXGym+MOzOJsTfeZWtpKehPWhhPUXZysYNgpZ5KGwCgRAyOewsTba/yEEuFXtHjrTesgNoezve/zbUq7ImHfR7UDPDpVlCyWQeha9KcfXHgPSM3OmnwQBY/TWcDqkpZ7o/qQ5x+XMF64+nvB9Ac52sXZdauR1tZky9Vq3ihjPbVmQDsj5dFgeR665Cf1M8y9QE3zlQ97tvDf2paZw+jYKdExJeLWJwRbn3Yk8SXLP0BEyllkF+snn7Y6xP9vAM/BbzkPgIx4Ice3iMm0QQev1UIZzBVJnfuPPCZyrTCGu37wogY4IoXvZVbnzVfkZTK+sR5WKpV5OF2CNG5RQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=WHWp5j7XW8eJNCkx4DM1lQDnj8RzOHaz/qFG/mLNrLQ=;
+ b=vStsksAPByCrcYP3bC6/i+jIAEWfCSmXNtfiJDNKQXNS70iLFzcA37czHgch0nUjUgl1TEqkHDr5YE16/fnqTnnLX5+RzGjFQ6zg05l0cz1UFidwGmDBwSw62/PwKyj4jAm+AJDnP9zNyGZ5KlZ18yVsZtVcSipXAPRDRDNXE2QfBwXMi3MU172nLv5K6B5TVs8+PqOl1rG2dKEBTI3OfDN/TvT33MXbCfEo/ycFY9URUvyqgorhaWUQgwvPkQeqzenhRc2nc2cnx4RNlxdEvaCcwz/ur3vVcH7GCGgL/74IRCopmozLxzu9S25lLAA0lYylRRvJ4r+RQAZc/x2Wvg==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=yale.edu; dmarc=pass action=none header.from=yale.edu;
+ dkim=pass header.d=yale.edu; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yale.edu; s=selector2;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=WHWp5j7XW8eJNCkx4DM1lQDnj8RzOHaz/qFG/mLNrLQ=;
+ b=sXSTUOia9PW9fg31LgqeRfCmDReEzacN+yp+B0j++tun/H95KME9UXnipUd60ckQpudsBeDn69t81KPRUMsgupY4JL+jD1Nz0noK3WwlFSzy0Ecoo/d1j0nfTK/9zowJTon5qK9ra6LZbVZ95HmpSUmlNr7SI7jUn04wA2IJjj4=
+Received: from SN6PR08MB4238.namprd08.prod.outlook.com (2603:10b6:805:33::33)
+ by PH7PR08MB8255.namprd08.prod.outlook.com (2603:10b6:510:156::21) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.21.339.11; Fri, 21 Aug
+ 2026 18:14:52 +0000
+Received: from SN6PR08MB4238.namprd08.prod.outlook.com
+ ([fe80::34a7:5ec3:b0e9:d4d1]) by SN6PR08MB4238.namprd08.prod.outlook.com
+ ([fe80::34a7:5ec3:b0e9:d4d1%3]) with mapi id 15.21.0315.016; Fri, 21 Aug 2026
+ 18:14:51 +0000
+From: "Brinkman, Daniel" <daniel.brinkman@yale.edu>
+To: Mike Taylor <sauropoda@gmail.com>
+Subject: RE: Discoverer and landowner for Barosaurus
+Thread-Topic: Discoverer and landowner for Barosaurus
+Thread-Index: AQHdMZJnWSjxZjdIKkC+GXyyThl2q7aoxBpg
+Date: Fri, 21 Aug 2026 18:14:51 +0000
+Message-ID:
+ <SN6PR08MB4238F26C87A0F4A8C6DDD0BE8AA32@SN6PR08MB4238.namprd08.prod.outlook.com>
+References:
+ <SN6PR08MB423864E40C2600FB61ECC0908AA32@SN6PR08MB4238.namprd08.prod.outlook.com>
+ <CACnMvBZFjNrkqsn_EAG7R351E3AjqfmyaqirN6hmh9P78K7AHQ@mail.gmail.com>
+In-Reply-To:
+ <CACnMvBZFjNrkqsn_EAG7R351E3AjqfmyaqirN6hmh9P78K7AHQ@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=yale.edu;
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: SN6PR08MB4238:EE_|PH7PR08MB8255:EE_
+x-ms-office365-filtering-correlation-id: 357573a4-e08a-4378-bff2-08deffb01840
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam:
+ BCL:0;ARA:13230040|786006|23010399003|366016|376014|1800799024|8096899003|10067099003|56012099006|4143699003|11063799006|13003099007|22082099003|38070700021|18002099003;
+x-microsoft-antispam-message-info:
+ mIlRMH4a+u83Kr2mIEi2yoymTDIKsZaIasTWia6gawQrcdhMz4ECJ68CCiEiWOJN8S0VjwR+p2jYqvgY6G193SfmgH0eyJGZPEJuqlvAdeGWMJZKBRDpQJUBB3hq6z6y09zTPq3Ls7Q77TMySxvxV1DY8Ygs1JEnEpIzTVNwTphEUkt4T4iPTgf/eIoeRdAJlfSnq6eESU0ETgQrfEiDycS5+Cb5QYNiys9/vuNoXlKHEbm5UMm0pMgxYn3rBoIKminyFCkpVOpNaZQAZMi7OSqSV76+AXG+VqfQYh+Z2nKRE2KwsR9VeEGjEGULwTTAwXy7318EcK6p9Gvy6U1tY/LUjq9kUy/0KYzP9+l8GxBpSfY9EU4P8cLb0uH2v41EhE/PaOB0oRoECDw05SP47VioUU3rQa36jeDmuQfGQxrGTDcVGyKli8Z/8n6O1eQW6Lv95oUuSlYB0BBn4/lXt1TwnnFtdVZ7ruWZdMghFoJ8lGHot1+K1Ga3VlDHjs5v/CHM3lJWVlYmhawl63rGe+jw2ElFZLBuU1Ut86FfBi1pbc0oYYw1j1V74I5xo9LPSptIBlcumej9CEKQTpAqMmdP3GYS5Y2BMi7kDEpmCw1epgmLP44hnh0RZIFQWGevFCz28P2caCm+6XyG2xy8+vwBIyElsu3AGiQd9WSpmG0=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:SN6PR08MB4238.namprd08.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230040)(786006)(23010399003)(366016)(376014)(1800799024)(8096899003)(10067099003)(56012099006)(4143699003)(11063799006)(13003099007)(22082099003)(38070700021)(18002099003);DIR:OUT;SFP:1101;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?us-ascii?Q?JY5BbW7OIu8r5c17YVeZe6reRuMLL7K6Ey7mmcY12qb3/Ez8tFdsP3SfINex?=
+ =?us-ascii?Q?9JCZTjWfkNChFinh/9LNE6HvmzAKapflr5XYXD3Eoqcbnp1IwpQ08hKLnoaY?=
+ =?us-ascii?Q?NBlF8vmmLWcDlQVyUblvm86Nnp/OZ7aNLkhoa3DjhIhxK2P+9cv3gAm73w4O?=
+ =?us-ascii?Q?mUas0w1NBK8pTQZdeB0zGygqDh5MVEGSJ15Tgllua+WnDwK3/0VoGWxOLrkY?=
+ =?us-ascii?Q?/YVxEDPML1tnHyuacs0yWoKYfuR2sHvh9Fra0sGZQAas8s+8QSEULKzGHsJP?=
+ =?us-ascii?Q?0/V/MRrQ6/7f1BnQSGAx8fySfBrdh2kVEeU3Mlos7gGwd+s2e4iLBUx/qbuJ?=
+ =?us-ascii?Q?ipLPSnLDKY+LY5ANoNuKCcRH34lA8pKwqTofBeCaMb+Y9OeKIhNBo+I1nVlw?=
+ =?us-ascii?Q?/MweH2XvAwDAJ52f2T6jbLcMABNzqHo7ciAX13+kyZHDhhSwNGcqMIiUdBxP?=
+ =?us-ascii?Q?Zy8A+J4pM80+zzTjJOeAg8HDTdxEQg5yOfAhtoddthCYeCjkPAYqJOtaxBeR?=
+ =?us-ascii?Q?V/LXg7aifUpmPpO8B90J6SqIYUIcDr3wz4SYhdPQs6PcCRvYQKQIoR44a7g3?=
+ =?us-ascii?Q?z+wvOY4192vMoKaJB5Jdk+/7vsjqBmGWDkR/DQGeO1vHF3kQN2JT/7AJA/SX?=
+ =?us-ascii?Q?wE76R+xZdebeYV3hRA+UGIYcQ68SP089/fVB7cbAj82XYq+AB0LVskb1i16i?=
+ =?us-ascii?Q?FUvGauROOO19DvCMlxqbDqobB+JHUFAgpX9Wu81d8T1dClhQCL3WYu8Olzad?=
+ =?us-ascii?Q?3m+KURYwNFmjsQQIHqMfAYnTU2zgIREI5ZL2UjNRIaJzWVWbaIEAEoRHAC9x?=
+ =?us-ascii?Q?9klF35SeEEiAkVe+CrMPmRjHwKmnCN80q7XCLAcmHGC2cpkxFrRRWllm9Vmh?=
+ =?us-ascii?Q?5N86NZMS1Prbf74wYcuVI2EhiPXVl5/RcqdweYMSD7M1IGm8s5YDhnD6vGxu?=
+ =?us-ascii?Q?L9bmkE6h68k+lc/Y7FWSVizPPJ/n8ohbfyxBJ2xlBshVqny4Is5k89wK0qW5?=
+ =?us-ascii?Q?rZLHO21RySxEz2Jxd2EkyAn1NSgN48LRHT0pz3K9wjIySp5XtXKVpu0KpipV?=
+ =?us-ascii?Q?OpQRMkV1mx2g9OJDcLMGAEzKTR7KhS4s/sv+JEZw1J5Ax7goBCtTgIKTiyvp?=
+ =?us-ascii?Q?c3pMWdvGIcUZUwTESYvfBQuPI9C+6MooP8mW34a3CBWCiU7mdY3vUDB5X+nR?=
+ =?us-ascii?Q?M47jT1H/FVDq9eISHWAvADOtWY0A64AsVm7mVlMRwR5DY+7f4P1srlqzERSI?=
+ =?us-ascii?Q?ZtmJT+BfYmgdDmdsPvcmDxoO6sC+vOD66CDk8mcN9GgbQbVoWGsl//UArVu5?=
+ =?us-ascii?Q?Kdnpcy0UIkgXr60UlPEid6GFZcSTJ+IwvxpZk4t+W+T7BRyElzeSARTCOs5s?=
+ =?us-ascii?Q?FvAmB/HozeHuqdku2O4QRz/wEf9rudVO9BA49evib6BSjZEm9w3TI1/rLHVF?=
+ =?us-ascii?Q?PGSHOIElw5NXIoT5j2j4HlGvCB3H+X1GaebbTqSWLXFXnhbWDU7quSJ8NA2u?=
+ =?us-ascii?Q?C9HegSU3cNYtnmywMks3fyjqWKydeL2mRQmekdMILjKm6T+Eqb872IcEGWPJ?=
+ =?us-ascii?Q?c26OKKOBCKQ3Lz1JiDI7Q5KEo8XYiBECeCunNAYQAQRetgSQ+xxoTRCvJ1OA?=
+ =?us-ascii?Q?jPjkHPRjWzdRVl7avXp35aCkRKfcR7RtgHx5mfmVdqzK3w4cvIDIAVOq0zsT?=
+ =?us-ascii?Q?cfpetaQEwqfroDhmxj0V6cZW3PT7JpO8IoNzrqj8y1vy71x768d5B8OG0IZK?=
+ =?us-ascii?Q?lM15G2vsAA=3D=3D?=
+MIME-Version: 1.0
+X-OriginatorOrg: yale.edu
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: SN6PR08MB4238.namprd08.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 357573a4-e08a-4378-bff2-08deffb01840
+X-MS-Exchange-CrossTenant-originalarrivaltime: 21 Aug 2026 18:14:51.8820
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: dd8cbebb-2139-4df8-b411-4e3e87abeb5c
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: ZhTaK5jqI+yWEk2xqhGxoWdtBScX29y7E7TZBdfkCp+u7gnuPZKB9QWch/Xqw4Ep72zIAWlu5RFdXQ+xAyjgzAyacotHCN8IoyJ+ifJQxRE=
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH7PR08MB8255
+X-StripMime: Non-text section removed by stripmime
+Content-Type: text/plain; charset="us-ascii"
+
+Yes, Mike, you may cite this additional info as a pers. comm.  Supposedly, Marsh and Hatcher obtained the first bones together.  I suspect one or the other of the ladies must have informed Marsh about their discovery, but, unfortunately, if they did so by either letter or telegram, it is not preserved among the Marsh correspondences at Yale.  However, based on the accession record below, the earliest one that we have for the specimen, I think it was probably Mrs. Ellerman in her capacity as both Postmistress and fossil discoverer who would have reached out to Marsh.
+
+Accession YPM.02054: from YPM.ledger: Rec'd. Nov. 14th, 1889. From Chadron, Nebraska. Three boxes fossils (Freight $7.00) Box 1. Miocene Turtles etc. (4) (one from Bronto. beds.) Box 2. Miocene Rhinoceros skull. (Pine Ridge Agency.) bought of C.H. Little (Farmer.) Box 3. Caudal vertebrae etc. of new Sauropod. col. by J.B.H. & O.C.M, Atlantosaurus beds, S. Dakota, on land Mrs. Rachel Hatch, locality found by Mrs. E.R. Ellerman, Postmistress at Postville, P.O. Sacora Station, S. Dakota. O.C.M. donor. Unpacked Dec. 3, 1889.
+
+Dan
+
+Daniel L. Brinkman
+Museum Assistant II
+Division of Vertebrate Paleontology
+Yale Peabody Museum
+PO Box 208118, New Haven, CT 06520-8118
+Telephone: +1 (203) 432-3760
+
+COURIER-DELIVERIES
+170 Whitney Avenue, New Haven, CT 06511
+peabody.yale.edu<http://peabody.yale.edu/>
+
+From: Mike Taylor <sauropoda@gmail.com>
+Sent: Friday, August 21, 2026 1:27 PM
+To: Brinkman, Daniel <daniel.brinkman@yale.edu>
+Subject: Re: Discoverer and landowner for Barosaurus
+
+Hi, Dan, good to hear from you. And thank you for such a swift response.
+
+Alas, it's as I'd feared. That is sparse information indeed. Still, the bit about "Postmistress, Postville P.O., Sacora Station" is new, and I'll slip it into the manuscript when it comes back from review.
+
+Just to cross the T's: may I please have permission to cite this as a pers. comm.?
+
+Thanks again,
+
+-- Mike.
+
+On Fri, 21 Aug 2026 at 17:57, Brinkman, Daniel <daniel.brinkman@yale.edu<mailto:daniel.brinkman@yale.edu>> wrote:
+Hi Mike,
+
+Your email to the Peabody Archives was forwarded to me.  I do not recall any letters from or photographs of these two ladies in the VP divisional archives.  And here is all of the information that we have on them in our main database:
+
+Mrs. E. R. Ellerman: discoverer of Barosaurus; Title: Postmistress, Postville P.O., Sacora Station; Employer: U.S. Postal Service
+
+Mrs. Rachel Hatch: Barosaurus landowner
+
+Dan
+
+Daniel L. Brinkman
+Museum Assistant II
+Division of Vertebrate Paleontology
+Yale Peabody Museum
+PO Box 208118, New Haven, CT 06520-8118
+Telephone: +1 (203) 432-3760
+
+COURIER-DELIVERIES
+170 Whitney Avenue, New Haven, CT 06511
+peabody.yale.edu<http://peabody.yale.edu/>
