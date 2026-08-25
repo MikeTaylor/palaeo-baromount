@@ -13,6 +13,6 @@ Where are RCI's _Barosaurus_ moulds?
 
 ## REFERENCES
 
-Mahoney, Jeff. 1992. Fossil "Fools": Oakville business built largest dinosaur in world. The Spectator, 6 February 1992.
+Mahoney, Jeff. 1992. Fossil "Fools": Oakville business built largest dinosaur in world. _The Spectator_, 6 February 1992.
 
 
