@@ -11,7 +11,7 @@ Note old location of RCI: "Oakville ... right here in Halton ... Invicta Drive, 
 Where are RCI's _Barosaurus_ moulds?
 
 
-## REFERENCES
+## References
 
 Mahoney, Jeff. 1992. Fossil "Fools": Oakville business built largest dinosaur in world. _The Spectator_, 6 February 1992.
 
