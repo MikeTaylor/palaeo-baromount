@@ -7,7 +7,7 @@ Accession YPM.02054: from YPM.ledger: Rec'd. Nov. 14th, 1889. From Chadron, Nebr
 
 Note old location of RCI: "Oakville ... right here in Halton ... Invicta Drive, tucked off in an industrial park ... just of the North Servide Road" (Mahoney 1992).
 
-Where are RCI's _Barosaurus_ moulds?
+"All the molds were destroyed at the request of the AMNH." -- Peter May.
 
 Read this book: Leiggi, Patrick, and Peter May (eds.) 2005. Vertebrate Paleontological Techniques, volume 1. Cambridge University Press. ISBN: 0521443571
 
